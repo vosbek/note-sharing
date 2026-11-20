@@ -1,5 +1,9 @@
 ---
 title: "Tacnode: a Context Lake for real-time automated decisions"
+kind: "booth"
+company: "Tacnode"
+day: "2026-11-16"
+summary: "Tacnode sells a Context Lake: one store that holds what an automated decision reads and what it decided, kept current in one consistent snapshot."
 ---
 
 # Tacnode: a Context Lake for real-time automated decisions
@@ -15,7 +19,7 @@ Booth visit: Tacnode · QCon SF 2026 · Mon Nov 16
 - Their examples are fraud detection, dynamic pricing, personalization and ad bidding; the performance claims on the page come without benchmarks.
 - It links an AWS Marketplace listing and shows SOC 2 Type II, HIPAA and GDPR badges; pricing is not shown.
 
-Booth, Monday Nov 16. Sources: Tacnode's Context Lake page and its canonical specification, read Nov 17, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Monday Nov 16. Sources: Tacnode's Context Lake page and its canonical specification, read Nov 17, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

@@ -5,50 +5,54 @@ My notes from QCon San Francisco 2026, November 16 to 19: 21 sessions and 17 exp
 ## Start here
 
 - [Themes across the conference](themes.md): the topics that ran through the talks, how ten companies handle agent-written code, and where each kind of check sits.
+- [Numbers I checked](numbers.md): every figure quoted in the talks, with the source I checked it against and what I found.
+- [Repos and links](links.md): every repo, paper, article and docs page the talks and booths pointed to, with where each came from.
 - [Tools and technologies](tools.md): the tools, settings and practices named on stage or at a booth, grouped by what they do, with side-by-side comparisons.
+
+For AI tools: [llms.txt](llms.txt) maps the site, and [talks.json](talks.json) has every page's speakers, topics, key points, checked figures and links.
 
 ## Talks
 
 ### Monday, November 16
 
-| Time | Talk | Speakers |
-|---|---|---|
-| 09:00 | [The Harness Is the New Operating System](talks/the-harness-is-the-new-operating-system.md) | Manju Rajashekhar |
-| 10:35 | [Running Software Factory Efficiently at Uber Scale: Holding Agent Spend Steady While Requests Grew 9X](talks/running-software-factory-efficiently-at-uber-scale.md) | Uday Kiran Medisetty |
-| 11:45 | [Beyond the Model: Engineering the Agent Harness for Autonomous Software Delivery](talks/beyond-the-model-engineering-the-agent-harness.md) | Jayant Kulkarni |
-| 13:35 | [Stop Fighting the Remodel: API Design for Models That Outgrew Their Boundaries](talks/stop-fighting-the-remodel.md) | Aarti Gupta |
-| 15:55 | [Generation Got Cheap, Trust Didn't: Scaling Agentic Changes from Prompt to Prod at Roblox](talks/generation-got-cheap-trust-didnt.md) | Kushan Mehta, Jay Moorthi |
-| 17:05 | [Into the Labyrinth: What Distributed Systems Have Taught Us About Guardrails](talks/into-the-labyrinth.md) | Akshay Shah |
-|   | [Wait, You're Still Doing PRs?](talks/wait-you-re-still-doing-prs.md) | Lee Faus |
+| Time | Talk | Speakers | Main topics |
+|---|---|---|---|
+| 09:00 | [The Harness Is the New Operating System](talks/the-harness-is-the-new-operating-system.md) | Manju Rajashekhar | Harness design, Isolation and permissions |
+| 10:35 | [Running Software Factory Efficiently at Uber Scale: Holding Agent Spend Steady While Requests Grew 9X](talks/running-software-factory-efficiently-at-uber-scale.md) | Uday Kiran Medisetty | Context and retrieval, Cost and value |
+| 11:45 | [Beyond the Model: Engineering the Agent Harness for Autonomous Software Delivery](talks/beyond-the-model-engineering-the-agent-harness.md) | Jayant Kulkarni | Harness design |
+| 13:35 | [Stop Fighting the Remodel: API Design for Models That Outgrew Their Boundaries](talks/stop-fighting-the-remodel.md) | Aarti Gupta | Context and retrieval, Isolation and permissions |
+| 15:55 | [Generation Got Cheap, Trust Didn't: Scaling Agentic Changes from Prompt to Prod at Roblox](talks/generation-got-cheap-trust-didnt.md) | Kushan Mehta, Jay Moorthi | Code review at volume, Verification, Context and retrieval, Cost and value, Change provenance |
+| 17:05 | [Into the Labyrinth: What Distributed Systems Have Taught Us About Guardrails](talks/into-the-labyrinth.md) | Akshay Shah | Verification |
+|   | [Wait, You're Still Doing PRs?](talks/wait-you-re-still-doing-prs.md) | Lee Faus | Code review at volume, Isolation and permissions, Change provenance |
 
 ### Tuesday, November 17
 
-| Time | Talk | Speakers |
-|---|---|---|
-| 09:00 | [Learning Out Loud (Under Near-Existential Pressure)](talks/learning-out-loud-under-near-existential-pressure.md) | Laura Savino |
-| 10:35 | [Skills, Memory, or Fine-Tuning? The Engineering Loop Behind Production Agents](talks/skills-memory-or-fine-tuning.md) | Abhinav Sinha |
-| 11:45 | [Use AI to Multiply Your Team as a Staff Engineer](talks/use-ai-to-multiply-your-team-as-a-staff-engineer.md) | Jordan Cutler |
-| 13:35 | [Drawing the Rest of the Owl: A Blueprint for Your Software Factory](talks/drawing-the-rest-of-the-owl.md) | Chris Kelly |
-| 14:45 | [Lessons from Building a $100M Product in Six Weeks at OpenAI](talks/building-a-100m-product-at-openai.md) | Brian Yang |
-| 15:55 | [Bridging Retrieval and Ranking: From LLM Embeddings and Graph Features to a GPU-Served DLRM](talks/bridging-retrieval-and-ranking.md) | Sudarshan Srinivasa Ramanujam |
+| Time | Talk | Speakers | Main topics |
+|---|---|---|---|
+| 09:00 | [Learning Out Loud (Under Near-Existential Pressure)](talks/learning-out-loud-under-near-existential-pressure.md) | Laura Savino | People and adoption |
+| 10:35 | [Skills, Memory, or Fine-Tuning? The Engineering Loop Behind Production Agents](talks/skills-memory-or-fine-tuning.md) | Abhinav Sinha | Harness design, Verification, Context and retrieval |
+| 11:45 | [Use AI to Multiply Your Team as a Staff Engineer](talks/use-ai-to-multiply-your-team-as-a-staff-engineer.md) | Jordan Cutler | Context and retrieval, People and adoption |
+| 13:35 | [Drawing the Rest of the Owl: A Blueprint for Your Software Factory](talks/drawing-the-rest-of-the-owl.md) | Chris Kelly | Harness design, Code review at volume |
+| 14:45 | [Lessons from Building a $100M Product in Six Weeks at OpenAI](talks/building-a-100m-product-at-openai.md) | Brian Yang | Code review at volume, Verification, Isolation and permissions |
+| 15:55 | [Bridging Retrieval and Ranking: From LLM Embeddings and Graph Features to a GPU-Served DLRM](talks/bridging-retrieval-and-ranking.md) | Sudarshan Srinivasa Ramanujam | Context and retrieval, Cost and value |
 
 ### Wednesday, November 18
 
-| Time | Talk | Speakers |
-|---|---|---|
-| 09:00 | [The Execution Muscle: Why Great Teams Are Built, Not Hired](talks/the-execution-muscle-why-great-teams-are-built-not-hired.md) | Charlotte Mestwerdt |
-| 10:35 | [How Netflix Retrofitted Its SDLC for AI Coding Agents](talks/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents.md) | Mark Khuzam |
-| 11:45 | [Legacy as Leverage: How Brownfield Work Builds Technical Judgment](talks/legacy-as-leverage-how-brownfield-work-builds-technical-judgment.md) | Shine Garg |
-| 13:35 | [Observability: The Missing Control Plane for Agentic Engineering](talks/observability-the-missing-control-plane-for-agentic-engineering.md) | Rachael Wonnacott |
-| 14:45 | [You Can't Read the Code Anymore - Verifying Software in the Age of AI](talks/you-cant-read-the-code-anymore.md) | Omer van Kloeten |
-| 15:55 | [How To Kill the Code Review](talks/how-to-kill-the-code-review.md) | Ankit Jain |
-| 17:15 | [Game Time: How to (Unsuccessfully) 10x in a Week & (Successfully) 10x in a Year](talks/game-time-10x-in-a-week-and-in-a-year.md) | Plum Ertz |
+| Time | Talk | Speakers | Main topics |
+|---|---|---|---|
+| 09:00 | [The Execution Muscle: Why Great Teams Are Built, Not Hired](talks/the-execution-muscle-why-great-teams-are-built-not-hired.md) | Charlotte Mestwerdt | People and adoption |
+| 10:35 | [How Netflix Retrofitted Its SDLC for AI Coding Agents](talks/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents.md) | Mark Khuzam | Code review at volume, Context and retrieval |
+| 11:45 | [Legacy as Leverage: How Brownfield Work Builds Technical Judgment](talks/legacy-as-leverage-how-brownfield-work-builds-technical-judgment.md) | Shine Garg | People and adoption |
+| 13:35 | [Observability: The Missing Control Plane for Agentic Engineering](talks/observability-the-missing-control-plane-for-agentic-engineering.md) | Rachael Wonnacott | Verification, Change provenance |
+| 14:45 | [You Can't Read the Code Anymore - Verifying Software in the Age of AI](talks/you-cant-read-the-code-anymore.md) | Omer van Kloeten | Code review at volume, Verification |
+| 15:55 | [How To Kill the Code Review](talks/how-to-kill-the-code-review.md) | Ankit Jain | Code review at volume, Verification, Change provenance |
+| 17:15 | [Game Time: How to (Unsuccessfully) 10x in a Week & (Successfully) 10x in a Year](talks/game-time-10x-in-a-week-and-in-a-year.md) | Plum Ertz |  |
 
 ### Thursday, November 19
 
-| Time | Talk | Speakers |
-|---|---|---|
-| 13:00 | [AI-Assisted Coding Master Class: Build Your Mission Control](talks/ai-assisted-coding-master-class-build-your-mission-control.md) | Sepehr Khosravi, Dev Bali |
+| Time | Talk | Speakers | Main topics |
+|---|---|---|---|
+| 13:00 | [AI-Assisted Coding Master Class: Build Your Mission Control](talks/ai-assisted-coding-master-class-build-your-mission-control.md) | Sepehr Khosravi, Dev Bali | Verification |
 
 ## Booths
 

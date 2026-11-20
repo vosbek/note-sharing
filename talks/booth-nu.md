@@ -1,5 +1,9 @@
 ---
 title: "Nu: the bank behind Monday's Pix infrastructure talk, and its claims on AI adoption"
+kind: "booth"
+company: "Nu"
+day: "2026-11-18"
+summary: "Nu (Nubank) is a Latin American digital bank, not a tool vendor; it sponsored QCon to hire engineers and gave a Monday talk on the infrastructure behind Brazil's Pix payments."
 ---
 
 # Nu: the bank behind Monday's Pix infrastructure talk, and its claims on AI adoption

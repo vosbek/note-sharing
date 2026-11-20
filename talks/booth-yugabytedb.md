@@ -1,5 +1,9 @@
 ---
 title: "YugabyteDB: distributed Postgres, with a database per agent and zero-copy branches"
+kind: "booth"
+company: "YugabyteDB"
+day: "2026-11-18"
+summary: "Yugabyte sells a distributed, PostgreSQL-compatible database and now pitches it for agents: isolated databases that scale to zero, branches to test against, and an MCP server."
 ---
 
 # YugabyteDB: distributed Postgres, with a database per agent and zero-copy branches
@@ -16,7 +20,7 @@ Booth visit: YugabyteDB · QCon SF 2026 · Wed Nov 18
 - Their MCP server uses OIDC sign-in and keeps write tools disabled until an operator turns them on.
 - The core database is open source under Apache 2.0; Aeon is the managed service (per-minute or vCPU subscription), and Anywhere is self-managed. No prices appear on the pages I read.
 
-Booth, Wednesday Nov 18. Sources: Yugabyte's homepage, AMP page and deployment comparison, read Nov 18, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Wednesday Nov 18. Sources: Yugabyte's homepage, AMP page and deployment comparison, read Nov 18, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

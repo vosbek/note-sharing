@@ -1,5 +1,9 @@
 ---
 title: "Atomic: version control that records what AI changed and why"
+kind: "booth"
+company: "Atomic"
+day: "2026-11-16"
+summary: "Atomic is a version control system, from Atomic Software, that records who made each change, why, which AI model helped and how it was reviewed."
 ---
 
 # Atomic: version control that records what AI changed and why
@@ -14,7 +18,7 @@ Booth visit: Atomic · QCon SF 2026 · Mon Nov 16
 - Its docs say it records which AI provider and model made a change, as a cryptographic attestation.
 - Atomic ships as a CLI with a Git import and a Git shim. Its docs mention team collaboration and self-hosting; pricing is not shown.
 
-Booth, Monday Nov 16. Sources: Atomic's docs and GitHub, plus the Atomic talk the same day, read Nov 17, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Monday Nov 16. Sources: Atomic's docs and GitHub, plus the Atomic talk the same day, read Nov 17, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

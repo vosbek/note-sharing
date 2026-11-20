@@ -1,5 +1,9 @@
 ---
 title: "Antithesis: deterministic simulation testing as a gate for agent pull requests"
+kind: "booth"
+company: "Antithesis"
+day: "2026-11-16"
+summary: "Antithesis runs a whole system inside a deterministic hypervisor, injects faults and replays any failure exactly, and pitches it as a check on agent-written pull requests."
 ---
 
 # Antithesis: deterministic simulation testing as a gate for agent pull requests
@@ -15,7 +19,7 @@ Booth visit: Antithesis · QCon SF 2026 · Mon Nov 16
 - Systems under test ship as containers on Docker Compose or Kubernetes on x86, with SDKs including Java, Python and JavaScript. Antithesis can run in the customer's own AWS VPC and is sold through AWS Marketplace.
 - No prices are shown and there is no free or open-source version; the testimonial figures on the page are the vendor's own.
 
-Booth, Monday Nov 16. Sources: Antithesis's product page and docs, read Nov 17, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Monday Nov 16. Sources: Antithesis's product page and docs, read Nov 17, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

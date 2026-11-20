@@ -1,5 +1,9 @@
 ---
 title: "Sonar: Vortex guides coding agents and checks their changes with SonarQube"
+kind: "booth"
+company: "Sonar"
+day: "2026-11-16"
+summary: "Sonar Vortex gives coding agents a project's rules and context before they write, then checks each change against SonarQube analysis as they work."
 ---
 
 # Sonar: Vortex guides coding agents and checks their changes with SonarQube
@@ -15,7 +19,7 @@ Booth visit: Sonar · QCon SF 2026 · Mon Nov 16
 - It runs through a SonarQube instance, set up by an agent plugin for Claude Code, Copilot, Codex CLI, Cursor and Antigravity, by the SonarQube CLI, or by its MCP server.
 - The headline figures on the page all read zero and look like placeholders; pricing is through sales.
 
-Booth, Monday Nov 16. Sources: Sonar's Vortex page and SonarQube docs, read Nov 17, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Monday Nov 16. Sources: Sonar's Vortex page and SonarQube docs, read Nov 17, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

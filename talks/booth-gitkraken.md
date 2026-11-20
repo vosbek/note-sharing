@@ -1,5 +1,9 @@
 ---
 title: "GitKraken: Insights compares AI coding tools by adoption, cost and cycle time"
+kind: "booth"
+company: "GitKraken"
+day: "2026-11-16"
+summary: "GitKraken Insights is a performance platform that tracks AI coding agents' output, cost and changes reaching production."
 ---
 
 # GitKraken: Insights compares AI coding tools by adoption, cost and cycle time
@@ -15,7 +19,7 @@ Booth visit: GitKraken · QCon SF 2026 · Mon Nov 16
 - An AI ROI view converts hours returned and capacity created into dollar figures, and an adoption view shows which developers get the most from AI tools.
 - The linked page is a three-day trial on sample data for a made-up company, behind a work-email form; no pricing is shown.
 
-Booth, Monday Nov 16. Sources: GitKraken Insights help docs, its 2026 survey report and the trial page, read Nov 17, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Monday Nov 16. Sources: GitKraken Insights help docs, its 2026 survey report and the trial page, read Nov 17, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

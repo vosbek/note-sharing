@@ -1,5 +1,9 @@
 ---
 title: "TuxCare: rebuilt, patched open-source packages, including for end-of-life Spring and Angular"
+kind: "booth"
+company: "TuxCare"
+day: "2026-11-18"
+summary: "TuxCare supplies open-source packages rebuilt from source and keeps patching them after upstream support ends, served from a repository you point Artifactory at."
 ---
 
 # TuxCare: rebuilt, patched open-source packages, including for end-of-life Spring and Angular
@@ -16,7 +20,7 @@ Booth visit: TuxCare · QCon SF 2026 · Wed Nov 18
 - The pages promise patches under an SLA but give no response times, and no prices; SLSA Level 3 for the end-of-life packages is listed as coming soon.
 - TuxCare has no AI product; its homepage argues AI is making open-source packages faster to attack and exploit.
 
-Booth, Wednesday Nov 18. Sources: TuxCare's homepage, SecureChain for Java page and Endless Lifecycle Support for language ecosystems page, read Nov 18, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Wednesday Nov 18. Sources: TuxCare's homepage, SecureChain for Java page and Endless Lifecycle Support for language ecosystems page, read Nov 18, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

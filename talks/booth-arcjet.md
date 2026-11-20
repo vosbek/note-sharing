@@ -1,5 +1,9 @@
 ---
 title: "Arcjet: runtime security policy for AI agents and coding agents"
+kind: "booth"
+company: "Arcjet"
+day: "2026-11-16"
+summary: "Arcjet enforces security policy at the moment an agent acts: in application code through an SDK, and in coding agents such as Claude Code and Copilot through their hooks."
 ---
 
 # Arcjet: runtime security policy for AI agents and coding agents
@@ -16,7 +20,7 @@ Booth visit: Arcjet · QCon SF 2026 · Mon Nov 16
 - Rules include prompt injection and sensitive data detection, token budgets, bot protection and a WAF. Some run locally in WebAssembly and others call Arcjet's cloud API, which the docs say adds 20 to 30 ms.
 - Published pricing runs from a free tier to Individual at $25 and Startup at $299 a month plus usage; Enterprise is custom and adds a log drain to a SIEM.
 
-Booth, Monday Nov 16. Sources: Arcjet's docs and its build-versus-buy page, read Nov 17, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Monday Nov 16. Sources: Arcjet's docs and its build-versus-buy page, read Nov 17, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

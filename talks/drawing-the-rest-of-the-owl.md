@@ -1,12 +1,22 @@
 ---
 title: "Drawing the Rest of the Owl: A Blueprint for Your Software Factory"
+kind: "talk"
+speakers: ["Chris Kelly"]
+track: "Sponsored Solution Track IV"
+day: "2026-11-17"
+time: "13:35"
+session_url: "https://qconsf.com/presentation/nov2026/drawing-rest-owl-blueprint-your-software-factory"
+topics_central: ["Harness design", "Code review at volume"]
+topics_touched: ["Verification", "Context and retrieval", "Isolation and permissions", "Cost and value", "Change provenance"]
+slides: "gallery/drawing-the-rest-of-the-owl.md"
+summary: "Cosmos's product lead, a month after Harness bought it from Augment Code, lays out how to build a software factory. Fix environments and CI first, then automate code review end to end."
 ---
 
 # Drawing the Rest of the Owl: A Blueprint for Your Software Factory
 
 **Speaker:** Chris Kelly (Product Lead, Harness)  
 QCon SF 2026 · Sponsored Solution Track IV · Tue Nov 17, 13:35 · Pacific LM  
-[Session page](https://qconsf.com/presentation/nov2026/drawing-rest-owl-blueprint-your-software-factory)
+[Session page](https://qconsf.com/presentation/nov2026/drawing-rest-owl-blueprint-your-software-factory) · [All 16 slides](../gallery/drawing-the-rest-of-the-owl.md)
 
 > Cosmos's product lead, a month after Harness bought it from Augment Code, lays out how to build a software factory. Fix environments and CI first, then automate code review end to end.
 
@@ -45,11 +55,11 @@ He doesn’t mean a widget line. He wants three things from the metaphor: consis
 
 ![Slide: your software factory is not individual workflows, skills, and configuration; only interactive software development; or a chain of automations with agents.](../slides/drawing-the-rest-of-the-owl/deep/p6066.webp)
 
-Slide 2. What a factory is not.
+*Slide 2: What a factory is not.*
 
 ![Slide: a software factory is a self-improving system that turns intent into trusted software outcomes using humans, agents, and automation.](../slides/drawing-the-rest-of-the-owl/deep/p6068.webp)
 
-Slide 3. His definition.
+*Slide 3: His definition.*
 
 If it doesn’t improve itself and nobody trusts its output, it’s automation, not a factory.
 
@@ -73,11 +83,11 @@ Skills should cover only what is unique to your organization, such as how to sea
 
 ![Slide: what's in the box. One, cloud agent. Two, sandbox. Three, triggers. Four, computer and browser use. Five, secrets and permissions. Illustrated as a box with a padlock, a button and a monitor.](../slides/drawing-the-rest-of-the-owl/deep/p6070.webp)
 
-Slide 5. What’s in the box.
+*Slide 5: What’s in the box.*
 
 ![Slide: select the right tool for the task. One, LLM, drawn as a multi-tool. Two, decision model, drawn as a caliper. Three, deterministic code, drawn as a hex key.](../slides/drawing-the-rest-of-the-owl/deep/p6072.webp)
 
-Slide 7. Not every step needs an LLM.
+*Slide 7: Not every step needs an LLM.*
 
 One slide error: on slide 8 the caption under Context repeats the Tools caption. The audio is the source for what he meant.
 
@@ -98,11 +108,11 @@ He was blunt that people were never good at reviewing for security or bugs anywa
 
 ![Slide: start with code review. Reviewer, auto-fix, verifier, risk analyzer.](../slides/drawing-the-rest-of-the-owl/deep/p6075.webp)
 
-Slide 10. The first lane.
+*Slide 10: The first lane.*
 
 ![Slide: expand from there. Ticket, PR, reviewer, auto-fix, verifier, risk analyzer, auto-merge.](../slides/drawing-the-rest-of-the-owl/deep/p6076.webp)
 
-Slide 11. Then the whole path.
+*Slide 11: Then the whole path.*
 
 Automate review all the way to a merge decision, and spend human attention on the verifier’s evidence.
 
@@ -118,11 +128,11 @@ He closed with two tips. Automate the known, not the thinking: system design sho
 
 ![Slide: a factory for self-improvement. A loop from agent runs to an evaluation panel to a changed configuration and back.](../slides/drawing-the-rest-of-the-owl/deep/p6079.webp)
 
-Slide 14. A factory that improves itself.
+*Slide 14: A factory that improves itself.*
 
 ![Slide with two tips. Automate the known, not the thinking: don't let the AI fill in the important decisions; design the system to encode the right decisions and keep yourself in the process. Be ambitious: instead of saying we can't do that, ask how can we do that.](../slides/drawing-the-rest-of-the-owl/deep/p6081.webp)
 
-Slide 16. Closing tips.
+*Slide 16: Closing tips.*
 
 ### From the Q&A
 
@@ -143,7 +153,7 @@ On October 8, 2026, [Harness announced](https://www.harness.io/blog/harness-acqu
 
 Harness’s [governance write-up](https://www.harness.io/blog/inside-a-governed-software-factory-with-harness-cosmos) says its OPA policies can gate Cosmos worker agents, so an agent can’t merge to main even if prompted to; every merge stays a human decision; and each change has an audit trail from trigger to production. Its `cosmos approve` command auto-approves only when the requester owns every changed file, no findings are open and the Verifier found nothing contradicting. The talk’s four-step review lane maps directly onto those Experts.
 
-## Numbers we checked
+## Numbers I checked
 
 Checked on Nov 17, 2026. The talk had almost no figures; most of these come from my research and are vendor-reported.
 
@@ -229,68 +239,3 @@ A policy-as-code engine. Harness uses it to gate pipelines and, with Cosmos, wor
 - [Use AI to Multiply Your Team as a Staff Engineer](use-ai-to-multiply-your-team-as-a-staff-engineer.md) (Pinterest, earlier today). Autoship is a homegrown version of the same ticket-to-PR lane.
 - [Skills, Memory, or Fine-Tuning?](skills-memory-or-fine-tuning.md) (Lucidic, this morning). The evals and self-improvement loop in more depth.
 
-## All slides
-
-[![Slide: Features of your new software factory](../slides/drawing-the-rest-of-the-owl/deep/p6065.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6065.webp)
-
-Slide 1. Features of your new software factory
-
-[![Slide: Your software factory is not](../slides/drawing-the-rest-of-the-owl/deep/p6066.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6066.webp)
-
-Slide 2. Your software factory is not
-
-[![Slide: A software factory is a self-improving system](../slides/drawing-the-rest-of-the-owl/deep/p6068.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6068.webp)
-
-Slide 3. A software factory is a self-improving system
-
-[![Slide: Stop: developer environments, build and test infrastructure](../slides/drawing-the-rest-of-the-owl/deep/p6069.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6069.webp)
-
-Slide 4. Stop: developer environments, build and test infrastructure
-
-[![Slide: What’s in the box](../slides/drawing-the-rest-of-the-owl/deep/p6070.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6070.webp)
-
-Slide 5. What’s in the box
-
-[![Slide: Designing an agent](../slides/drawing-the-rest-of-the-owl/deep/p6071.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6071.webp)
-
-Slide 6. Designing an agent
-
-[![Slide: Select the right tool for the task](../slides/drawing-the-rest-of-the-owl/deep/p6072.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6072.webp)
-
-Slide 7. Select the right tool for the task
-
-[![Slide: Enable the agent: skills, tools, context](../slides/drawing-the-rest-of-the-owl/deep/p6073.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6073.webp)
-
-Slide 8. Enable the agent: skills, tools, context
-
-[![Slide: Tips: start simple; autonomy is limited by verification](../slides/drawing-the-rest-of-the-owl/deep/p6074.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6074.webp)
-
-Slide 9. Tips: start simple; autonomy is limited by verification
-
-[![Slide: Start with code review](../slides/drawing-the-rest-of-the-owl/deep/p6075.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6075.webp)
-
-Slide 10. Start with code review
-
-[![Slide: Expand from there](../slides/drawing-the-rest-of-the-owl/deep/p6076.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6076.webp)
-
-Slide 11. Expand from there
-
-[![Slide: Tip: engineering becomes about improving the factory](../slides/drawing-the-rest-of-the-owl/deep/p6077.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6077.webp)
-
-Slide 12. Tip: engineering becomes about improving the factory
-
-[![Slide: Use traces for optimization](../slides/drawing-the-rest-of-the-owl/deep/p6078.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6078.webp)
-
-Slide 13. Use traces for optimization
-
-[![Slide: A factory for self-improvement](../slides/drawing-the-rest-of-the-owl/deep/p6079.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6079.webp)
-
-Slide 14. A factory for self-improvement
-
-[![Slide: Create evals for your important decisions](../slides/drawing-the-rest-of-the-owl/deep/p6080.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6080.webp)
-
-Slide 15. Create evals for your important decisions
-
-[![Slide: Tips: automate the known, not the thinking; be ambitious](../slides/drawing-the-rest-of-the-owl/deep/p6081.webp)](../slides/drawing-the-rest-of-the-owl/deep/p6081.webp)
-
-Slide 16. Tips: automate the known, not the thinking; be ambitious

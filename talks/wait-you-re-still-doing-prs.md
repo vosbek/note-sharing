@@ -1,12 +1,20 @@
 ---
 title: "Wait, You're Still Doing PRs?"
+kind: "talk"
+speakers: ["Lee Faus"]
+day: "2026-11-16"
+session_url: "https://qconsf.com/presentation/nov2026/wait-youre-still-doing-prs"
+topics_central: ["Code review at volume", "Isolation and permissions", "Change provenance"]
+topics_touched: ["Harness design", "Verification", "Context and retrieval", "Cost and value"]
+slides: "gallery/wait-you-re-still-doing-prs.md"
+summary: "Lee Faus of Atomic argued that pull requests don't fit agent-written code and showed Atomic, which records each change against an intent and has a separate identity review it."
 ---
 
 # Wait, You're Still Doing PRs?
 
 **Speaker:** Lee Faus (Founder and CEO, Atomic Software)  
 QCon SF 2026 · Mon Nov 16  
-[Session page](https://qconsf.com/presentation/nov2026/wait-youre-still-doing-prs)
+[Session page](https://qconsf.com/presentation/nov2026/wait-youre-still-doing-prs) · [All 17 slides](../gallery/wait-you-re-still-doing-prs.md)
 
 > Lee Faus of Atomic argued that pull requests don't fit agent-written code and showed Atomic, which records each change against an intent and has a separate identity review it.
 
@@ -33,7 +41,7 @@ His company, Atomic, replaces Git’s snapshot history with a patch-theory graph
 
 ## In depth
 
-The deck had 12 slides in six acts; we have 4 of them. The parts below follow the talk’s order, using the recording where no slide was captured. Photo numbers refer to the gallery.
+The deck had 12 slides in six acts; I have 4 of them. The parts below follow the talk’s order, using the recording where no slide was captured. Photo numbers refer to the gallery.
 
 ### The setup: a self-driving car with a man and a flashlight (photo 1)
 
@@ -43,7 +51,7 @@ Some of those ceremonies no longer work at scale. He once trained teams to searc
 
 ![Photo 1: Title slide. QCon vendor presentation, AI agents and software delivery. Wait, You're Still Doing PRs? A 50-minute argument for giving autonomous work a workflow of its own. Lee Faus, Atomic Software. 50 minutes, 6 acts.](../slides/wait-you-re-still-doing-prs/deep/p01.webp)
 
-Slide 1. Title slide: six acts, a workflow of its own.
+*Slide 1: Title slide: six acts, a workflow of its own.*
 
 ### Act 1, the dark ages: Bugzilla, SVN and a mailing list (photo 2)
 
@@ -51,7 +59,7 @@ In the early 2000s at Red Hat, Lee tried to land a first patch in Fedora with he
 
 ![Photo 2: Act 01, The Dark Ages, slide 2 of 12. The patch was ready. Steve was not. A Rube Goldberg machine feeds a bug through Bugzilla, an SVN diff and a mailing list to a sleeping reviewer.](../slides/wait-you-re-still-doing-prs/deep/p02.webp)
 
-Slide 2. “The patch was ready. Steve was not.”
+*Slide 2: “The patch was ready. Steve was not.”*
 
 ### How the pull request was born, and grew heavy (recording only)
 
@@ -97,13 +105,13 @@ Because it is a graph, it is queryable. His examples: which intent cost the most
 
 ![Photo 3: Atomic's loop in five steps. Intent (Feature WorkIntent), Capture (Change from a planned SessionTurn), Subject (ReviewSubject, one content-addressed scope, pinned), Conclusion (PublicationReview, a signed judgment criterion by criterion), Gate (PublicationGate). Arrows loop back to the intent.](../slides/wait-you-re-still-doing-prs/deep/p03.webp)
 
-Slide 3. Intent → change → review subject → review → gate.
+*Slide 3: Intent → change → review subject → review → gate.*
 
 ![Photo 4: Anatomy of a Feature WorkIntent: frontmatter, why, acceptance criteria, tasks, files, scope in, scope out, constraints.](../slides/wait-you-re-still-doing-prs/deep/p04.webp)
 
-Slide 4. What an intent holds.
+*Slide 4: What an intent holds.*
 
-**Takeaway.** The unit of work is the intent, not the commit. Everything an agent does is recorded against what it was asked to do.
+> The unit of work is the intent, not the commit. Everything an agent does is recorded against what it was asked to do.
 
 ### Reviewing a graph instead of a diff (recording only)
 
@@ -119,11 +127,11 @@ An Atomic skill rewrites a bad prompt into a “why” statement that describes 
 
 ![Photo 7: Agent result. An attested.jsonld sidecar with a did:atomic author; the intent is a feature, needs review, attested fresh and verified. Built a minimal TypeScript CLI; clean install, successful build and 3 tests passing. 1 minute 3 seconds, 14.3K tokens, \$0.08.](../slides/wait-you-re-still-doing-prs/deep/p07.webp)
 
-Slide 7. Built, tested and attested, then marked “needs review”.
+*Slide 7: Built, tested and attested, then marked “needs review”.*
 
 ![Photo 9: Verification evidence for criterion 1, verified by GPT-6.1 Sol via local shell: npm install and npm ci succeeded with zero vulnerabilities, npm test passed all 3 tests, npm start printed Hello, world.](../slides/wait-you-re-still-doing-prs/deep/p09.webp)
 
-Slide 9. Each criterion carries its evidence.
+*Slide 9: Each criterion carries its evidence.*
 
 Underneath, the intent is Markdown using generic directives rather than plain headings. Directives carry IDs and attributes, so a task can point at the acceptance criterion it satisfies, and links can target sections rather than whole files, which he noted Obsidian-style linking can’t do. He recommended directives to anyone building their own software factory, and said the files are meant for agents, not people to maintain by hand. The links are RDF relationships in an ontology; he said semantic web ideas (RDF, SPARQL, OWL) are seeing a resurgence.
 
@@ -131,11 +139,11 @@ Running `atomic intent graph` printed the intent as a tree and then as typed nod
 
 ![Photo 10: The intent as raw Markdown: an acceptance-criterion directive with an ID, status=met, verifiedBy and evidence attributes, and a task directive with status=done and a criteria attribute pointing at the criterion.](../slides/wait-you-re-still-doing-prs/deep/p10.webp)
 
-Slide 10. Directives link a task to the criterion it meets.
+*Slide 10: Directives link a task to the criterion it meets.*
 
 ![Photo 14: Graph view node details for one change: BLAKE3-256 content address, type Change, source vcs, 1 of 1 changes with AI provenance, cost \$0.076934.](../slides/wait-you-re-still-doing-prs/deep/p14.webp)
 
-Slide 14. One change, its content address and its cost.
+*Slide 14: One change, its content address and its cost.*
 
 The tree on photo 11 lists two findings, MissingAttestation and MissingPlanId, and the graph header on photo 13 reads “0 implementing, 1 intent-artifact recording”. That suggests the code changes were not yet linked to the intent as implementation, which is exactly what the review in part 2 later flagged.
 
@@ -149,19 +157,19 @@ On stage the publication review didn’t complete. The agent reported that both 
 
 ![Photo 16: Reviewer grant for the current view: read and record only for 1 hour; no existing agents or delegation certificates. Asks to confirm target view, an independent non-author reviewer with a separate directory, a change budget, and approval including revocation and key retirement. The grant will not authorize insertion into the target.](../slides/wait-you-re-still-doing-prs/deep/p16.webp)
 
-Slide 16. A one-hour, read-and-record reviewer grant.
+*Slide 16: A one-hour, read-and-record reviewer grant.*
 
 ![Photo 17: Review blocked. Both author sessions are still active and lack completion signatures. The agent did not delete anything, bypass the gate or create a VM. Outstanding: connect changed files to the intent and complete an independent review. Nothing was inserted into dev. 88.9K tokens, \$0.43.](../slides/wait-you-re-still-doing-prs/deep/p17.webp)
 
-Slide 17. The gate refused to publish; nothing reached dev.
+*Slide 17: The gate refused to publish; nothing reached dev.*
 
 ### Closing: 30,000 intents in two weeks (recording only)
 
 He finished with a CTO whose team created 30,000 intents in two weeks and asked how to manage them. His reframe: the question is not managing 30,000 intents but what agents can do with that much queryable knowledge about why every change was made. Asked by customers whether Atomic will build a GitHub-style UI, he asks whether the UI is for people or for agents; agents don’t want one, and he doubts how much such a UI will matter in two to five years. His summary: agent-native source control should be designed for agents, not built by bolting agents onto existing tools.
 
-**Takeaway.** Review moves from reading code to checking intent, criteria and evidence, with a different identity doing the checking and every step signed.
+> Review moves from reading code to checking intent, criteria and evidence, with a different identity doing the checking and every step signed.
 
-## Numbers we checked
+## Numbers I checked
 
 Figures and claims from the talk against their sources. Checked found in a published source; Caveat holds with a condition or needed correcting; On screen read off the demo screen; Talk only heard in the room and not found elsewhere.
 
@@ -352,72 +360,3 @@ An open-source tool for portable, fast-starting microVMs built on libkrun, pitch
 - **Still ahead** Wed 10:35: [How Netflix Retrofitted Its SDLC for AI Coding Agents](https://qconsf.com/presentation/nov2026/how-netflix-retrofitted-its-sdlc-ai-coding-agents).
 - **Still ahead** Tue 2:45: [Lessons from Building a \$100M Product in Six Weeks at OpenAI](https://qconsf.com/presentation/nov2026/lessons-building-100m-product-six-weeks-openai).
 
-## All slides
-
-[![Slide 1: Photo 1: Title slide: QCon vendor presentation, AI agents and software delivery. Wait, You're Still Doing PRs? A 50-minute argument for giving autonomous work a workflow of its own. Lee Faus, Atomic Software. 50 minutes, 6 acts, Q&A.](../slides/wait-you-re-still-doing-prs/deep/p01.webp)](../slides/wait-you-re-still-doing-prs/deep/p01.webp)
-
-Slide 1. Title slide
-
-[![Slide 2: Photo 2: Act 01, The Dark Ages, slide 2 of 12. The patch was ready. Steve was not. A Rube Goldberg machine feeds a bug report through Bugzilla, an SVN diff and a mailing list to a sleeping reviewer.](../slides/wait-you-re-still-doing-prs/deep/p02.webp)](../slides/wait-you-re-still-doing-prs/deep/p02.webp)
-
-Slide 2. Act 01: the dark ages
-
-[![Slide 3: Photo 3: Atomic's loop in five steps: 01 Intent, a Feature WorkIntent, the authored spec the work is held to. 02 Capture, a Change; each change comes from a planned SessionTurn. 03 Subject, a ReviewSubject, one content-addressed scope, pinned. 04 Conclusion, a PublicationReview, a signed judgment criterion by criterion. 05 Gate, a PublicationGate, a signed judgment criterion by criterion. Arrows loop back to the intent.](../slides/wait-you-re-still-doing-prs/deep/p03.webp)](../slides/wait-you-re-still-doing-prs/deep/p03.webp)
-
-Slide 3. The five-step loop
-
-[![Slide 4: Photo 4: Anatomy of a Feature WorkIntent, the authored spec the work is held to: frontmatter, why, acceptance criteria (one or more), tasks (one or more), files (one or more), scope in, scope out, constraints.](../slides/wait-you-re-still-doing-prs/deep/p04.webp)](../slides/wait-you-re-still-doing-prs/deep/p04.webp)
-
-Slide 4. Anatomy of an intent
-
-[![Slide 5: Photo 5: Demo setup: a VS Code workspace named demo-10 with only .atomic, .vault and .atomicignore, and OpenCode running the Atomic agent on GPT-6.1 Sol through OpenRouter.](../slides/wait-you-re-still-doing-prs/deep/p05.webp)](../slides/wait-you-re-still-doing-prs/deep/p05.webp)
-
-Slide 5. Demo: empty project
-
-[![Slide 6: Photo 6: Demo prompt typed into OpenCode: let's build a typescript hello world cli. Atomic agent, GPT-6.1 Sol via OpenRouter.](../slides/wait-you-re-still-doing-prs/deep/p06.webp)](../slides/wait-you-re-still-doing-prs/deep/p06.webp)
-
-Slide 6. Demo: the prompt
-
-[![Slide 7: Photo 7: Agent result: an attested.jsonld sidecar signed by a did:atomic author; the intent DEMO::continuouslee::1 is a feature, needs review, attested fresh and verified. Built a minimal TypeScript CLI; verified a clean install, a successful build and all 3 tests passing. 1 minute 3 seconds, 14.3K tokens, \$0.08.](../slides/wait-you-re-still-doing-prs/deep/p07.webp)](../slides/wait-you-re-still-doing-prs/deep/p07.webp)
-
-Slide 7. Demo: built, verified, needs review
-
-[![Slide 8: Photo 8: The intent rendered like an issue: Build a TypeScript hello world CLI, needs review, priority medium. Description: provide a runnable, minimal TypeScript command-line starting point in an otherwise empty repository. Acceptance criteria 1 of 1, met; tasks 1 of 1. The vault holds attestations, goals, intents, memory, prompts, scratch and skills.](../slides/wait-you-re-still-doing-prs/deep/p08.webp)](../slides/wait-you-re-still-doing-prs/deep/p08.webp)
-
-Slide 8. Demo: the intent page
-
-[![Slide 9: Photo 9: Verification evidence for criterion 1: verified by GPT-6.1 Sol via local shell. npm install and npm ci succeeded with zero vulnerabilities, npm test passed all 3 tests after each install, and npm start printed Hello, world. Task 1 done: the files to create and how to verify them.](../slides/wait-you-re-still-doing-prs/deep/p09.webp)](../slides/wait-you-re-still-doing-prs/deep/p09.webp)
-
-Slide 9. Demo: verification evidence
-
-[![Slide 10: Photo 10: The same intent as raw Markdown: an acceptance-criterion directive with an ID, status=met, verifiedBy and evidence attributes, and a task directive with status=done and criteria pointing at the criterion ID.](../slides/wait-you-re-still-doing-prs/deep/p10.webp)](../slides/wait-you-re-still-doing-prs/deep/p10.webp)
-
-Slide 10. Demo: Markdown directives
-
-[![Slide 11: Photo 11: Output of atomic intent graph 1: a tree of the intent's tasks, acceptance criteria, scope items, constraints, 12 files, two findings (MissingAttestation, MissingPlanId), identities and a provenance graph.](../slides/wait-you-re-still-doing-prs/deep/p11.webp)](../slides/wait-you-re-still-doing-prs/deep/p11.webp)
-
-Slide 11. Demo: intent graph tree
-
-[![Slide 12: Photo 12: Output of atomic intent graph 1 --details: URN identifiers and types for Identity, ProvenanceGraph (blake3-256), Session and SessionTurn, with predicates hasTurn, generatedChange and turnExplainedBy, and views dev and late-morning-ba24 linked by childViewOf.](../slides/wait-you-re-still-doing-prs/deep/p12.webp)](../slides/wait-you-re-still-doing-prs/deep/p12.webp)
-
-Slide 12. Demo: graph details
-
-[![Slide 13: Photo 13: HTML graph of the change record: Intent 1, 0 implementing, 1 intent-artifact recording, 1 dependency-only change. Legend of node types: AcceptanceCriterion, Change, Constraint, FeatureIntent, File, Finding, Identity, ProvenanceGraph, ScopeItem, Session, SessionTurn, Task, View.](../slides/wait-you-re-still-doing-prs/deep/p13.webp)](../slides/wait-you-re-still-doing-prs/deep/p13.webp)
-
-Slide 13. Demo: graph view
-
-[![Slide 14: Photo 14: Node details for one change: a BLAKE3-256 content address, type atomic.dev/ns/workflow#Change, source vcs, 1 of 1 unique changes with AI provenance, and a cost of \$0.076934 with input, output, reasoning and cache breakdowns.](../slides/wait-you-re-still-doing-prs/deep/p14.webp)](../slides/wait-you-re-still-doing-prs/deep/p14.webp)
-
-Slide 14. Demo: a change's cost
-
-[![Slide 15: Photo 15: A new OpenCode session asks for a reviewer grant for the current view.](../slides/wait-you-re-still-doing-prs/deep/p15.webp)](../slides/wait-you-re-still-doing-prs/deep/p15.webp)
-
-Slide 15. Demo: asking for a reviewer
-
-[![Slide 16: Photo 16: Reviewer grant for the current view: read and record only, 1-hour lifetime, no existing agents or delegation certificates. The agent asks to confirm the target view, a non-author reviewer with a separately provisioned directory, a change budget, and approval including revocation and retirement of the disposable reviewer key. The grant will not authorize insertion into the target.](../slides/wait-you-re-still-doing-prs/deep/p16.webp)](../slides/wait-you-re-still-doing-prs/deep/p16.webp)
-
-Slide 16. Demo: reviewer grant terms
-
-[![Slide 17: Photo 17: The review stops: both author sessions are still active and lack the completion signatures Atomic requires. The agent did not delete anything, bypass the gate or create a VM or production grant. Still outstanding: connect the CLI's changed files to the original intent and complete an independent review. No repository files changed; nothing was inserted into dev. 88.9K tokens, \$0.43.](../slides/wait-you-re-still-doing-prs/deep/p17.webp)](../slides/wait-you-re-still-doing-prs/deep/p17.webp)
-
-Slide 17. Demo: the gate holds

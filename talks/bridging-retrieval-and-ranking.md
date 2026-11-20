@@ -1,12 +1,22 @@
 ---
 title: "Bridging Retrieval and Ranking: From LLM Embeddings and Graph Features to a GPU-Served DLRM"
+kind: "talk"
+speakers: ["Sudarshan Srinivasa Ramanujam"]
+track: "Engineering AI Systems"
+day: "2026-11-17"
+time: "15:55"
+session_url: "https://qconsf.com/presentation/nov2026/bridging-retrieval-and-ranking-llm-embeddings-and-graph-features-gpu-served"
+topics_central: ["Context and retrieval", "Cost and value"]
+topics_touched: ["Verification"]
+slides: "gallery/bridging-retrieval-and-ranking.md"
+summary: "LinkedIn moved a full ranking model into Feed retrieval on GPUs. Who posted it carried more signal than LLM embeddings, and the serving tricks took one GPU from 75 to 700 QPS."
 ---
 
 # Bridging Retrieval and Ranking: From LLM Embeddings and Graph Features to a GPU-Served DLRM
 
 **Speaker:** Sudarshan Srinivasa Ramanujam (Lead Engineer, LinkedIn)  
 QCon SF 2026 · Engineering AI Systems · Tue Nov 17, 15:55 · Pacific DEKJ  
-[Session page](https://qconsf.com/presentation/nov2026/bridging-retrieval-and-ranking-llm-embeddings-and-graph-features-gpu-served)
+[Session page](https://qconsf.com/presentation/nov2026/bridging-retrieval-and-ranking-llm-embeddings-and-graph-features-gpu-served) · [All 20 slides](../gallery/bridging-retrieval-and-ranking.md)
 
 > LinkedIn moved a full ranking model into Feed retrieval on GPUs. Who posted it carried more signal than LLM embeddings, and the serving tricks took one GPU from 75 to 700 QPS.
 
@@ -47,11 +57,11 @@ The ranker sees semantics from the LLM, author affinity, request context, post f
 
 ![Funnel diagram: feed and recsys, search, ads and RAG for LLMs all feed a corpus of millions to billions of items. Retrieval with kNN or ANN, cheap per item, leaves thousands. Ranking, a rich expensive model, scores hundreds. Then what the user sees. Banner: if retrieval misses it, no ranker downstream can save it.](../slides/bridging-retrieval-and-ranking/deep/s03.webp)
 
-Slide 3. Every AI product you ship is a funnel.
+*Slide 3: Every AI product you ship is a funnel.*
 
 ![Diagram: ranking, a full DLRM over hundreds of candidates, can use semantics from an LLM, author affinity, request context, post features and feature crosses. Retrieval, a dot product over 1.3 billion documents, can use only semantics. Arrow: pull ranking signals down.](../slides/bridging-retrieval-and-ranking/deep/s04.webp)
 
-Slide 4. The ranker knows things the retriever never sees.
+*Slide 4: The ranker knows things the retriever never sees.*
 
 Recall at the top of the funnel is the ceiling on quality at the bottom.
 
@@ -63,11 +73,11 @@ They tried the same fine-tuned LLM embeddings on connected content and engagemen
 
 ![Diagram of a viewer's network with first and second degree connections. Unconnected content: every post on LinkedIn, matched on what it says; LLM embeddings were enough. Connected content, this talk: tens of thousands per viewer of 1.3 billion, needing what it says plus who posted it. Embeddings alone lost engagement in A/B tests.](../slides/bridging-retrieval-and-ranking/deep/s06.webp)
 
-Slide 6. Connected content: who posted it matters.
+*Slide 6: Connected content: who posted it matters.*
 
 ![Slide: post embeddings from CIKM 2025 applied retrieval at scale. Suggested content with larger LLMs gave an A/B lift. Connected content with the same embeddings saw engagement fall. Same topic, two authors: your teammate and someone you met once. Content match for both, edge strong for one and none for the other.](../slides/bridging-retrieval-and-ranking/deep/s07.webp)
 
-Slide 7. Why bigger LLM embeddings were not enough.
+*Slide 7: Why bigger LLM embeddings were not enough.*
 
 ### From a dot product to a full model (slides 8–13)
 
@@ -77,7 +87,7 @@ The starting point was GPU retrieval as ranking from LiNR (CIKM 2024): keep ever
 
 ![Before: GPU-RAR from LiNR, CIKM 2024. Score the whole corpus with a viewer embedding and a document embedding, no edge features, using a dot product or weighted dot product, then top K. Now: a full DLRM at retrieval. Filter 1.3 billion to tens of thousands, combine request, document and edge features, score with any DLRM batched across requests of different sizes, then top K.](../slides/bridging-retrieval-and-ranking/deep/s10.webp)
 
-Slide 10. Same GPU-resident index, a full model instead of a dot product.
+*Slide 10: Same GPU-resident index, a full model instead of a dot product.*
 
 ### Where does doc X live? (slides 14–16)
 
@@ -89,11 +99,11 @@ Freshness is the other half. Bootstrap loads the index in big batches before ser
 
 ![Diagram: ingestion writes and scoring reads both go through a CPU map from doc ID to row, pointing into GPU feature tensors per shard. Ingestion lookup 52x faster batch inserts. Request lookup for a batch of 8 drops from 47 ms to 1 ms versus GPU sorted search. Cost: a few GB of host memory per shard.](../slides/bridging-retrieval-and-ranking/deep/s15.webp)
 
-Slide 15. One CPU hash map per shard.
+*Slide 15: One CPU hash map per shard.*
 
 ![Slide: bootstrap loads hundreds of thousands of docs in one big batch before serving. Steady state interleaves upserts and scoring with 50x smaller batches and lag under a minute. One read-write lock per shard; compaction runs every few minutes.](../slides/bridging-retrieval-and-ranking/deep/s16.webp)
 
-Slide 16. Staying fresh while serving.
+*Slide 16: Staying fresh while serving.*
 
 The GPU keeps the dense math. The CPU keeps the map.
 
@@ -107,19 +117,19 @@ He was candid about his first guess. He expected a batch of 8 to give 8 times th
 
 ![Joining edge features: N candidates, tens of thousands, each with an author; K edges, a few thousand authors, by action and window. Naive scan per post is O(N times K), about 10 to the 7. Sort once and binary search is O((N plus K) log K), up to 200x fewer operations. No match gives zeros.](../slides/bridging-retrieval-and-ranking/deep/s17.webp)
 
-Slide 17. Viewer-to-author affinity joins in per request, without a scan.
+*Slide 17: Viewer-to-author affinity joins in per request, without a scan.*
 
 ![Batching requests of different sizes: form a batch with uneven sizes up to a max size or wait limit; gather once over real candidates only, using positions from the CPU map, one slice per request; then scatter and pad to the longest so edge, doc and ID features stay aligned.](../slides/bridging-retrieval-and-ranking/deep/s18.webp)
 
-Slide 18. Gather once, then scatter and pad.
+*Slide 18: Gather once, then scatter and pad.*
 
 ![Timeline: with one CUDA stream, transfers and compute take turns and batch 3 returns late. With two streams, transfers hide behind compute: form batch 3, compute batch 2 and return batch 1 at once.](../slides/bridging-retrieval-and-ranking/deep/s19.webp)
 
-Slide 19. Overlapping batches on CUDA streams.
+*Slide 19: Overlapping batches on CUDA streams.*
 
 ![Bar chart of QPS per GPU per replica at p99 under 120 ms: GPU lookup one at a time 75 (1.0x); GPU lookup plus batching 120 (1.6x); CPU map plus batching plus streams 700 (9.3x). Why batching barely helped: GPU lookup for a batch of 8 took about 47 ms; CPU lookup unlocked batching.](../slides/bridging-retrieval-and-ranking/deep/s20.webp)
 
-Slide 20. Putting it together: 9.3x throughput.
+*Slide 20: Putting it together: 9.3x throughput.*
 
 Remove the irregular bottleneck first. Then batching pays off.
 
@@ -143,11 +153,11 @@ On model size, quality saturates and cost keeps growing. Each doubling of MLP pa
 
 ![Infra results on H200 GPUs, 400 million docs per GPU, p99 at most 120 ms with ingestion running: 9.3x throughput, 75 to 700 QPS per GPU; ID lookup 47 to 1 ms for a batch of 8; 52x faster batch inserts; under 1 minute ingestion lag while serving; about 8% QPS for ten experiments, 600 to 550 QPS.](../slides/bridging-retrieval-and-ranking/deep/s23.webp)
 
-Slide 23. What the serving stack delivers.
+*Slide 23: What the serving stack delivers.*
 
 ![Table: parameters versus offline delta Recall@10 and relative QPS. 4x +0.11% at 0.93x, 8x +0.15% at 0.89x, 15x +0.16% at 0.78x, 40x +0.20% at 0.67x, 75x +0.20% at 0.56x, 400x out of GPU memory. Each doubling of MLP parameters costs roughly 10 to 15% QPS.](../slides/bridging-retrieval-and-ranking/deep/s24.webp)
 
-Slide 24. Why O(10⁷) parameters.
+*Slide 24: Why O(10⁷) parameters.*
 
 Measure quality and throughput together. 75 times the parameters bought +0.20% recall for 44% less throughput.
 
@@ -161,21 +171,21 @@ Two audience questions were useful. How do embedding or feature changes reach do
 
 ![Bar chart of Recall@10 change with one input removed at a time: no viewer-to-author edge features minus 7.86%; no LLM embedding content features minus 3.05%; no item count features minus 2.5%. Who posted it carries signal content alone misses.](../slides/bridging-retrieval-and-ranking/deep/s25.webp)
 
-Slide 25. Edge features matter most, by a wide margin.
+*Slide 25: Edge features matter most, by a wide margin.*
 
 ![Bar chart of content time spent lift by number of connections: under 30, +0.580%; 30 to 89, +1.055%; 90 to 499, +2.466%; 500 to 999, +3.066%; 1000 to 1999, +2.885%; 2000 and up, +2.092%.](../slides/bridging-retrieval-and-ranking/deep/s27.webp)
 
-Slide 27. Every connection cohort gained.
+*Slide 27: Every connection cohort gained.*
 
 ![What's next: memory, a CPU feature index for room for bigger models; contention, lock-free updates; sparsity, sparse tensors for less memory and transfer; scheduling, dynamic batching tuned per model; modeling, newer architectures and larger models instead of a multi-task MLP.](../slides/bridging-retrieval-and-ranking/deep/s28.webp)
 
-Slide 28. What’s next: freeing GPU memory and removing static limits.
+*Slide 28: What’s next: freeing GPU memory and removing static limits.*
 
 ![Takeaways: relevance depends on who posted it, put edge features in the model (minus 7.86% recall without). Features change fast, index them next to the model (lag under a minute). GPU waiting on irregular work, move it to the CPU then batch (75 to 700 QPS). Scaling parameters, measure quality and throughput together (+0.20% for 0.56x QPS). Many experiments, share the index and separate the queues (ten for about 8% QPS).](../slides/bridging-retrieval-and-ranking/deep/s29.webp)
 
-Slide 29. Takeaways.
+*Slide 29: Takeaways.*
 
-## Numbers we checked
+## Numbers I checked
 
 Checked on Nov 17, 2026. The preprint is the team’s own paper, so it confirms what they reported, not an independent result.
 
@@ -280,84 +290,3 @@ A language-agnostic code index format for definitions and references. A source o
 - [Drawing the Rest of the Owl](drawing-the-rest-of-the-owl.md) (Harness, earlier today). A context engine for code, the same retrieval problem for code.
 - [Skills, memory or fine-tuning](skills-memory-or-fine-tuning.md) (Monday). Where context should live for agents.
 
-## All slides
-
-[![Slide: About me and published work](../slides/bridging-retrieval-and-ranking/deep/s02.webp)](../slides/bridging-retrieval-and-ranking/deep/s02.webp)
-
-Slide 2. About me and published work
-
-[![Slide: Every AI product you ship is a funnel](../slides/bridging-retrieval-and-ranking/deep/s03.webp)](../slides/bridging-retrieval-and-ranking/deep/s03.webp)
-
-Slide 3. Every AI product you ship is a funnel
-
-[![Slide: The ranker knows things the retriever never sees](../slides/bridging-retrieval-and-ranking/deep/s04.webp)](../slides/bridging-retrieval-and-ranking/deep/s04.webp)
-
-Slide 4. The ranker knows things the retriever never sees
-
-[![Slide: What you will walk away with](../slides/bridging-retrieval-and-ranking/deep/s05.webp)](../slides/bridging-retrieval-and-ranking/deep/s05.webp)
-
-Slide 5. What you will walk away with
-
-[![Slide: The problem: connected content](../slides/bridging-retrieval-and-ranking/deep/s06.webp)](../slides/bridging-retrieval-and-ranking/deep/s06.webp)
-
-Slide 6. The problem: connected content
-
-[![Slide: Why bigger LLM embeddings were not enough](../slides/bridging-retrieval-and-ranking/deep/s07.webp)](../slides/bridging-retrieval-and-ranking/deep/s07.webp)
-
-Slide 7. Why bigger LLM embeddings were not enough
-
-[![Slide: GPU retrieval as ranking: where we started, what we added](../slides/bridging-retrieval-and-ranking/deep/s10.webp)](../slides/bridging-retrieval-and-ranking/deep/s10.webp)
-
-Slide 10. GPU retrieval as ranking: where we started, what we added
-
-[![Slide: Two paths, one question: where does doc X live?](../slides/bridging-retrieval-and-ranking/deep/s14.webp)](../slides/bridging-retrieval-and-ranking/deep/s14.webp)
-
-Slide 14. Two paths, one question: where does doc X live?
-
-[![Slide: One CPU hash map per shard](../slides/bridging-retrieval-and-ranking/deep/s15.webp)](../slides/bridging-retrieval-and-ranking/deep/s15.webp)
-
-Slide 15. One CPU hash map per shard
-
-[![Slide: Staying fresh while serving](../slides/bridging-retrieval-and-ranking/deep/s16.webp)](../slides/bridging-retrieval-and-ranking/deep/s16.webp)
-
-Slide 16. Staying fresh while serving
-
-[![Slide: Joining edge features](../slides/bridging-retrieval-and-ranking/deep/s17.webp)](../slides/bridging-retrieval-and-ranking/deep/s17.webp)
-
-Slide 17. Joining edge features
-
-[![Slide: Batching requests of different sizes](../slides/bridging-retrieval-and-ranking/deep/s18.webp)](../slides/bridging-retrieval-and-ranking/deep/s18.webp)
-
-Slide 18. Batching requests of different sizes
-
-[![Slide: Overlapping batches on CUDA streams](../slides/bridging-retrieval-and-ranking/deep/s19.webp)](../slides/bridging-retrieval-and-ranking/deep/s19.webp)
-
-Slide 19. Overlapping batches on CUDA streams
-
-[![Slide: Putting it together: 9.3x throughput](../slides/bridging-retrieval-and-ranking/deep/s20.webp)](../slides/bridging-retrieval-and-ranking/deep/s20.webp)
-
-Slide 20. Putting it together: 9.3x throughput
-
-[![Slide: Infra results](../slides/bridging-retrieval-and-ranking/deep/s23.webp)](../slides/bridging-retrieval-and-ranking/deep/s23.webp)
-
-Slide 23. Infra results
-
-[![Slide: Why O(10⁷) parameters](../slides/bridging-retrieval-and-ranking/deep/s24.webp)](../slides/bridging-retrieval-and-ranking/deep/s24.webp)
-
-Slide 24. Why O(10⁷) parameters
-
-[![Slide: Which features matter](../slides/bridging-retrieval-and-ranking/deep/s25.webp)](../slides/bridging-retrieval-and-ranking/deep/s25.webp)
-
-Slide 25. Which features matter
-
-[![Slide: Every connection cohort gained](../slides/bridging-retrieval-and-ranking/deep/s27.webp)](../slides/bridging-retrieval-and-ranking/deep/s27.webp)
-
-Slide 27. Every connection cohort gained
-
-[![Slide: What&#x27;s next](../slides/bridging-retrieval-and-ranking/deep/s28.webp)](../slides/bridging-retrieval-and-ranking/deep/s28.webp)
-
-Slide 28. What&#x27;s next
-
-[![Slide: Takeaways](../slides/bridging-retrieval-and-ranking/deep/s29.webp)](../slides/bridging-retrieval-and-ranking/deep/s29.webp)
-
-Slide 29. Takeaways

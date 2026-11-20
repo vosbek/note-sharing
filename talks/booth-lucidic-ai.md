@@ -1,5 +1,9 @@
 ---
 title: "Lucidic AI: tuning the harness around production agents"
+kind: "booth"
+company: "Lucidic AI"
+day: "2026-11-16"
+summary: "Lucidic AI sells agent optimization: it tunes an agent's prompts, tools, context, memory and policies, or trains the model and harness together."
 ---
 
 # Lucidic AI: tuning the harness around production agents
@@ -14,7 +18,7 @@ Booth visit: Lucidic AI · QCon SF 2026 · Mon Nov 16
 - Their site says it builds a simulated copy of a company's tools, data and customers, then replays failed agent runs from the step that went wrong.
 - Their site reports benchmark wins, including a ServiceNow case study; these are the vendor's own figures, without the models or conditions behind most of them.
 
-Booth, Monday Nov 16. Sources: Lucidic AI's site, docs and published benchmarks, read Nov 17, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Monday Nov 16. Sources: Lucidic AI's site, docs and published benchmarks, read Nov 17, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

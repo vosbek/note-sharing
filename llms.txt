@@ -1,0 +1,57 @@
+# QCon San Francisco 2026 notes
+
+> Notes from QCon San Francisco 2026 (November 16 to 19): 21 sessions and 17 expo booths, with each speaker's main points, slides, every quoted figure checked against its source, and the tools, papers and repos that came up.
+
+Structured data for every page, including speakers, topics, key points, checked figures and links, is in talks.json.
+
+## Start here
+
+- [Themes across the conference](themes.md): eight topics that ran through the talks and how ten companies handle agent-written code
+- [Numbers I checked](numbers.md): every figure quoted in the talks, with source and status
+- [Repos and links](links.md): every external link, grouped by kind
+- [Tools and technologies](tools.md): tools, settings and practices named on stage or at a booth
+- [talks.json](talks.json): all of the above as JSON
+
+## Talks
+
+- [The Harness Is the New Operating System](talks/the-harness-is-the-new-operating-system.md): A coding agent is a model plus a harness, and the harness decides much of what the agent can do and is allowed to do.
+- [Running Software Factory Efficiently at Uber Scale: Holding Agent Spend Steady While Requests Grew 9X](talks/running-software-factory-efficiently-at-uber-scale.md): How Uber grew agent requests 15x while holding weekly AI spend level, by splitting spend into six measurable terms and pulling one lever on each.
+- [Beyond the Model: Engineering the Agent Harness for Autonomous Software Delivery](talks/beyond-the-model-engineering-the-agent-harness.md): IBM pitched Bob as a harness for the whole software lifecycle, with modes, rules, skills, hooks and human approval gates around the model.
+- [Stop Fighting the Remodel: API Design for Models That Outgrew Their Boundaries](talks/stop-fighting-the-remodel.md): How Netflix's Entity Services team found its shared vendor model no longer fit the business, and is rebuilding it in stages while agents start calling its APIs.
+- [Generation Got Cheap, Trust Didn't: Scaling Agentic Changes from Prompt to Prod at Roblox](talks/generation-got-cheap-trust-didnt.md): Roblox's Kushan Mehta and Jay Moorthi showed how agent-written changes reach production. AI review is built from Roblox's own review history, owners set the risk gates, and telemetry traces every merged line and LLM call.
+- [Into the Labyrinth: What Distributed Systems Have Taught Us About Guardrails](talks/into-the-labyrinth.md): Why agent-written code should be treated like a distributed system, and how property-based testing, fault injection and deterministic simulation let people state what correct means while machines search for violations.
+- [Wait, You're Still Doing PRs?](talks/wait-you-re-still-doing-prs.md): Lee Faus of Atomic argued that pull requests don't fit agent-written code and showed Atomic, which records each change against an intent and has a separate identity review it.
+- [Learning Out Loud (Under Near-Existential Pressure)](talks/learning-out-loud-under-near-existential-pressure.md): Photoshop engineer and former language teacher Laura Savino argued that the engineers who adapt fastest to AI are the ones willing to learn in public. Enthusiasts, she said, spread adoption by invitation, not pressure.
+- [Skills, Memory, or Fine-Tuning? The Engineering Loop Behind Production Agents](talks/skills-memory-or-fine-tuning.md): Lucidic AI's CEO sorts every bad agent trace into six failure types, each with a ladder of fixes. Most fixes are small scoped calls, curated skills and cleaned-up memory, tested on held-out cases.
+- [Use AI to Multiply Your Team as a Staff Engineer](talks/use-ai-to-multiply-your-team-as-a-staff-engineer.md): Pinterest's Jordan Cutler turned the corrections he kept giving AI agents into shared skills, a one-command path to a reviewed PR, and scheduled agents that run whole migrations.
+- [Drawing the Rest of the Owl: A Blueprint for Your Software Factory](talks/drawing-the-rest-of-the-owl.md): Cosmos's product lead, a month after Harness bought it from Augment Code, lays out how to build a software factory. Fix environments and CI first, then automate code review end to end.
+- [Lessons from Building a $100M Product in Six Weeks at OpenAI](talks/building-a-100m-product-at-openai.md): ChatGPT Ads' first engineer on directing coding agents like a manager. A verification ladder ends in a sandbox fed with copies of live traffic, and the mental model lives in the system.
+- [Bridging Retrieval and Ranking: From LLM Embeddings and Graph Features to a GPU-Served DLRM](talks/bridging-retrieval-and-ranking.md): LinkedIn moved a full ranking model into Feed retrieval on GPUs. Who posted it carried more signal than LLM embeddings, and the serving tricks took one GPU from 75 to 700 QPS.
+- [The Execution Muscle: Why Great Teams Are Built, Not Hired](talks/the-execution-muscle-why-great-teams-are-built-not-hired.md): A business psychologist on why projects stall on people more than code, and three daily habits that build trust, shared ownership and feedback.
+- [How Netflix Retrofitted Its SDLC for AI Coding Agents](talks/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents.md): How Netflix's commerce UI team made coding agents reliable by recording one way to do each thing in the repo, then adding agents to CI and shared context.
+- [Legacy as Leverage: How Brownfield Work Builds Technical Judgment](talks/legacy-as-leverage-how-brownfield-work-builds-technical-judgment.md): Shine Garg on how years of legacy work built her technical judgment, and why judgment alone couldn't stop a schema ecosystem from outgrowing its governance.
+- [Observability: The Missing Control Plane for Agentic Engineering](talks/observability-the-missing-control-plane-for-agentic-engineering.md): Rachael Wonnacott on why production observability, not more tests, should decide what an AI agent may do without a human. She adds a maturity ladder for agents that use the platform directly.
+- [You Can't Read the Code Anymore - Verifying Software in the Age of AI](talks/you-cant-read-the-code-anymore.md): Forter's Omer van Kloeten on reviewing behavior instead of code: agents backfill plain-English Cucumber tests into existing services, and a strict, fully faked harness makes those tests trustworthy.
+- [How To Kill the Code Review](talks/how-to-kill-the-code-review.md): Aviator's Ankit Jain on keeping code review while killing line-by-line reading: agents find bugs and enforce team rules, and people review the decisions behind each change.
+- [Game Time: How to (Unsuccessfully) 10x in a Week & (Successfully) 10x in a Year](talks/game-time-10x-in-a-week-and-in-a-year.md): Ro's Plum Ertz on how a last-minute 2025 Super Bowl ad overwhelmed its intake site. Then a year of targets, tabletop rehearsals and queueing made the 2026 ad a non-event for the system.
+- [AI-Assisted Coding Master Class: Build Your Mission Control](talks/ai-assisted-coding-master-class-build-your-mission-control.md): A half-day training. Sepehr Khosravi covered running a personal AI coding stack; Dev Bali gave a ladder of tests, from types and contracts up to formal proofs, for trusting AI-written code.
+
+## Booths
+
+- [Antithesis](talks/booth-antithesis.md): Antithesis runs a whole system inside a deterministic hypervisor, injects faults and replays any failure exactly, and pitches it as a check on agent-written pull requests.
+- [Arcjet](talks/booth-arcjet.md): Arcjet enforces security policy at the moment an agent acts: in application code through an SDK, and in coding agents such as Claude Code and Copilot through their hooks.
+- [Atomic](talks/booth-atomic.md): Atomic is a version control system, from Atomic Software, that records who made each change, why, which AI model helped and how it was reviewed.
+- [Azul](talks/booth-azul.md): Azul sells Java runtimes and support. Its Code Inventory product reports which Java classes and methods actually run in production.
+- [GitKraken](talks/booth-gitkraken.md): GitKraken Insights is a performance platform that tracks AI coding agents' output, cost and changes reaching production.
+- [Lucidic AI](talks/booth-lucidic-ai.md): Lucidic AI sells agent optimization: it tunes an agent's prompts, tools, context, memory and policies, or trains the model and harness together.
+- [Materialize](talks/booth-materialize.md): Materialize keeps SQL views over operational databases, ERPs and CRMs up to date as the data changes, and offers them to agents as live context.
+- [Nutrient](talks/booth-nutrient.md): Nutrient's Data Extraction API parses documents into JSON or Markdown and pulls named fields, with citations, against a schema you supply.
+- [Sonar](talks/booth-sonar.md): Sonar Vortex gives coding agents a project's rules and context before they write, then checks each change against SonarQube analysis as they work.
+- [Tacnode](talks/booth-tacnode.md): Tacnode sells a Context Lake: one store that holds what an automated decision reads and what it decided, kept current in one consistent snapshot.
+- [Unblocked](talks/booth-unblocked.md): Unblocked gives coding agents context from conversations, issues, docs and production systems as well as code.
+- [groundcover](talks/booth-groundcover.md): groundcover collects logs, traces and metrics with an eBPF sensor and keeps them in your own cloud, and lets Claude Code or Cursor query them through an MCP server.
+- [Nu](talks/booth-nu.md): Nu (Nubank) is a Latin American digital bank, not a tool vendor; it sponsored QCon to hire engineers and gave a Monday talk on the infrastructure behind Brazil's Pix payments.
+- [OutSystems](talks/booth-outsystems.md): OutSystems now calls itself an agentic systems platform: its own agent builds apps, and Claude Code, Codex, Cursor or Kiro can build, deploy and roll back through its Coding MCP.
+- [Testkube](talks/booth-testkube.md): Testkube orchestrates the test tools teams already have from runners in their own clusters, and adds AI test authoring, failure-triage agents and an MCP server.
+- [TuxCare](talks/booth-tuxcare.md): TuxCare supplies open-source packages rebuilt from source and keeps patching them after upstream support ends, served from a repository you point Artifactory at.
+- [YugabyteDB](talks/booth-yugabytedb.md): Yugabyte sells a distributed, PostgreSQL-compatible database and now pitches it for agents: isolated databases that scale to zero, branches to test against, and an MCP server.

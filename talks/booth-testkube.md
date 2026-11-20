@@ -1,5 +1,9 @@
 ---
-title: "Testkube: existing test suites run inside your own Kubernetes clusters, reachable from agents"
+title: "Testkube: existing test suites run inside our own Kubernetes clusters, reachable from agents"
+kind: "booth"
+company: "Testkube"
+day: "2026-11-18"
+summary: "Testkube orchestrates the test tools teams already have from runners in their own clusters, and adds AI test authoring, failure-triage agents and an MCP server."
 ---
 
 # Testkube: existing test suites run inside your own Kubernetes clusters, reachable from agents
@@ -16,7 +20,7 @@ Booth visit: Testkube · QCon SF 2026 · Wed Nov 18
 - The MCP server exposes the full API to Claude, Cursor, Copilot and other clients, and is the one AI feature included in the free open-source tier.
 - The pricing page lists Pro at $700 a month per runner agent with 50 AI sessions, and Enterprise at a custom price. Paid AI plans use your own OpenAI or Anthropic account.
 
-Booth, Wednesday Nov 18. Sources: Testkube's homepage, AI page, pricing page and MCP docs, read Nov 18, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Wednesday Nov 18. Sources: Testkube's homepage, AI page, pricing page and MCP docs, read Nov 18, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

@@ -1,5 +1,9 @@
 ---
 title: "Materialize: a live context layer kept current from operational data"
+kind: "booth"
+company: "Materialize"
+day: "2026-11-16"
+summary: "Materialize keeps SQL views over operational databases, ERPs and CRMs up to date as the data changes, and offers them to agents as live context."
 ---
 
 # Materialize: a live context layer kept current from operational data
@@ -15,7 +19,7 @@ Booth visit: Materialize · QCon SF 2026 · Mon Nov 16
 - It comes as a managed cloud, self-managed in your own cloud, or a local emulator, and the page mentions air-gapped deployment; pricing is not shown.
 - The customer figures on the page, such as a 30x cut in context engineering cycle time at Zepz, are the vendor's own.
 
-Booth, Monday Nov 16. Sources: Materialize's site and docs, read Nov 17, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Monday Nov 16. Sources: Materialize's site and docs, read Nov 17, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

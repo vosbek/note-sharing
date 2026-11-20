@@ -1,12 +1,22 @@
 ---
 title: "The Harness Is the New Operating System"
+kind: "talk"
+speakers: ["Manju Rajashekhar"]
+track: "Keynote"
+day: "2026-11-16"
+time: "09:00"
+session_url: "https://qconsf.com/keynote/nov2026/harness-new-operating-system"
+topics_central: ["Harness design", "Isolation and permissions"]
+topics_touched: ["Code review at volume", "Verification", "Context and retrieval"]
+slides: "gallery/the-harness-is-the-new-operating-system.md"
+summary: "A coding agent is a model plus a harness, and the harness decides much of what the agent can do and is allowed to do."
 ---
 
 # The Harness Is the New Operating System
 
 **Speaker:** Manju Rajashekhar (Founder & CEO, Mad Labs)  
 QCon SF 2026 · Keynote · Mon Nov 16, 09:00 · Grand Ballroom  
-[Session page](https://qconsf.com/keynote/nov2026/harness-new-operating-system)
+[Session page](https://qconsf.com/keynote/nov2026/harness-new-operating-system) · [All 40 slides](../gallery/the-harness-is-the-new-operating-system.md)
 
 > A coding agent is a model plus a harness, and the harness decides much of what the agent can do and is allowed to do.
 
@@ -55,11 +65,11 @@ limits what the model’s actions can touch.
 
 ![Slide 3: Every agent struggles. Goes in circles, works on the wrong thing, gives up halfway.](../slides/the-harness-is-the-new-operating-system/deep/s03.webp)
 
-Slide 3. The three ways agents struggle.
+*Slide 3: The three ways agents struggle.*
 
 ![Slide 7: Model inherent capability plus harness tools, information, feedback equals agent effective capability.](../slides/the-harness-is-the-new-operating-system/deep/s07.webp)
 
-Slide 7. Weak model, weak harness, or weak instructions?
+*Slide 7: Weak model, weak harness, or weak instructions?*
 
 ### Same model, different harness, different results (slides 8–10)
 
@@ -86,15 +96,15 @@ The second example changes how work is organized. The GVS5H paper ([arXiv 2608.2
 | Qwen3.8-27B, manager-worker scaffold    | 92.4%     |
 | Claude Fable 5, single call             | 90.4%     |
 
-Slide 10 was too blurry to read in our photo; the figures above come from the paper as reported by independent write-ups. The comparison is uneven by design: the scaffold gets up to 10 manager-worker rounds plus test feedback, while the frontier model gets one call. The paper also found the scaffold did nothing or hurt for some models.
+Slide 10 was too blurry to read in my photo; the figures above come from the paper as reported by independent write-ups. The comparison is uneven by design: the scaffold gets up to 10 manager-worker rounds plus test feedback, while the frontier model gets one call. The paper also found the scaffold did nothing or hurt for some models.
 
 ![Slide 8: Same model, different harnesses, different results. DeepSeek V4.1 Flash table.](../slides/the-harness-is-the-new-operating-system/deep/s08.webp)
 
-Slide 8. DeepSeek V4.1-Flash across eight harnesses.
+*Slide 8: DeepSeek V4.1-Flash across eight harnesses.*
 
 ![Slide 9: A harness can change how a model works through a problem. Single call versus manager-worker scaffold with shared ledger.](../slides/the-harness-is-the-new-operating-system/deep/s09.webp)
 
-Slide 9. Single call versus the manager-worker scaffold.
+*Slide 9: Single call versus the manager-worker scaffold.*
 
 ### The harness decides what an agent may touch (slides 11–15)
 
@@ -112,11 +122,11 @@ The better gate has three parts: **isolation** (where it runs, which limits how 
 
 ![Slide 12: When OpenAI's agents broke into Hugging Face. Evaluation agents, package proxy, out to the internet, launchpad, Hugging Face.](../slides/the-harness-is-the-new-operating-system/deep/s12.webp)
 
-Slide 12. The July 2026 OpenAI and Hugging Face incident. The final build adds: “Reward hacking, far beyond what the job required.”
+*Slide 12: The July 2026 OpenAI and Hugging Face incident. The final build adds: “Reward hacking, far beyond what the job required.”*
 
 ![Slide 15: Give the agent room to work, within its authority. People reviewing prompts 13.6 percent, auto-mode classifier 89 percent.](../slides/the-harness-is-the-new-operating-system/deep/s15.webp)
 
-Slide 15. Isolation, scoped credentials, selective review.
+*Slide 15: Isolation, scoped credentials, selective review.*
 
 ### The simplest agent is a model in a loop (slides 16–18)
 
@@ -138,11 +148,11 @@ Not all guidance belongs up front. A team’s checklist for debugging test failu
 
 ![Slide 20: Guidance sets the role and the rules. System prompt: you review code, find bugs, cite the lines. AGENTS.md rules.](../slides/the-harness-is-the-new-operating-system/deep/s20.webp)
 
-Slide 20. Swap the role and the same harness reviews code.
+*Slide 20: Swap the role and the same harness reviews code.*
 
 ![Slide 21: Give the model a pointer, not the whole thing. skills/debug-tests loaded on request, repository map.](../slides/the-harness-is-the-new-operating-system/deep/s21.webp)
 
-Slide 21. Progressive disclosure: pointers in context, details on request.
+*Slide 21: Progressive disclosure: pointers in context, details on request.*
 
 ### Interface: what the model can ask to do (slides 22–26)
 
@@ -167,11 +177,11 @@ Delegation isn’t free. Google and MIT’s scaling study (Kim et al., 260 confi
 
 ![Slide 23: Same model, different interface. Plain shell 11.0, agent-designed interface 18.0, whole files 12.7, without the linter 15.0.](../slides/the-harness-is-the-new-operating-system/deep/s23.webp)
 
-Slide 23. SWE-agent’s interface results.
+*Slide 23: SWE-agent’s interface results.*
 
 ![Slide 26: Spawning a subagent can also be a tool call. Decomposition helps up to plus 80 percent when it splits cleanly, hurts up to minus 70 percent when each step depends on the last.](../slides/the-harness-is-the-new-operating-system/deep/s26b.webp)
 
-Slide 26. When decomposition helps and when it hurts.
+*Slide 26: When decomposition helps and when it hurts.*
 
 ### Execution: where it runs and what it can reach (slides 27–29)
 
@@ -185,11 +195,11 @@ Why not just tell the model where the boundary is? Instructions are guidance. Ev
 
 ![Slide 28: Execution needs a way to enforce a boundary. Isolation, scoped credentials, selective review. 84 percent fewer permission prompts.](../slides/the-harness-is-the-new-operating-system/deep/s28.webp)
 
-Slide 28. The better gate, in execution.
+*Slide 28: The better gate, in execution.*
 
 ![Slide 29: Instructions can't enforce a boundary. Agent told use only test reaches test database most of the time, prod credentials unlikely but possible.](../slides/the-harness-is-the-new-operating-system/deep/s29.webp)
 
-Slide 29. Instructions can’t enforce a boundary.
+*Slide 29: Instructions can’t enforce a boundary.*
 
 ### Feedback: what actually happened (slides 30–33)
 
@@ -205,11 +215,11 @@ Not all feedback has to come from a model. [Hooks](https://code.claude.com/docs/
 
 ![Slide 32: The best feedback comes from observing the app. Application legibility: running app, logs, traces. Rectangle fill: expected versus what the app did.](../slides/the-harness-is-the-new-operating-system/deep/s32.webp)
 
-Slide 32. Reading the code is a guess; watching it run is evidence.
+*Slide 32: Reading the code is a guess; watching it run is evidence.*
 
 ![Slide 33: The harness runs the checks, not the model. Hook runs the type checker after every edit; exit hook runs the tests when the model says it's done.](../slides/the-harness-is-the-new-operating-system/deep/s33.webp)
 
-Slide 33. Hooks after every edit and before “done”.
+*Slide 33: Hooks after every edit and before “done”.*
 
 ### The harness is the new operating system (slides 34–35)
 
@@ -234,11 +244,11 @@ Adding support: LangChain held GPT-5.2-Codex fixed and improved its Deep Agents 
 
 ![Slide 37: A better model can make support unnecessary. Sonnet 4.5 resets and structured handoff struck through; Opus 4.5 automatic compaction.](../slides/the-harness-is-the-new-operating-system/deep/s37.webp)
 
-Slide 37. Context anxiety: a fix one model needed and the next didn’t.
+*Slide 37: Context anxiety: a fix one model needed and the next didn’t.*
 
 ![Slide 39: The harness can take over what the model drops. Observe, hypothesize, change, evaluate. 52.8 percent to 66.5 percent.](../slides/the-harness-is-the-new-operating-system/deep/s39.webp)
 
-Slide 39. LangChain’s trace-driven harness loop.
+*Slide 39: LangChain’s trace-driven harness loop.*
 
 ### When an agent struggles, where to look (slides 40–41)
 
@@ -254,9 +264,9 @@ Start with the job: did the application say what “done” means? Then walk the
 
 His closing ask for the week: open an agent you use and read its system prompt and tool list; then pick a task where it struggles, change one part of the loop, see whether it helps, and rerun what already worked.
 
-## Numbers we checked
+## Numbers I checked
 
-Every figure in the talk against its source. Checked means we found the same number in the source or a write-up of it; Caveat means it holds with a condition worth knowing; Slide only means we took it from the slide.
+Every figure in the talk against its source. Checked means we found the same number in the source or a write-up of it; Caveat means it holds with a condition worth knowing; Slide only means I took it from the slide.
 
 | Claim                                                    | Figure        | Source                                                                                                                                                                                                                                                                                                  | Status                       |
 |----------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
@@ -410,164 +420,3 @@ Manju pointed to these for going deeper. As of Monday evening, the last three ar
 - **Making Production Legible to Agents.** Liz Fong-Jones, Wed 11:45.
 - **Avoiding Prompt Debt & Other Context Failures.** Drew Breunig, Wed 3:55.
 
-## All slides
-
-[![Slide 1: title](../slides/the-harness-is-the-new-operating-system/deep/s01.webp)](../slides/the-harness-is-the-new-operating-system/deep/s01.webp)
-
-Slide 1. Title
-
-[![Slide 2: quick show of hands](../slides/the-harness-is-the-new-operating-system/deep/s02.webp)](../slides/the-harness-is-the-new-operating-system/deep/s02.webp)
-
-Slide 2. Show of hands
-
-[![Slide 3: every agent struggles](../slides/the-harness-is-the-new-operating-system/deep/s03.webp)](../slides/the-harness-is-the-new-operating-system/deep/s03.webp)
-
-Slide 3. Every agent struggles
-
-[![Slide 5: the application gives the agent its job](../slides/the-harness-is-the-new-operating-system/deep/s05.webp)](../slides/the-harness-is-the-new-operating-system/deep/s05.webp)
-
-Slide 5. The application gives the job
-
-[![Slide 6: model plus harness equals agent](../slides/the-harness-is-the-new-operating-system/deep/s06.webp)](../slides/the-harness-is-the-new-operating-system/deep/s06.webp)
-
-Slide 6. Model + harness = agent
-
-[![Slide 7: capability depends on model and harness](../slides/the-harness-is-the-new-operating-system/deep/s07.webp)](../slides/the-harness-is-the-new-operating-system/deep/s07.webp)
-
-Slide 7. Effective capability
-
-[![Slide 8: same model, different harnesses](../slides/the-harness-is-the-new-operating-system/deep/s08.webp)](../slides/the-harness-is-the-new-operating-system/deep/s08.webp)
-
-Slide 8. Same model, 8 harnesses
-
-[![Slide 9: manager-worker scaffold](../slides/the-harness-is-the-new-operating-system/deep/s09.webp)](../slides/the-harness-is-the-new-operating-system/deep/s09.webp)
-
-Slide 9. Manager-worker scaffold
-
-[![Slide 10: blurry bar chart of scaffold results](../slides/the-harness-is-the-new-operating-system/deep/s10.webp)](../slides/the-harness-is-the-new-operating-system/deep/s10.webp)
-
-Slide 10. Scaffold results (blurry)
-
-[![Slide 11: the harness is the gatekeeper](../slides/the-harness-is-the-new-operating-system/deep/s11.webp)](../slides/the-harness-is-the-new-operating-system/deep/s11.webp)
-
-Slide 11. The harness is the gatekeeper
-
-[![Slide 12: OpenAI agents and Hugging Face](../slides/the-harness-is-the-new-operating-system/deep/s12.webp)](../slides/the-harness-is-the-new-operating-system/deep/s12.webp)
-
-Slide 12. OpenAI and Hugging Face
-
-[![Slide 13: capability does not grant authority](../slides/the-harness-is-the-new-operating-system/deep/s13.webp)](../slides/the-harness-is-the-new-operating-system/deep/s13.webp)
-
-Slide 13. Capability isn’t authority
-
-[![Slide 14: approval fatigue](../slides/the-harness-is-the-new-operating-system/deep/s14.webp)](../slides/the-harness-is-the-new-operating-system/deep/s14.webp)
-
-Slide 14. Approval fatigue
-
-[![Slide 15: room to work within authority](../slides/the-harness-is-the-new-operating-system/deep/s15.webp)](../slides/the-harness-is-the-new-operating-system/deep/s15.webp)
-
-Slide 15. A better gate
-
-[![Slide 16: the nature of agentic work](../slides/the-harness-is-the-new-operating-system/deep/s16.webp)](../slides/the-harness-is-the-new-operating-system/deep/s16.webp)
-
-Slide 16. Agentic work
-
-[![Slide 17: a model in a loop](../slides/the-harness-is-the-new-operating-system/deep/s17.webp)](../slides/the-harness-is-the-new-operating-system/deep/s17.webp)
-
-Slide 17. A model in a loop
-
-[![Slide 18: what makes each loop iteration count](../slides/the-harness-is-the-new-operating-system/deep/s18.webp)](../slides/the-harness-is-the-new-operating-system/deep/s18.webp)
-
-Slide 18. The four parts
-
-[![Slide 19: relevant information for the next decision](../slides/the-harness-is-the-new-operating-system/deep/s19.webp)](../slides/the-harness-is-the-new-operating-system/deep/s19.webp)
-
-Slide 19. Context: working view
-
-[![Slide 20: guidance sets role and rules](../slides/the-harness-is-the-new-operating-system/deep/s20.webp)](../slides/the-harness-is-the-new-operating-system/deep/s20.webp)
-
-Slide 20. Context: role and rules
-
-[![Slide 21: a pointer, not the whole thing](../slides/the-harness-is-the-new-operating-system/deep/s21.webp)](../slides/the-harness-is-the-new-operating-system/deep/s21.webp)
-
-Slide 21. Context: pointers
-
-[![Slide 22: tool interface shapes what the model can ask](../slides/the-harness-is-the-new-operating-system/deep/s22.webp)](../slides/the-harness-is-the-new-operating-system/deep/s22.webp)
-
-Slide 22. Interface: what it can ask
-
-[![Slide 23: same model, different interface](../slides/the-harness-is-the-new-operating-system/deep/s23.webp)](../slides/the-harness-is-the-new-operating-system/deep/s23.webp)
-
-Slide 23. Interface: SWE-agent
-
-[![Slide 24: compose operations using code](../slides/the-harness-is-the-new-operating-system/deep/s24.webp)](../slides/the-harness-is-the-new-operating-system/deep/s24.webp)
-
-Slide 24. Interface: code
-
-[![Slide 25: interface shapes what enters context](../slides/the-harness-is-the-new-operating-system/deep/s25.webp)](../slides/the-harness-is-the-new-operating-system/deep/s25.webp)
-
-Slide 25. Interface: what comes back
-
-[![Slide 26, first build: subagent as a tool call](../slides/the-harness-is-the-new-operating-system/deep/s26a.webp)](../slides/the-harness-is-the-new-operating-system/deep/s26a.webp)
-
-Slide 26. Subagent as a tool call
-
-[![Slide 26, final build: when decomposition helps or hurts](../slides/the-harness-is-the-new-operating-system/deep/s26b.webp)](../slides/the-harness-is-the-new-operating-system/deep/s26b.webp)
-
-Slide 26. Decomposition helps or hurts
-
-[![Slide 27: an action needs a place to run](../slides/the-harness-is-the-new-operating-system/deep/s27.webp)](../slides/the-harness-is-the-new-operating-system/deep/s27.webp)
-
-Slide 27. Execution: a place to run
-
-[![Slide 28: enforce a boundary](../slides/the-harness-is-the-new-operating-system/deep/s28.webp)](../slides/the-harness-is-the-new-operating-system/deep/s28.webp)
-
-Slide 28. Execution: boundary
-
-[![Slide 29: instructions can't enforce a boundary](../slides/the-harness-is-the-new-operating-system/deep/s29.webp)](../slides/the-harness-is-the-new-operating-system/deep/s29.webp)
-
-Slide 29. Instructions aren’t a boundary
-
-[![Slide 30: the model needs to know what happened](../slides/the-harness-is-the-new-operating-system/deep/s30.webp)](../slides/the-harness-is-the-new-operating-system/deep/s30.webp)
-
-Slide 30. Feedback: what happened
-
-[![Slide 32: observe the app](../slides/the-harness-is-the-new-operating-system/deep/s32.webp)](../slides/the-harness-is-the-new-operating-system/deep/s32.webp)
-
-Slide 32. Feedback: observe the app
-
-[![Slide 33: the harness runs the checks](../slides/the-harness-is-the-new-operating-system/deep/s33.webp)](../slides/the-harness-is-the-new-operating-system/deep/s33.webp)
-
-Slide 33. Feedback: hooks
-
-[![Slide 34: all the parts together](../slides/the-harness-is-the-new-operating-system/deep/s34.webp)](../slides/the-harness-is-the-new-operating-system/deep/s34.webp)
-
-Slide 34. All parts together
-
-[![Slide 35: mapping to an operating system](../slides/the-harness-is-the-new-operating-system/deep/s35.webp)](../slides/the-harness-is-the-new-operating-system/deep/s35.webp)
-
-Slide 35. The OS mapping
-
-[![Slide 36: harness design is never finished](../slides/the-harness-is-the-new-operating-system/deep/s36.webp)](../slides/the-harness-is-the-new-operating-system/deep/s36.webp)
-
-Slide 36. Never finished
-
-[![Slide 37: better model makes support unnecessary](../slides/the-harness-is-the-new-operating-system/deep/s37.webp)](../slides/the-harness-is-the-new-operating-system/deep/s37.webp)
-
-Slide 37. Context anxiety
-
-[![Slide 38: responsibility stays, mechanism changes](../slides/the-harness-is-the-new-operating-system/deep/s38.webp)](../slides/the-harness-is-the-new-operating-system/deep/s38.webp)
-
-Slide 38. Mechanism changes
-
-[![Slide 39: harness takes over what the model drops](../slides/the-harness-is-the-new-operating-system/deep/s39.webp)](../slides/the-harness-is-the-new-operating-system/deep/s39.webp)
-
-Slide 39. LangChain loop
-
-[![Slide 40: where do you look](../slides/the-harness-is-the-new-operating-system/deep/s40.webp)](../slides/the-harness-is-the-new-operating-system/deep/s40.webp)
-
-Slide 40. Where to look
-
-[![Slide 41: what will you try this week](../slides/the-harness-is-the-new-operating-system/deep/s41.webp)](../slides/the-harness-is-the-new-operating-system/deep/s41.webp)
-
-Slide 41. Try this week

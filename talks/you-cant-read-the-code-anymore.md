@@ -1,12 +1,22 @@
 ---
 title: "You Can't Read the Code Anymore - Verifying Software in the Age of AI"
+kind: "talk"
+speakers: ["Omer van Kloeten"]
+track: "Code Beyond Engineers & Engineering Teams"
+day: "2026-11-18"
+time: "14:45"
+session_url: "https://qconsf.com/presentation/nov2026/you-cant-read-code-anymore-verifying-software-age-ai"
+topics_central: ["Code review at volume", "Verification"]
+topics_touched: ["Harness design", "Cost and value"]
+slides: "gallery/you-cant-read-the-code-anymore.md"
+summary: "Forter's Omer van Kloeten on reviewing behavior instead of code: agents backfill plain-English Cucumber tests into existing services, and a strict, fully faked harness makes those tests trustworthy."
 ---
 
 # You Can't Read the Code Anymore - Verifying Software in the Age of AI
 
 **Speaker:** Omer van Kloeten (Principal Engineer, Forter)  
 QCon SF 2026 · Code Beyond Engineers & Engineering Teams · Wed Nov 18, 14:45 · Ballroom BC  
-[Session page](https://qconsf.com/presentation/nov2026/you-cant-read-code-anymore-verifying-software-age-ai)
+[Session page](https://qconsf.com/presentation/nov2026/you-cant-read-code-anymore-verifying-software-age-ai) · [All 42 slides](../gallery/you-cant-read-the-code-anymore.md)
 
 > Forter's Omer van Kloeten on reviewing behavior instead of code: agents backfill plain-English Cucumber tests into existing services, and a strict, fully faked harness makes those tests trustworthy.
 
@@ -21,7 +31,7 @@ QCon SF 2026 · Code Beyond Engineers & Engineering Teams · Wed Nov 18, 14:45 �
 - A walkthrough skill explains the suite top down in HTML for review in crit; Omer said subject matter experts' surprises are a success, not a failure.
 - His slide put the cost at hundreds to thousands of dollars in tokens per system and 1 to 2 agent hours per flow. Human review took days for simple systems and about four engineering months for billing.
 
-From an audio recording and 62 photos of the deck, kept here as 41 slides plus one close-up. The deck shows no slide numbers, so slides are numbered by the order they were photographed, and earlier builds of the same slide were dropped. Gaps in the photo sequence mean a few slides may be missing; the recording covers the talk end to end. The repo section is our own reading of [forter/telem-seed](https://github.com/forter/telem-seed) at commit `4995a9d` (12 Nov 2026). All results are Forter’s own, from its internal systems.
+From an audio recording and 62 photos of the deck, kept here as 41 slides plus one close-up. The deck shows no slide numbers, so slides are numbered by the order they were photographed, and earlier builds of the same slide were dropped. Gaps in the photo sequence mean a few slides may be missing; the recording covers the talk end to end. The repo section is my own reading of [forter/telem-seed](https://github.com/forter/telem-seed) at commit `4995a9d` (12 Nov 2026). All results are Forter’s own, from its internal systems.
 
 ## The talk in brief
 
@@ -43,13 +53,13 @@ The Gate team wanted to add a small feature and gave a large estimate, because t
 
 ![Meet Gate, our API orchestrator: a hand-drawn box labelled GATE with HTTP in, arrows downstream, plus clouds, databases, queues and question marks, captioned simplified.](../slides/you-cant-read-the-code-anymore/deep/s02.webp)
 
-Slide 2. Gate, Forter’s API orchestrator, “simplified”.
+*Slide 2: Gate, Forter’s API orchestrator, “simplified”.*
 
 ![Verifying agentic output: a loop from AI writes code and tests (+5391 −1457), to I ain’t reading all that, to spot check, trust it, vibe, to ship slop. Notes: tests overfit, fragile; AI marking its own homework; we’ve reinvented manual QA, poorly.](../slides/you-cant-read-the-code-anymore/deep/s08.webp)
 
-Slide 8. The loop most teams are in today.
+*Slide 8: The loop most teams are in today.*
 
-**Takeaway:** the risk is not bad code in general, it is changing behavior customers depend on without knowing it, and agents increase the rate of that.
+> the risk is not bad code in general, it is changing behavior customers depend on without knowing it, and agents increase the rate of that.
 
 ### Review the what, in plain English (slides 9–13)
 
@@ -59,11 +69,11 @@ His replacement is Gherkin: Given, When, Then scenarios in plain English, run by
 
 ![So don't read code: Cucumber, about 20 years old, costly to write and maintain, let agents do it. Example scenario: message is delivered successfully, given a subscriber listens for orders, when a Kafka message arrives, then the webhook should have been posted, the delivery logged and the Kafka offset committed.](../slides/you-cant-read-the-code-anymore/deep/s11.webp)
 
-Slide 11. A Gherkin scenario instead of code.
+*Slide 11: A Gherkin scenario instead of code.*
 
 ![Reframed workflow for agents: 1 human writes agent spec, 2 human aligns with agent on What, 3 agent writes implementation and tests are the feedback loop, 4 agent refactors and simplifies. Solved!](../slides/you-cant-read-the-code-anymore/deep/s13.webp)
 
-Slide 13. The reframed workflow, before the catch.
+*Slide 13: The reframed workflow, before the catch.*
 
 ### What makes the tests trustworthy (slides 14–19)
 
@@ -80,13 +90,13 @@ The sidebar on slide 19 made the review case. In a normal PR the reviewer has to
 
 ![Properties to increase trust: blackbox, comprehensive, explicit. Tests with implicit behavior plus assumptions; given flag A is on, when I send a request, then we should write to S3; given flag A is off, then we shouldn't write to S3.](../slides/you-cant-read-the-code-anymore/deep/s17.webp)
 
-Slide 17. Explicit: say what must not happen.
+*Slide 17: Explicit: say what must not happen.*
 
 ![Sidebar, not just you and the agent: your teammate reviews a PR; what and how means reading the code; plain-English tests give a readable what. Given 100 line items of \$5 each and 1% tax, the tax should be \$0 versus \$5, beside code that floors per-item tax.](../slides/you-cant-read-the-code-anymore/deep/s19.webp)
 
-Slide 19. A reviewer can catch the \$0 tax bug without reading the loop.
+*Slide 19: A reviewer can catch the \$0 tax bug without reading the loop.*
 
-**Takeaway:** “has tests” is not the bar. The bar is black box, comprehensive, explicit and readable, and each property closes a specific way an agent can quietly get it wrong.
+> “has tests” is not the bar. The bar is black box, comprehensive, explicit and readable, and each property closes a specific way an agent can quietly get it wrong.
 
 ### Red, Green, Refactor, Whitebox (slides 20–22)
 
@@ -109,21 +119,21 @@ The ideal Omer described: give the agent a backfill command, let it go business 
 
 ![Telem skills plus deterministic tooling: a large skill invocation graph, with tools like only reference entry point means blackbox, comprehensive decision tables, new feature flag must be declared explicitly or fail, and linters for tests and implementation.](../slides/you-cant-read-the-code-anymore/deep/s25.webp)
 
-Slide 25. Skills plus deterministic tooling.
+*Slide 25: Skills plus deterministic tooling.*
 
 ![Close-up of the telem-bdd skill invocation graph: dozens of skills connected from bootstrap and create-fakes down through backfill steps.](../slides/you-cant-read-the-code-anymore/deep/s26.webp)
 
-Slide 26. Close-up of the skill invocation graph.
+*Slide 26: Close-up of the skill invocation graph.*
 
 On Gate the backfill produced about 8,000 business flows and more than 24,000 tests across configuration and flag variations (slide 27). Reading 8,000 tests means never seeing the forest, so a walkthrough skill has the agent build an interactive HTML explainer from the test text alone, most abstract level first. If the top level is wrong there is no point going down. The engineer discusses each level with the agent in crit, and the agent explains or corrects itself. Omer said surprises are successes: subject matter experts kept saying “I didn’t know it did that”, which is relearning their own system and lowering the risk of owning it.
 
 ![Explain it back to me: /walkthrough, conversation with agent using crit, surprises are successes, alignment: see forest before trees. Screenshot of a Create Billing Snapshots explainer page with a flow diagram and comments.](../slides/you-cant-read-the-code-anymore/deep/s28.webp)
 
-Slide 28. The walkthrough, reviewed in crit.
+*Slide 28: The walkthrough, reviewed in crit.*
 
 ![We did it: “We've had three senior engineers attempt and fail to backfill tests to our team's codebase. With Telem, we achieved comprehensive test coverage across the entire repo within a single quarter.” Senior engineer, billing.](../slides/you-cant-read-the-code-anymore/deep/s29.webp)
 
-Slide 29. The billing team’s result.
+*Slide 29: The billing team’s result.*
 
 ### Results at Forter (slides 29–30, 35–37)
 
@@ -139,13 +149,13 @@ Two bonus properties follow. Faking everything, including the clock, removes non
 
 ![Making this sustainable: blackbox-only, comprehensive, explicit; generated a lot of tests; long feedback loop is bad; therefore blazingly fast. Terminal summary: 24740 passed, 0 failed, total 24740 tests, 58.4s wall time.](../slides/you-cant-read-the-code-anymore/deep/s31.webp)
 
-Slide 31. 24,740 tests in 58.4 seconds.
+*Slide 31: 24,740 tests in 58.4 seconds.*
 
 ![Bonus properties: flaky tests suck, flakiness comes from nondeterminism, fake everything gives determinism; test unexpectedly writes a file, we control the world around tests, forbid the outside world gives hermetic. Error: unexpected write to table Foo.](../slides/you-cant-read-the-code-anymore/deep/s33.webp)
 
-Slide 33. Deterministic and hermetic.
+*Slide 33: Deterministic and hermetic.*
 
-**Takeaway:** the full list on slide 34 is black box, comprehensive, explicit, blazingly fast, deterministic, hermetic, plain-English tests. Omer’s point was that these were always the aspiration; agents now make them affordable.
+> the full list on slide 34 is black box, comprehensive, explicit, blazingly fast, deterministic, hermetic, plain-English tests. Omer’s point was that these were always the aspiration; agents now make them affordable.
 
 ### Limits, costs and adoption (slides 38–42)
 
@@ -164,15 +174,15 @@ The DIY slide pointed to [forter/telem-seed](https://github.com/forter/telem-see
 
 ![Costs: AI backfills tests, \$100s to \$1000s in tokens per system, 1 to 2 hours in Claude Code per flow. Human attention: simple systems days, complex systems high variance, case study billing was practically impossible, about 4 net engineering months, parallelized.](../slides/you-cant-read-the-code-anymore/deep/s39.webp)
 
-Slide 39. What it costs.
+*Slide 39: What it costs.*
 
 ![Convincing our own engineering managers: understand impact with an internal dashboard (10,776 and 29,179 agent-guarded use cases, per-service coverage for billing and notifications) and quick time to value: flow backfilled then into CI, incremental value.](../slides/you-cant-read-the-code-anymore/deep/s40.webp)
 
-Slide 40. The adoption dashboard.
+*Slide 40: The adoption dashboard.*
 
 ## Inside the telem-seed repo
 
-We read [forter/telem-seed](https://github.com/forter/telem-seed) end to end at commit `4995a9d`. It has 53 commits between 9 and 12 November 2026, almost all by Omer, and is dual licensed: MIT for code and CC BY 4.0 for the docs. It is not a tool you install. It is about 45,000 words of specification written for a coding agent, plus a worked sample. You point your agent at it and the agent builds you a Telem implementation.
+I read [forter/telem-seed](https://github.com/forter/telem-seed) end to end at commit `4995a9d`. It has 53 commits between 9 and 12 November 2026, almost all by Omer, and is dual licensed: MIT for code and CC BY 4.0 for the docs. It is not a tool you install. It is about 45,000 words of specification written for a coding agent, plus a worked sample. You point your agent at it and the agent builds you a Telem implementation.
 
 ### What is in the box
 
@@ -242,7 +252,7 @@ The steps that matter most for understanding how backfill actually finds behavio
 | 17–18                | Writes costly lessons to `WRITING-TESTS.md` and repo gotchas to `COLLECTED-WISDOM.md`, then fans each new lesson out across every earlier feature file.                                                                                                   | No two agents write the same file at once.                                                                   |
 | 20 walkthrough       | Explains the feature file to the user from the file alone, one HTML page per abstraction level, reviewed in crit. Each correction is diagnosed: I misread, unclear wording, real bug (report, don’t fix), wrong assessment, or untested behavior.         | The human gate.                                                                                              |
 
-**Takeaway:** backfill is not “ask the agent to write tests”. It is a fixed pipeline where coverage, decision tables, flag accounting, a blind second agent and a human walkthrough each catch a different way the first pass is incomplete. Coverage alone is not enough: the sample’s own notes say its real bugs sat on lines already covered, and were found by decision tables, config reading and protocol thinking.
+> backfill is not “ask the agent to write tests”. It is a fixed pipeline where coverage, decision tables, flag accounting, a blind second agent and a human walkthrough each catch a different way the first pass is incomplete. Coverage alone is not enough: the sample’s own notes say its real bugs sat on lines already covered, and were found by decision tables, config reading and protocol thinking.
 
 ### The test harness
 
@@ -298,7 +308,7 @@ Telem is a method over standard tools. These are the ones the seed and sample us
 | Parity backends        | [Docker Compose](https://docs.docker.com/compose/), [MySQL 8](https://www.mysql.com/), [Apache Kafka](https://kafka.apache.org/) (KRaft), [KafkaJS](https://kafka.js.org/) | Real services the fakes are compared against, outside the fast suite.                                                                            |
 | Reporting              | [JUnit XML](https://en.wikipedia.org/wiki/JUnit), [Mermaid](https://mermaid.js.org/)                                                                                       | Merged permutation results for CI; diagrams in the seed docs.                                                                                    |
 
-## Numbers we checked
+## Numbers I checked
 
 Figures from the talk against their sources. Checked found in a published source; Caveat holds with a condition; On slide read off a slide, not independently verified; Talk only heard in the room. Every result is Forter’s own measurement of its internal systems; Forter’s blog is the only other source and is also Forter’s.
 
@@ -426,179 +436,10 @@ The seed’s two licences: the docs may be reused with attribution, the code und
 ## Reading and tools
 
 - [Telem: Teaching Systems to Keep Promises](https://blog.forter.dev/telem-teaching-systems-to-keep-promises/), Omer van Kloeten, Forter Tech Blog, 27 July 2026. The written version of the talk, with a five-level billing explainer generated from tests.
-- [forter/telem-seed](https://github.com/forter/telem-seed): start with `README.md`, then `seed/principles.md`, `seed/skills/backfill.md` and `seed/fakes.md`. The README sends feedback to an omervk/telem repo, which we could not open on Nov 18 (private or not yet published).
+- [forter/telem-seed](https://github.com/forter/telem-seed): start with `README.md`, then `seed/principles.md`, `seed/skills/backfill.md` and `seed/fakes.md`. The README sends feedback to an omervk/telem repo, which I could not open on Nov 18 (private or not yet published).
 - The sample’s `webhook-delivery.feature` and `webhook-delivery.implementation-notes.md`: the best single example of what backfilled tests and pinned bugs look like.
 - [crit](https://crit.md), the review tool used for walkthroughs.
 - Michael Feathers, *Working Effectively with Legacy Code*, the origin of characterization tests; and Martin Fowler on [test doubles](https://martinfowler.com/bliki/TestDouble.html).
-- Related sessions in our notes: [Legacy as Leverage](https://qconsf.com/presentation/nov2026/legacy-leverage-how-brownfield-work-builds-technical-judgment) (Wed 11:45, brownfield judgment), [Generation Got Cheap, Trust Didn’t](https://qconsf.com/presentation/nov2026/generation-got-cheap-trust-didnt-scaling-agentic-changes-prompt-prod-roblox) (Roblox, review at scale) and Atomic’s “Wait, You’re Still Doing PRs?” (Mon)
+- Related sessions in my notes: [Legacy as Leverage](https://qconsf.com/presentation/nov2026/legacy-leverage-how-brownfield-work-builds-technical-judgment) (Wed 11:45, brownfield judgment), [Generation Got Cheap, Trust Didn’t](https://qconsf.com/presentation/nov2026/generation-got-cheap-trust-didnt-scaling-agentic-changes-prompt-prod-roblox) (Roblox, review at scale) and Atomic’s “Wait, You’re Still Doing PRs?” (Mon)
 - **Still ahead** Wed 3:55: [How To Kill the Code Review](https://qconsf.com/presentation/nov2026/how-kill-code-review) (Aviator), the other half of the same question.
 
-## All slides
-
-[![Slide 1: Title: You Can&#x27;t Read the Code Anymore, Verifying Software in the Age of AI. Omer van Kloeten, Principal Engineer, Forter.](../slides/you-cant-read-the-code-anymore/deep/s01.webp)](../slides/you-cant-read-the-code-anymore/deep/s01.webp)
-
-Slide 1. Title
-
-[![Slide 2: Meet Gate, our API orchestrator: hand-drawn GATE box with HTTP in and downstream arrows, clouds, databases, queues and question marks, captioned simplified.](../slides/you-cant-read-the-code-anymore/deep/s02.webp)](../slides/you-cant-read-the-code-anymore/deep/s02.webp)
-
-Slide 2. Meet Gate
-
-[![Slide 3: Existing codebases are scary: we never read the code, unknown is scary, still adding stuff. Change plus fear equals bigger change. Cartoon of a pilot in a patched plane labelled brownfield development.](../slides/you-cant-read-the-code-anymore/deep/s03.webp)](../slides/you-cant-read-the-code-anymore/deep/s03.webp)
-
-Slide 3. Existing codebases are scary
-
-[![Slide 4: Enter coding AI agents: reading code is much harder than writing it; more code we didn&#x27;t write.](../slides/you-cant-read-the-code-anymore/deep/s04.webp)](../slides/you-cant-read-the-code-anymore/deep/s04.webp)
-
-Slide 4. Enter coding AI agents
-
-[![Slide 5: Expectations: “Everyone else is shipping 10x as fast!” your manager? Is being scared the new normal? Cartoon of a plane labelled AI coding.](../slides/you-cant-read-the-code-anymore/deep/s05.webp)](../slides/you-cant-read-the-code-anymore/deep/s05.webp)
-
-Slide 5. Expectations
-
-[![Slide 6: Hi, I&#x27;m Omer: over 25 years of experience, Principal Engineer at Forter, focus: systemic concerns in engineering. Photo and Forter logo.](../slides/you-cant-read-the-code-anymore/deep/s06.webp)](../slides/you-cant-read-the-code-anymore/deep/s06.webp)
-
-Slide 6. Hi, I’m Omer
-
-[![Slide 7: This talk: what&#x27;s fundamentally changed, verify what you build, verify what you didn&#x27;t, DIY.](../slides/you-cant-read-the-code-anymore/deep/s07.webp)](../slides/you-cant-read-the-code-anymore/deep/s07.webp)
-
-Slide 7. This talk
-
-[![Slide 8: Verifying agentic output: AI writes code and tests (+5391 −1457), I ain&#x27;t reading all that, spot check / trust it / vibe, ship slop. Tests overfit and fragile; AI marking its own homework; we&#x27;ve reinvented manual QA, poorly.](../slides/you-cant-read-the-code-anymore/deep/s08.webp)](../slides/you-cant-read-the-code-anymore/deep/s08.webp)
-
-Slide 8. Verifying agentic output
-
-[![Slide 9: Section slide: Why, What, How.](../slides/you-cant-read-the-code-anymore/deep/s09.webp)](../slides/you-cant-read-the-code-anymore/deep/s09.webp)
-
-Slide 9. Why, What, How
-
-[![Slide 10: Understanding the What: easy, write the code; hard, read code and tests. A long test file on screen.](../slides/you-cant-read-the-code-anymore/deep/s10.webp)](../slides/you-cant-read-the-code-anymore/deep/s10.webp)
-
-Slide 10. Understanding the What
-
-[![Slide 11: So don&#x27;t read code: Cucumber, about 20 years ago, costly to write and maintain, let agents do it. Gherkin example about webhook delivery for a Kafka message.](../slides/you-cant-read-the-code-anymore/deep/s11.webp)](../slides/you-cant-read-the-code-anymore/deep/s11.webp)
-
-Slide 11. So don’t read code
-
-[![Slide 12: Reframed workflow for agents. Our goal: aligning on the What. Human thinks and reconsiders, agent grills, loop. What plus-equals readable tests.](../slides/you-cant-read-the-code-anymore/deep/s12.webp)](../slides/you-cant-read-the-code-anymore/deep/s12.webp)
-
-Slide 12. Aligning on the What
-
-[![Slide 13: Reframed workflow: human writes agent spec, human aligns with agent on What, agent writes implementation with tests as feedback loop, agent refactors and simplifies. Solved!](../slides/you-cant-read-the-code-anymore/deep/s13.webp)](../slides/you-cant-read-the-code-anymore/deep/s13.webp)
-
-Slide 13. Reframed workflow
-
-[![Slide 14: Section slide: I Don&#x27;t Trust the Tests.](../slides/you-cant-read-the-code-anymore/deep/s14.webp)](../slides/you-cant-read-the-code-anymore/deep/s14.webp)
-
-Slide 14. I don’t trust the tests
-
-[![Slide 15: Properties to increase trust: What equals behaviors, effects on users (PM cap) and on other parts of the system (architect cap); blackbox behavior. Given merchant A is configured as async, then I get a 202 response, the fraud decision is made and the audit log written.](../slides/you-cant-read-the-code-anymore/deep/s15.webp)](../slides/you-cant-read-the-code-anymore/deep/s15.webp)
-
-Slide 15. Blackbox
-
-[![Slide 16: Properties to increase trust: behavior exposed is behavior used (Hyrum&#x27;s Law); missing test means assumptions and hallucinations; therefore comprehensive. Same scenario with flag A off and on.](../slides/you-cant-read-the-code-anymore/deep/s16.webp)](../slides/you-cant-read-the-code-anymore/deep/s16.webp)
-
-Slide 16. Comprehensive
-
-[![Slide 17: Properties to increase trust: tests with implicit behavior plus assumptions, therefore explicit. Flag A on: we should write to S3; flag A off: we shouldn&#x27;t write to S3.](../slides/you-cant-read-the-code-anymore/deep/s17.webp)](../slides/you-cant-read-the-code-anymore/deep/s17.webp)
-
-Slide 17. Explicit
-
-[![Slide 18: Blackbox, Comprehensive, Explicit, Plain-English Tests.](../slides/you-cant-read-the-code-anymore/deep/s18.webp)](../slides/you-cant-read-the-code-anymore/deep/s18.webp)
-
-Slide 18. The first four properties
-
-[![Slide 19: Sidebar, not just you and the agent: teammate reviews a PR; plain-English tests give a readable What. 100 line items of \$5 with 1% tax: should the tax be \$0 or \$5? Code floors per-item tax.](../slides/you-cant-read-the-code-anymore/deep/s19.webp)](../slides/you-cant-read-the-code-anymore/deep/s19.webp)
-
-Slide 19. Sidebar: the reviewer
-
-[![Slide 20: Implementation erodes comprehensiveness: can&#x27;t think of everything, implementation will introduce behaviors. Given one \$500 line item and 1% tax, tax \$5, beside code with per-item floor.](../slides/you-cant-read-the-code-anymore/deep/s20.webp)](../slides/you-cant-read-the-code-anymore/deep/s20.webp)
-
-Slide 20. Implementation erodes comprehensiveness
-
-[![Slide 21: Make incidental behaviors explicit. Whitebox: comprehensive green tests from whitebox inspection. Disagreement means alignment. Given 100 line items of \$5 each and 1% tax, the tax should be \$0.](../slides/you-cant-read-the-code-anymore/deep/s21.webp)](../slides/you-cant-read-the-code-anymore/deep/s21.webp)
-
-Slide 21. Make incidental behaviors explicit
-
-[![Slide 22: Four circles: Red\* achieve mutual understanding, Green minimum implementation, Refactor clean implementation, Whitebox make incidental behaviors explicit.](../slides/you-cant-read-the-code-anymore/deep/s22.webp)](../slides/you-cant-read-the-code-anymore/deep/s22.webp)
-
-Slide 22. Red, Green, Refactor, Whitebox
-
-[![Slide 23: This won&#x27;t work in brownfield: new interacts with existing, missing feedback loop, the usual move is writing tests to pin current behavior. Quote: we&#x27;ve had three senior engineers attempt and fail to backfill tests to our team&#x27;s codebase. Sr. Engineer, Billing.](../slides/you-cant-read-the-code-anymore/deep/s23.webp)](../slides/you-cant-read-the-code-anymore/deep/s23.webp)
-
-Slide 23. This won’t work in brownfield
-
-[![Slide 24: Telem logo with a star, pronounced like tell &#x27;em.](../slides/you-cant-read-the-code-anymore/deep/s24.webp)](../slides/you-cant-read-the-code-anymore/deep/s24.webp)
-
-Slide 24. Telem
-
-[![Slide 25: Telem skills plus deterministic tooling: skill invocation graph; tools like only reference entry point means blackbox, comprehensive decision tables, new feature flag must be declared explicitly or fail, linters for tests and implementation.](../slides/you-cant-read-the-code-anymore/deep/s25.webp)](../slides/you-cant-read-the-code-anymore/deep/s25.webp)
-
-Slide 25. Skills and deterministic tooling
-
-[![Slide 26: Close-up of the skill invocation graph for telem-bdd, from bootstrap and create-fakes through the backfill steps.](../slides/you-cant-read-the-code-anymore/deep/s26.webp)](../slides/you-cant-read-the-code-anymore/deep/s26.webp)
-
-Slide 26. Skill invocation graph, close-up
-
-[![Slide 27: Engineer&#x27;s role: Gate, about 8,000 business flows (sum over 24,000). Gherkin scenarios in the background.](../slides/you-cant-read-the-code-anymore/deep/s27.webp)](../slides/you-cant-read-the-code-anymore/deep/s27.webp)
-
-Slide 27. Engineer’s role
-
-[![Slide 28: Explain it back to me: /walkthrough, conversation with agent using crit, surprises are successes, alignment: see forest before trees. Screenshot of a Create Billing Snapshots explainer.](../slides/you-cant-read-the-code-anymore/deep/s28.webp)](../slides/you-cant-read-the-code-anymore/deep/s28.webp)
-
-Slide 28. Explain it back to me
-
-[![Slide 29: We did it: “With Telem, we achieved comprehensive test coverage across the entire repo within a single quarter.” Sr. Engineer, Billing.](../slides/you-cant-read-the-code-anymore/deep/s29.webp)](../slides/you-cant-read-the-code-anymore/deep/s29.webp)
-
-Slide 29. We did it
-
-[![Slide 30: Over 10,000: user-invokable behaviors not broken at Forter, past 60 days.](../slides/you-cant-read-the-code-anymore/deep/s30.webp)](../slides/you-cant-read-the-code-anymore/deep/s30.webp)
-
-Slide 30. Over 10,000
-
-[![Slide 31: Making this sustainable: blackbox-only, comprehensive, explicit; generated a lot of tests; long feedback loop is bad; blazingly fast. 24,740 passed, 0 failed; 58.4s wall time.](../slides/you-cant-read-the-code-anymore/deep/s31.webp)](../slides/you-cant-read-the-code-anymore/deep/s31.webp)
-
-Slide 31. 58.4 seconds
-
-[![Slide 32: Behind the curtain: blackbox plus fast? Doubt. Fakes: test doubles, rudimentary, in-memory, no IO; drift? parity tested; whole other talk. Tests don&#x27;t leave their runtime, so blazingly fast.](../slides/you-cant-read-the-code-anymore/deep/s32.webp)](../slides/you-cant-read-the-code-anymore/deep/s32.webp)
-
-Slide 32. Behind the curtain: fakes
-
-[![Slide 33: Bonus properties: flaky tests suck, flakiness from nondeterminism, fake everything gives determinism; we control the world around tests, forbid the outside world gives hermetic. Error: unexpected write to table Foo.](../slides/you-cant-read-the-code-anymore/deep/s33.webp)](../slides/you-cant-read-the-code-anymore/deep/s33.webp)
-
-Slide 33. Deterministic and hermetic
-
-[![Slide 34: Blackbox, Comprehensive, Explicit, Blazingly Fast, Deterministic, Hermetic, Plain-English Tests.](../slides/you-cant-read-the-code-anymore/deep/s34.webp)](../slides/you-cant-read-the-code-anymore/deep/s34.webp)
-
-Slide 34. All seven properties
-
-[![Slide 35: Started from a small and risky change: “Telem gave me the confidence that it behaves as I expected.” Principal Engineer, working on Gate. No unexpected behaviors, no incidents.](../slides/you-cant-read-the-code-anymore/deep/s35.webp)](../slides/you-cant-read-the-code-anymore/deep/s35.webp)
-
-Slide 35. The small risky change
-
-[![Slide 36: Compounding value, Telem as a translator: your ticket agent triages behavior, interrogates code, costly and error-prone; system behaviors now in plain English, validated, living documentation; ticket agent no longer guesses.](../slides/you-cant-read-the-code-anymore/deep/s36.webp)](../slides/you-cant-read-the-code-anymore/deep/s36.webp)
-
-Slide 36. Telem as a translator
-
-[![Slide 37: Compounding value: and context for more agents. “The agents come back with implementations that make sense.” Engineering Manager.](../slides/you-cant-read-the-code-anymore/deep/s37.webp)](../slides/you-cant-read-the-code-anymore/deep/s37.webp)
-
-Slide 37. Context for more agents
-
-[![Slide 38: Telem is specialized: not blackbox to blackbox integration, agentic system evals, architecture constraints and tradeoffs, your system in production.](../slides/you-cant-read-the-code-anymore/deep/s38.webp)](../slides/you-cant-read-the-code-anymore/deep/s38.webp)
-
-Slide 38. Telem is specialized
-
-[![Slide 39: Costs: AI backfills tests, \$100s to \$1000s in tokens per system, 1 to 2 hours in Claude Code per flow. Human attention: simple systems days, complex systems high variance; billing case study about 4 net engineering months, parallelized.](../slides/you-cant-read-the-code-anymore/deep/s39.webp)](../slides/you-cant-read-the-code-anymore/deep/s39.webp)
-
-Slide 39. Costs
-
-[![Slide 40: Convincing our own engineering managers: understand impact (internal dashboard, global and per-service metrics, speedup case studies) and quick time to value (flow backfilled then CI, incremental value). Dashboard shows 10,776 and 29,179.](../slides/you-cant-read-the-code-anymore/deep/s40.webp)](../slides/you-cant-read-the-code-anymore/deep/s40.webp)
-
-Slide 40. Convincing engineering managers
-
-[![Slide 41: DIY: seed; agent grows your Telem (skills, tools, methodology); sample: webhooks delivery; work in progress, feedback welcome; blog link; QR code for forter/telem-seed.](../slides/you-cant-read-the-code-anymore/deep/s41.webp)](../slides/you-cant-read-the-code-anymore/deep/s41.webp)
-
-Slide 41. DIY
-
-[![Slide 42: Thank you: @omervk, omervk@forter.com, QR code for forter/telem-seed.](../slides/you-cant-read-the-code-anymore/deep/s42.webp)](../slides/you-cant-read-the-code-anymore/deep/s42.webp)
-
-Slide 42. Thank you

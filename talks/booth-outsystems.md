@@ -1,5 +1,9 @@
 ---
 title: "OutSystems: a low-code platform that outside coding agents drive through MCP"
+kind: "booth"
+company: "OutSystems"
+day: "2026-11-18"
+summary: "OutSystems now calls itself an agentic systems platform: its own agent builds apps, and Claude Code, Codex, Cursor or Kiro can build, deploy and roll back through its Coding MCP."
 ---
 
 # OutSystems: a low-code platform that outside coding agents drive through MCP
@@ -16,7 +20,7 @@ Booth visit: OutSystems · QCon SF 2026 · Wed Nov 18
 - Agent Workbench builds business-process agents with guardrails, evaluations, monitoring and a choice of LLM.
 - Pricing is by quote, counted in Application Objects (screens, tables and API methods) and end users; a free Personal Edition covers up to 100 internal users.
 
-Booth, Wednesday Nov 18. Sources: OutSystems's homepage, Agent Experience page, Coding MCP product update and pricing page, read Nov 18, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Wednesday Nov 18. Sources: OutSystems's homepage, Agent Experience page, Coding MCP product update and pricing page, read Nov 18, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

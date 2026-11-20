@@ -1,12 +1,22 @@
 ---
 title: "How Netflix Retrofitted Its SDLC for AI Coding Agents"
+kind: "talk"
+speakers: ["Mark Khuzam"]
+track: "Architecting for Agents: Beneath the Loop"
+day: "2026-11-18"
+time: "10:35"
+session_url: "https://qconsf.com/presentation/nov2026/how-netflix-retrofitted-its-sdlc-ai-coding-agents"
+topics_central: ["Code review at volume", "Context and retrieval"]
+topics_touched: ["Harness design", "Verification", "Change provenance"]
+slides: "gallery/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents.md"
+summary: "How Netflix's commerce UI team made coding agents reliable by recording one way to do each thing in the repo, then adding agents to CI and shared context."
 ---
 
 # How Netflix Retrofitted Its SDLC for AI Coding Agents
 
 **Speaker:** Mark Khuzam (Senior Software Engineer, Netflix)  
 QCon SF 2026 · Architecting for Agents: Beneath the Loop · Wed Nov 18, 10:35 · Ballroom BC  
-[Session page](https://qconsf.com/presentation/nov2026/how-netflix-retrofitted-its-sdlc-ai-coding-agents)
+[Session page](https://qconsf.com/presentation/nov2026/how-netflix-retrofitted-its-sdlc-ai-coding-agents) · [All 35 slides](../gallery/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents.md)
 
 > How Netflix's commerce UI team made coding agents reliable by recording one way to do each thing in the repo, then adding agents to CI and shared context.
 
@@ -45,11 +55,11 @@ Commerce supports the whole member lifecycle: signup, sign-in, identity, payment
 
 ![Slide 2: A mock email titled AI is here, sent to engineering-all at 9:02 AM: We've just purchased Claude Code for all of engineering. You can use AI to write your code now. Let us know how much faster you're shipping.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s02.webp)
 
-Slide 2. The email that opened the talk.
+*Slide 2: The email that opened the talk.*
 
 ![Slide 6: Server Driven UI. API Gateway connects to Screen Composition, which serves iOS, Android, Web and TV clients.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s06.webp)
 
-Slide 6. Server-driven UI: one composition service, four clients.
+*Slide 6: Server-driven UI: one composition service, four clients.*
 
 ### Context engineering: the failed test migration (slides 8–13)
 
@@ -61,11 +71,11 @@ The goal then widened from one test to a whole feature: an agent should define a
 
 ![Slide 10: Failing Forward. Four attempt cards, each adding to the last: migrate this file; plus instructions; plus the APIs to use; plus how to mock data.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s10.webp)
 
-Slide 10. Four attempts at one test migration.
+*Slide 10: Four attempts at one test migration.*
 
 ![Slide 11: Our docs were ok. For humans. Written for humans: readers filled the gaps with what they knew about the rest of our architecture. Hard to find: the context window ran out before the agent found the doc and understood the code. Inconsistent: the tests worked, but they weren't written the same way everywhere. You had to learn how to write tests here.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s11.webp)
 
-Slide 11. Why the docs failed the agent.
+*Slide 11: Why the docs failed the agent.*
 
 ### Entropy, decisions and ADRs (slides 14–16)
 
@@ -85,11 +95,11 @@ That left 45 ADRs, each written for people and agents, plus a doc site of 300+ p
 
 ![Slide 15: Architecture Decision Records. Context: why this came up. Decision: what we chose. Pattern and anti-pattern: what right and wrong look like. AI usage notes: what an agent should do. Metadata: related docs, ADRs, code. The last two rows are highlighted.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s15.webp)
 
-Slide 15. Netflix’s ADR template, with two rows added for agents.
+*Slide 15: Netflix’s ADR template, with two rows added for agents.*
 
 ![Slide 16: Documentation. 45 architecture decision records, each written for people and for agents. 300+ docs: Docs, Tutorials, Server API, Client API, TV, Web, Mobile, Recipes.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s16.webp)
 
-Slide 16. 45 ADRs and 300+ docs.
+*Slide 16: 45 ADRs and 300+ docs.*
 
 ### Finding the context, and migrating the old code (slides 17–19)
 
@@ -99,11 +109,11 @@ Docs alone weren’t enough. With the old patterns still in the code, an agent s
 
 ![Slide 17: Finding the context, 45 ADRs and 300+ docs. AGENTS.md, read first, is like robots.txt. The index, what's where, is like sitemap.xml. The one doc, read in full, is like the page. Then the code: change it. Make it easy to find how to do it.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s17.webp)
 
-Slide 17. AGENTS.md, index, one doc, then the code.
+*Slide 17: AGENTS.md, index, one doc, then the code.*
 
 ![Slide 18: Simplifying. Before: five ways to do one thing. Goal: one way. Agents migrate, people review. Decide what you want agents to do. Then tell them.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s18.webp)
 
-Slide 18. Five ways to one way.
+*Slide 18: Five ways to one way.*
 
 ### Loops inside loops (slides 20–22)
 
@@ -111,11 +121,11 @@ Slide 21 nests the loops from the inside out: local (write, test, repeat); every
 
 ![Slide 21: Loops inside loops, nested boxes from outside in. Release: canary on 10% of traffic, the RCA agent reports. After merge: docs follow. Fix: a comment or the revise label. Review: the CI agent pre-reviews. Every PR: build, lint and tests. Local: write, test, repeat.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s21.webp)
 
-Slide 21. Six nested loops.
+*Slide 21: Six nested loops.*
 
 ![Slide 22: Our CI loop is still deterministic. What's changed is how we integrate agents into each phase. 1 Build and lint, 2 Unit tests, 3 Integration tests, 4 Screenshot diffing, 5 Merge queues, 6 Canaries.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s22.webp)
 
-Slide 22. The deterministic CI phases.
+*Slide 22: The deterministic CI phases.*
 
 ### Review: verified blockers only (slides 23–25)
 
@@ -127,25 +137,25 @@ When review or a colleague finds a problem, the context to fix it is already on 
 
 ![Slide 24: Verified blockers only. First version: ci-agent with 23 comments, starting Overall this PR looks great, with suggestions such as renaming price to formattedPrice and a nit about trailing whitespace. Now: ci-agent, Blocking. Evidence: the confirm screen rebuilds the price from a number, so it drops the local currency format. Fix: use the formatted price the service sends. Rule: Pricing ADR, show the price the service formats.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s24.webp)
 
-Slide 24. 23 comments then; one verified blocker now.
+*Slide 24: 23 comments then; one verified blocker now.*
 
 ![Slide 25: The agent fixes it. The engineer owns it. What the agent reads: PR description, diff, review and comments. Trigger: revise label. The agent makes the fix, pushes to the same PR, and the engineer reviews it. Never auto-merged. Engineers own the code.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s25.webp)
 
-Slide 25. The revise label.
+*Slide 25: The revise label.*
 
 ### Docs follow the merge; the engineer ships (slides 26–28)
 
-The same review agent checks every change for docs it makes stale. The engineer can update them in the same PR; if not, the PR is labelled stale at merge and the agent opens a follow-up docs PR and tags the engineer to approve it. About 9% of merged PRs needed a docs update (slide 26). The recording says 9% “make changes to the API”; we follow the slide. ADRs stay human-owned, because people should keep reading and writing the decisions that everything else rests on.
+The same review agent checks every change for docs it makes stale. The engineer can update them in the same PR; if not, the PR is labelled stale at merge and the agent opens a follow-up docs PR and tags the engineer to approve it. About 9% of merged PRs needed a docs update (slide 26). The recording says 9% “make changes to the API”; I follow the slide. ADRs stay human-owned, because people should keep reading and writing the decisions that everything else rests on.
 
 Releases go out, by his estimate, about three times a day. Each gets a canary on 10% of traffic. An RCA agent then compares historical error rates with new errors from the release, reads past findings and reports anything new to the on-call engineer, who decides whether it ships. Real findings go back through the same loop. Slide 28 closes the first part: zero Sev 1 incidents in 2026 on a core service, pull requests up 32% year over year, developer NPS from -3 to +25 three quarters apart. “A person decided at every step.”
 
 ![Slide 26: Docs follow the merge. A pull request (any change), review checks the docs (is a doc now stale?), merge (labelled if stale), a docs PR (in the same PR, or after merge), back to the next change. The review checks every change. Docs update only when they need to. About 9% of merged PRs needed a docs update. ADRs stay human-owned.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s26.webp)
 
-Slide 26. About 9% of merged PRs needed a docs update.
+*Slide 26: About 9% of merged PRs needed a docs update.*
 
 ![Slide 28: More changes, zero Sev 1s. 0 Sev 1 incidents in 2026 on a core service. +32% pull requests year over year. Developer NPS from -3 to +25, three quarters apart. A person decided at every step.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s28.webp)
 
-Slide 28. The results he reported.
+*Slide 28: The results he reported.*
 
 ### Ownership: one feature crosses many services (slides 29–30)
 
@@ -181,11 +191,11 @@ His example: the payments team picks the repos in its graph and gets one MCP add
 
 ![Slide 34: GraphRAG per domain. 1 Parse: AST parsing of symbols, calls, imports, gives Accurate. 2 Extract: semantic extraction from docs and ADRs, gives Accurate. 3 Group: community labels, one namespace per domain, gives Per domain. 4 Serve: one MCP tool, ask; each build pins commits, gives Portable, Fresh. Structure from the code. Meaning from the docs.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s34.webp)
 
-Slide 34. Parse, extract, group, serve.
+*Slide 34: Parse, extract, group, serve.*
 
 ![Slide 35: Any agent can ask. The domain: Payments, the repos the team picks. The graph: Payments graph, one MCP address. Who asks: local agents (Claude Code, Cursor, Codex), a Slack bot (questions that span the stack), CI review (what else reads this change?). Every answer cites a file and a line.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s35.webp)
 
-Slide 35. One graph, three kinds of caller.
+*Slide 35: One graph, three kinds of caller.*
 
 ### Team plugins (not photographed)
 
@@ -207,7 +217,7 @@ He talked about GraphRAG as settled, so we looked for whether Netflix or anyone 
 
 ### Netflix has not published this system
 
-We found no Netflix TechBlog post, paper or earlier talk describing per-domain GraphRAG for code or the “ask” MCP server. The session abstract describes the context layer only in general terms: architecture decisions seed every agent session, plans are checked against them, drift is flagged before review and docs update after merge. No cost, latency or answer-accuracy figures for the graph were shown. What Netflix has published is related graph work by other teams:
+I found no Netflix TechBlog post, paper or earlier talk describing per-domain GraphRAG for code or the “ask” MCP server. The session abstract describes the context layer only in general terms: architecture decisions seed every agent session, plans are checked against them, drift is flagged before review and docs update after merge. No cost, latency or answer-accuracy figures for the graph were shown. What Netflix has published is related graph work by other teams:
 
 - [Ontology-driven observability](https://www.infoq.com/news/2026/03/ontology-at-netflix) (QCon London, March 2026; [InfoQ, November 2026](https://infoq.com/news/2026/11/netflix-ai-driven-observability)): an operational knowledge graph built on RDF, OWL, SHACL and SPARQL, stored in Netflix’s QuipuDB, with an AutoRCA system of specialist agents that rank likely root causes. This is a formally modelled graph, not one extracted by an LLM. It is likely related to the RCA agent in this talk, but he didn’t say so.
 - [UDA (Unified Data Architecture)](https://netflixtechblog.com/uda-unified-data-architecture-6a6aee261d8d), presented Monday by Aarti Gupta in [Stop Fighting the Remodel](https://qconsf.com/presentation/nov2026/stop-fighting-remodel-api-design-models-outgrew-their-boundaries): a knowledge graph of business meaning that generates schemas.
@@ -224,9 +234,9 @@ We found no Netflix TechBlog post, paper or earlier talk describing per-domain G
 
 Read together, Netflix’s design matches where the evidence points. Structure comes from deterministic AST parsing, which is cheap and complete; an LLM extracts meaning only from docs and ADRs, which is where it adds something. The open questions are the ones the research raises. Netflix gave no cost per question for the “ask” agent and no evaluation of its answers. “Each build pins commits” suggests the graph is rebuilt on each build, but he didn’t say how long that takes.
 
-## Numbers we checked
+## Numbers I checked
 
-Checked means we found it in a published source; Caveat means it holds with a condition; Slide only means we took it from the slide; Talk only means we heard it in the room and found it nowhere else.
+Checked means we found it in a published source; Caveat means it holds with a condition; Slide only means I took it from the slide; Talk only means I heard it in the room and found it nowhere else.
 
 | Claim                                        | Figure      | Source                                                                                                                                                                                                        | Status                                                 |
 |----------------------------------------------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
@@ -364,144 +374,3 @@ The coding agents he listed as callers of the graph: [Claude Code](https://code.
 - **Still ahead** Wed 11:45: [Making Production Legible to Agents](https://qconsf.com/presentation/nov2026/making-production-legible-agents-lessons-building-observability-mcp) (Honeycomb).
 - **Still ahead** Wed 3:55: [How To Kill the Code Review](https://qconsf.com/presentation/nov2026/how-kill-code-review) (Aviator).
 
-## All slides
-
-[![Slide 1: How Netflix retrofitted its SDLC for AI coding agents. Mark Khuzam, Software Engineer, Commerce at Netflix. QCon San Francisco, Nov 18, 2026.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s01.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s01.webp)
-
-Slide 1. Title
-
-[![Slide 2: A mock email titled AI is here, to engineering-all at 9:02 AM: We&#x27;ve just purchased Claude Code for all of engineering. You can use AI to write your code now. Let us know how much faster you&#x27;re shipping.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s02.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s02.webp)
-
-Slide 2. The email
-
-[![Slide 3: Agents promised speed. But we spent 20 years building for humans.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s03.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s03.webp)
-
-Slide 3. Agents promised speed
-
-[![Slide 4: Commerce supports every step of the member lifecycle. 300M+ members, 190 countries, \$45B+ revenue a year, beside a Netflix signup page.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s04.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s04.webp)
-
-Slide 4. Commerce at Netflix
-
-[![Slide 5: Commerce, a dense graph of dozens of connected services.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s05.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s05.webp)
-
-Slide 5. The service graph
-
-[![Slide 6: Server Driven UI. API Gateway to Screen Composition, which serves iOS, Android, Web and TV.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s06.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s06.webp)
-
-Slide 6. Server-driven UI
-
-[![Slide 7: One codebase. Screen Composition: context engineering, loops.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s07.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s07.webp)
-
-Slide 7. One codebase
-
-[![Slide 8: Context Engineering. Getting what engineers know into what agents see.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s08.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s08.webp)
-
-Slide 8. Context engineering
-
-[![Slide 9: Writing new code to migrate old code to enable more code. As the product grows, we build the foundation that supports it.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s09.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s09.webp)
-
-Slide 9. Migrations
-
-[![Slide 10: Failing Forward. Attempt 1: migrate this file. Attempt 2: plus instructions. Attempt 3: plus the APIs to use. Attempt 4: plus how to mock data.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s10.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s10.webp)
-
-Slide 10. Failing forward
-
-[![Slide 11: Our docs were ok. For humans. Written for humans, hard to find, inconsistent. You had to learn how to write tests here.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s11.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s11.webp)
-
-Slide 11. Docs were ok, for humans
-
-[![Slide 12: -3. Net Promoter Score: how likely someone would recommend building on it.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s12.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s12.webp)
-
-Slide 12. NPS of -3
-
-[![Slide 13: From one test to a whole feature. Screen, Data, Route, Test. We had to teach the agent how we build here.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s13.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s13.webp)
-
-Slide 13. One test to a whole feature
-
-[![Slide 14: Entropy. Many ways to do the same thing. What stays? What goes? What confuses agents and humans?](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s14.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s14.webp)
-
-Slide 14. Entropy
-
-[![Slide 15: Architecture Decision Records. Context, Decision, Pattern and anti-pattern, AI usage notes (what an agent should do), Metadata (related docs, ADRs, code).](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s15.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s15.webp)
-
-Slide 15. ADR template
-
-[![Slide 16: Documentation. 45 architecture decision records, each written for people and for agents. 300+ docs: Docs, Tutorials, Server API, Client API, TV, Web, Mobile, Recipes.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s16.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s16.webp)
-
-Slide 16. 45 ADRs, 300+ docs
-
-[![Slide 17: Finding the context, 45 ADRs and 300+ docs. AGENTS.md read first (robots.txt), the index of what&#x27;s where (sitemap.xml), the one doc read in full (the page), then the code. Make it easy to find how to do it.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s17.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s17.webp)
-
-Slide 17. Finding the context
-
-[![Slide 18: Simplifying. Before: five ways to do one thing. Goal: one way. Agents migrate, people review. Decide what you want agents to do. Then tell them.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s18.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s18.webp)
-
-Slide 18. Simplifying
-
-[![Slide 19: ADRs now ship inside almost every repo.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s19.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s19.webp)
-
-Slide 19. ADRs in every repo
-
-[![Slide 20: Loops. An agent writes code. What does it do with it?](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s20.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s20.webp)
-
-Slide 20. Loops
-
-[![Slide 21: Loops inside loops. Release: canary on 10% of traffic, the RCA agent reports. After merge: docs follow. Fix: a comment or the revise label. Review: the CI agent pre-reviews. Every PR: build, lint and tests. Local: write, test, repeat.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s21.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s21.webp)
-
-Slide 21. Loops inside loops
-
-[![Slide 22: Our CI loop is still deterministic. 1 Build and lint, 2 Unit tests, 3 Integration tests, 4 Screenshot diffing, 5 Merge queues, 6 Canaries.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s22.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s22.webp)
-
-Slide 22. CI is deterministic
-
-[![Slide 23: Agentic Review. 1 Check the diff against our docs and ADRs. 2 Flag blockers: code that uses an anti-pattern. 3 Look downstream: what depends on this change?](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s23.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s23.webp)
-
-Slide 23. Agentic review
-
-[![Slide 24: Verified blockers only. First version: 23 comments of suggestions and nits. Now: one blocking finding with evidence (the confirm screen drops the local currency format), a fix (use the formatted price the service sends) and the rule (Pricing ADR).](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s24.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s24.webp)
-
-Slide 24. Verified blockers only
-
-[![Slide 25: The agent fixes it. The engineer owns it. The agent reads the PR description, diff, review and comments; the revise label triggers it; it pushes to the same PR; the engineer reviews it. Never auto-merged.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s25.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s25.webp)
-
-Slide 25. The revise label
-
-[![Slide 26: Docs follow the merge. Review checks whether a doc is now stale; merge is labelled if stale; a docs PR follows in the same PR or after merge. About 9% of merged PRs needed a docs update. ADRs stay human-owned.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s26.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s26.webp)
-
-Slide 26. Docs follow the merge
-
-[![Slide 27: The agent reports. The engineer ships. Release, canary on 10% of traffic, RCA agent studies the results, the engineer decides if it ships. It compares historical error rates with new errors from this release.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s27.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s27.webp)
-
-Slide 27. The engineer ships
-
-[![Slide 28: More changes, zero Sev 1s. 0 Sev 1 incidents in 2026 on a core service, +32% pull requests year over year, developer NPS -3 to +25 three quarters apart. A person decided at every step.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s28.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s28.webp)
-
-Slide 28. Results
-
-[![Slide 29: Ownership. Who owns this context?](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s29.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s29.webp)
-
-Slide 29. Ownership
-
-[![Slide 30: Product engineer. One feature crosses many services, shown as a large service graph.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s30.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s30.webp)
-
-Slide 30. Many services
-
-[![Slide 31: Portability. How does context follow the work?](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s31.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s31.webp)
-
-Slide 31. Portability
-
-[![Slide 32: Where does context go? Load every repo: dozens of repos, doesn&#x27;t fit. Git submodules: brittle, extra setup for everyone. A Git MCP server: sees one file, not the system. A shared repo plus copies: goes stale, many copies, many truths.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s32.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s32.webp)
-
-Slide 32. What failed
-
-[![Slide 33: What we needed. More than anything, accurate: the right context, and it&#x27;s correct. Portable: any agent, in any environment. Per domain: the team decides what&#x27;s in it. Fresh: keeps up with the code.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s33.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s33.webp)
-
-Slide 33. What they needed
-
-[![Slide 34: GraphRAG per domain. Parse (AST: symbols, calls, imports), Extract (semantic extraction from docs and ADRs), Group (community labels, one namespace per domain), Serve (one MCP tool, ask; each build pins commits). Structure from the code. Meaning from the docs.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s34.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s34.webp)
-
-Slide 34. GraphRAG per domain
-
-[![Slide 35: Any agent can ask. Payments repos feed the payments graph at one MCP address, queried by local agents (Claude Code, Cursor, Codex), a Slack bot and CI review. Every answer cites a file and a line.](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s35.webp)](../slides/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/deep/s35.webp)
-
-Slide 35. Any agent can ask

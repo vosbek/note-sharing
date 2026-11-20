@@ -1,12 +1,22 @@
 ---
 title: "Running Software Factory Efficiently at Uber Scale: Holding Agent Spend Steady While Requests Grew 9X"
+kind: "talk"
+speakers: ["Uday Kiran Medisetty"]
+track: "Guardrails & Safety Nets for the New Landscape"
+day: "2026-11-16"
+time: "10:35"
+session_url: "https://qconsf.com/presentation/nov2026/running-software-factory-efficiently-uber-scale-holding-agent-spend-steady"
+topics_central: ["Context and retrieval", "Cost and value"]
+topics_touched: ["Harness design", "Code review at volume", "Verification", "Change provenance"]
+slides: "gallery/running-software-factory-efficiently-at-uber-scale.md"
+summary: "How Uber grew agent requests 15x while holding weekly AI spend level, by splitting spend into six measurable terms and pulling one lever on each."
 ---
 
 # Running Software Factory Efficiently at Uber Scale: Holding Agent Spend Steady While Requests Grew 9X
 
 **Speaker:** Uday Kiran Medisetty (VP, Distinguished Engineer, Uber)  
 QCon SF 2026 · Guardrails & Safety Nets for the New Landscape · Mon Nov 16, 10:35 · Ballroom A  
-[Session page](https://qconsf.com/presentation/nov2026/running-software-factory-efficiently-uber-scale-holding-agent-spend-steady)
+[Session page](https://qconsf.com/presentation/nov2026/running-software-factory-efficiently-uber-scale-holding-agent-spend-steady) · [All 23 slides](../gallery/running-software-factory-efficiently-at-uber-scale.md)
 
 > How Uber grew agent requests 15x while holding weekly AI spend level, by splitting spend into six measurable terms and pulling one lever on each.
 
@@ -43,11 +53,11 @@ Slide 4 is the headline. From February 2 to the week of October 19, 2026, weekly
 
 ![Slide 2: Agents now do a large share of software work at Uber. 70%+ of pull requests attributed to agents, 5,000+ agent skills, 33K+ skill executions per day, 1,000+ MCP servers behind one gateway, with a map of tech sites.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s02.webp)
 
-Slide 2. The scale: PRs, skills, skill runs and MCP servers.
+*Slide 2: The scale: PRs, skills, skill runs and MCP servers.*
 
 ![Slide 4: Requests grew more than 15x while spend stabilized. Weekly active users +7x, weekly agent requests +15x, and weekly cost, Feb 2 to the week of Oct 19, 2026.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s04.webp)
 
-Slide 4. Users +7x, requests +15x, and the weekly cost curve.
+*Slide 4: Users +7x, requests +15x, and the weekly cost curve.*
 
 ### Four layers, and cost per outcome (slides 3, 9–10)
 
@@ -67,13 +77,13 @@ Slide 9 or 10 spells out the method: one unit of work per agent; score models on
 
 ![Slide 3: Four layers where agent sessions run. Specialized agents Minion, uReview, Agentic XP, Conan AI and Fawkes across code gen, validate, deploy, observe and maintain, each with a cost-per-outcome unit; then general agents, sessions with skills and raw sessions, from more control to less.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s03.webp)
 
-Slide 3. Four layers; more control over cost, quality and model higher up.
+*Slide 3: Four layers; more control over cost, quality and model higher up.*
 
 ![Slide 9 or 10: Specialized agents are measured by cost per outcome. One unit of work per agent; score models on the agent's real tasks; run the Pareto-optimal model.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s09.webp)
 
 Slide 9–10. Cost per outcome, benchmark, then the Pareto-optimal model.
 
-**Takeaway.** Moving work into the top layers is what makes cost controllable: there the model, the harness and the unit of work are all fixed and measurable.
+> Moving work into the top layers is what makes cost controllable: there the model, the harness and the unit of work are all fixed and measurable.
 
 ### Six terms, one lever each (slides 8, 29)
 
@@ -89,13 +99,13 @@ Users and sessions per user are adoption, which Uber wants to grow. The middle t
 
 ![Slide 8: What we changed, by term. Users and sessions per user to grow; turns per session, requests per turn, tokens per request and price per token, with the changes made for each and token price multipliers.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s08.webp)
 
-Slide 8. The six terms and the change made for each.
+*Slide 8: The six terms and the change made for each.*
 
 ![Slide 29: Summary, what we changed in each term. Users +7x, requests +15x, 18 session checks, 55 to 71% fewer tokens with code mode, about 15% fewer input tokens, 7x cost of the top score for +0.019 over the 1x setting.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s29.webp)
 
-Slide 29. The summary slide, with a result for each term.
+*Slide 29: The summary slide, with a result for each term.*
 
-**Takeaway.** Breaking cost into terms turns “AI is expensive” into specific questions, each with an owner and a number.
+> Breaking cost into terms turns “AI is expensive” into specific questions, each with an owner and a number.
 
 ### Price per token: a benchmark from Uber’s own PRs (slides 11–13)
 
@@ -118,13 +128,13 @@ The result is a Pareto chart of composite score against cost per task, for every
 
 ![Slide 11: A merged PR becomes a graded task in six steps: select, rewrite, isolate, extract tests, validate, score. Gates B1 to B5, quality from a checklist and LLM judge, composite score S equals gate pass rate times mean quality. 1,075 graded tasks: Go 363, Java 416, Python 296.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s11.webp)
 
-Slide 11. Six steps from merged PR to graded task; 1,075 tasks.
+*Slide 11: Six steps from merged PR to graded task; 1,075 tasks.*
 
 ![Slide 13: Score against cost for each model and effort level. Composite score from 0.55 to 0.75 against cost per task on a log scale from 0.1x to 10x, with the Pareto frontier marked.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s13.webp)
 
-Slide 13. Score against cost; the line is the best score at each price.
+*Slide 13: Score against cost; the line is the best score at each price.*
 
-**Takeaway.** Public leaderboards don’t say which model is good enough for your codebase’s routine work. A benchmark from your own merged PRs does, and it shows how little the most expensive setting adds.
+> Public leaderboards don’t say which model is good enough for your codebase’s routine work. A benchmark from your own merged PRs does, and it shows how little the most expensive setting adds.
 
 ### Tokens per request: one CLI, three defaults (slides 14–17)
 
@@ -146,7 +156,7 @@ Slide 14–17. aifx: one CLI for every harness.
 
 Slide 14–17. Three defaults and what each saved.
 
-**Takeaway.** With one place to set defaults, a choice such as 400K versus 1M becomes an experiment with a measured result rather than an argument.
+> With one place to set defaults, a choice such as 400K versus 1M becomes an experiment with a measured result rather than an argument.
 
 ### Tokens per request: tool definitions (slides 14–18)
 
@@ -162,9 +172,9 @@ Slide 14–17. From every installed tool to one CLI.
 
 ![Slide 18: SaaS MCP servers go through the same gateway. aifx mcp call in context; gateway with auth, policy, metering; workspace suite 49 tools, project tracker 46, messaging 34, issue tracker 28, design 16; about 22K tokens for the workspace server; 173 schemas and about 57K tokens kept out of context.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s18.webp)
 
-Slide 18. 173 vendor tool schemas kept out of context.
+*Slide 18: 173 vendor tool schemas kept out of context.*
 
-**Takeaway.** Asked later which levers saved most, he named this one first, together with cache hit rate.
+> Asked later which levers saved most, he named this one first, together with cache hit rate.
 
 ### Requests per turn: code mode and the context graph (slides 19–25)
 
@@ -189,7 +199,7 @@ Slide 19–25. Code mode: one model turn instead of 3 to 7.
 
 Slide 19–25. The graph’s effect on one question and on 68.
 
-**Takeaway.** The graph is a map with pointers. It tells the agent where to look, and the agent does the looking.
+> The graph is a map with pointers. It tells the agent where to look, and the agent does the looking.
 
 ### Turns per session: showing the meter (slides 19–28)
 
@@ -209,7 +219,7 @@ Slide 19–25. The status line: model, pool, session cost, context.
 
 Slide 27–28. Session analysis: 18 checks, each with a fix.
 
-**Takeaway.** Visible cost and specific, per-session advice changed behaviour without hard caps.
+> Visible cost and specific, per-session advice changed behaviour without hard caps.
 
 ### Questions from the room (after slide 30)
 
@@ -237,9 +247,9 @@ Uber used AI to backfill years of feature timelines and now measures feature vel
 Is aifx a proxy?  
 No. Engineers get the normal Claude Code or Codex interface; aifx writes the settings and hooks and then starts the harness. Nobody bypasses it because it is the way to reach Uber’s model gateway. Asked whether anyone sells this, he said he knew of nothing.
 
-## Numbers we checked
+## Numbers I checked
 
-Every figure in the talk against its source. Checked means we found the same number in a published source; Caveat means it holds with a condition; Slide only means we took it from the slide; Talk only means we heard it in the room and found it nowhere else.
+Every figure in the talk against its source. Checked means we found the same number in a published source; Caveat means it holds with a condition; Slide only means I took it from the slide; Talk only means I heard it in the room and found it nowhere else.
 
 | Claim                                       | Figure            | Source                                                                                                                                      | Status                                                     |
 |---------------------------------------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
@@ -432,96 +442,3 @@ One repository holding many projects. Uber’s benchmark runs inside its largest
 - **Still ahead** Wed 11:45: [Making Production Legible to Agents](https://qconsf.com/presentation/nov2026/making-production-legible-agents-lessons-building-observability-mcp) (Honeycomb), on MCP and observability.
 - **Still ahead** Wed 3:55: [How To Kill the Code Review](https://qconsf.com/presentation/nov2026/how-kill-code-review) (Aviator).
 
-## All slides
-
-[![Slide 1: Running Software Factory Efficiently at Uber Scale, holding agent spend steady while requests grew 15X. Uday Kiran Medisetty, VP, Distinguished Engineer, Uber.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s01.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s01.webp)
-
-Slide 1. Title
-
-[![Slide 2: 70%+ of pull requests attributed to agents, 5,000+ skills, 33K+ skill executions per day, 1,000+ MCP servers behind one gateway.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s02.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s02.webp)
-
-Slide 2. Agents do a large share of the work
-
-[![Slide 3: four layers where agent sessions run, with five specialized agents and their cost-per-outcome units.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s03.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s03.webp)
-
-Slide 3. Four layers where sessions run
-
-[![Slide 4: weekly active users +7x, weekly agent requests +15x, and weekly cost, Feb 2 to the week of Oct 19, 2026.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s04.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s04.webp)
-
-Slide 4. Requests +15x, spend stabilized
-
-[![Slide 8: what we changed by term, with token price multipliers and changes for each term.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s08.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s08.webp)
-
-Slide 8. What we changed, by term
-
-[![Slide 9 or 10: specialized agents are measured by cost per outcome.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s09.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s09.webp)
-
-Slide 9. Cost per outcome
-
-[![Slide 11: a merged PR becomes a graded task in six steps; 1,075 graded tasks.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s11.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s11.webp)
-
-Slide 11. Merged PR to graded task
-
-[![Slide 11, earlier build with the first two steps highlighted.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s11a.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s11a.webp)
-
-Slide 11. Earlier build
-
-[![Slide 12: each run is an isolated agent job on Kubernetes, built by Michelangelo; time to run one model from 3 days to about 1 hour.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s12.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s12.webp)
-
-Slide 12. Isolated agent jobs
-
-[![Slide 13: score against cost for each model and effort level, with the Pareto frontier.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s13.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s13.webp)
-
-Slide 13. Score against cost
-
-[![Slide 14 to 17: aifx applies the same defaults to every engineer.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s15.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s15.webp)
-
-Slide 15. aifx defaults
-
-[![Slide 14 to 17: three fleet-wide defaults set through aifx, with results.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s16.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s16.webp)
-
-Slide 16. Three fleet-wide defaults
-
-[![Slide 14 to 17: tool schemas in context, from every installed tool to one CLI.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s17.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s17.webp)
-
-Slide 17. Tool schemas to one CLI
-
-[![Slide 18: SaaS MCP servers go through the same gateway; 173 tool schemas kept out of context.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s18.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s18.webp)
-
-Slide 18. SaaS MCPs via the gateway
-
-[![Slide 19 to 25: code mode runs the tool loop outside the model.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s19.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s19.webp)
-
-Slide 19. Code mode
-
-[![Slide 19 to 25: a capable model still needs company context to answer.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s20.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s20.webp)
-
-Slide 20. Company context
-
-[![Slide 19 to 25: agents query the AI Context Graph before they search; 55M+ nodes, 195M+ edges.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s21.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s21.webp)
-
-Slide 21. AI Context Graph
-
-[![Slide 19 to 25: same prompt, same model, 20 minutes without the graph and 38 seconds with it.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s22.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s22.webp)
-
-Slide 22. 20m vs 38s
-
-[![Slide 19 to 25: a live cost counter in every engineer's status line.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s24.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s24.webp)
-
-Slide 24. Live cost counter
-
-[![Slide 26: visibility and nudges instead of hard caps.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s26.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s26.webp)
-
-Slide 26. Nudges, not hard caps
-
-[![Slide 27 or 28: session analysis, 18 checks grouped by the term they reduce.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s27.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s27.webp)
-
-Slide 27. Session analysis
-
-[![Slide 29: summary of what was changed in each term, with results.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s29.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s29.webp)
-
-Slide 29. Summary
-
-[![Slide 30: questions; read more at uber.com/blog/efficient-software-factory.](../slides/running-software-factory-efficiently-at-uber-scale/deep/s30.webp)](../slides/running-software-factory-efficiently-at-uber-scale/deep/s30.webp)
-
-Slide 30. Questions

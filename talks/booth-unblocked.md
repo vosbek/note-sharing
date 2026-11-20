@@ -1,5 +1,9 @@
 ---
 title: "Unblocked: a context layer for coding agents"
+kind: "booth"
+company: "Unblocked"
+day: "2026-11-16"
+summary: "Unblocked gives coding agents context from conversations, issues, docs and production systems as well as code."
 ---
 
 # Unblocked: a context layer for coding agents
@@ -15,7 +19,7 @@ Booth visit: Unblocked · QCon SF 2026 · Mon Nov 16
 - Their site lists SOC 2 Type II, SSO and SCIM. It says customer data is never used to train models, and it describes no self-hosted option.
 - Their site shows customer-reported savings, such as faster onboarding, that are not independently verified.
 
-Booth, Monday Nov 16. Sources: Unblocked's site and docs, read Nov 17, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Monday Nov 16. Sources: Unblocked's site and docs, read Nov 17, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

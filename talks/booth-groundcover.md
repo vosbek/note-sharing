@@ -1,5 +1,9 @@
 ---
-title: "groundcover: eBPF observability in your own cloud, readable by coding agents over MCP"
+title: "groundcover: eBPF observability in our own cloud, readable by coding agents over MCP"
+kind: "booth"
+company: "groundcover"
+day: "2026-11-18"
+summary: "groundcover collects logs, traces and metrics with an eBPF sensor and keeps them in your own cloud, and lets Claude Code or Cursor query them through an MCP server."
 ---
 
 # groundcover: eBPF observability in your own cloud, readable by coding agents over MCP
@@ -16,7 +20,7 @@ Booth visit: groundcover · QCon SF 2026 · Wed Nov 18
 - The MCP server gives Cursor and Claude Code tools to query logs, traces, metrics, events, monitors and Kubernetes objects.
 - Pricing is per monitored host: free with 12-hour retention, Pro $30, Enterprise $35 and on premises $50 a host a month, by their pricing page.
 
-Booth, Wednesday Nov 18. Sources: groundcover's homepage, pricing page and MCP server page, read Nov 18, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Wednesday Nov 18. Sources: groundcover's homepage, pricing page and MCP server page, read Nov 18, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 

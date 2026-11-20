@@ -1,12 +1,22 @@
 ---
 title: "Into the Labyrinth: What Distributed Systems Have Taught Us About Guardrails"
+kind: "talk"
+speakers: ["Akshay Shah"]
+track: "Guardrails & Safety Nets for the New Landscape"
+day: "2026-11-16"
+time: "17:05"
+session_url: "https://qconsf.com/presentation/nov2026/labyrinth-what-distributed-systems-have-taught-us-about-guardrails"
+topics_central: ["Verification"]
+topics_touched: ["Code review at volume", "Change provenance"]
+slides: "gallery/into-the-labyrinth.md"
+summary: "Why agent-written code should be treated like a distributed system, and how property-based testing, fault injection and deterministic simulation let people state what correct means while machines search for violations."
 ---
 
 # Into the Labyrinth: What Distributed Systems Have Taught Us About Guardrails
 
 **Speaker:** Akshay Shah (Field CTO, Antithesis)  
 QCon SF 2026 · Guardrails & Safety Nets for the New Landscape · Mon Nov 16, 17:05 · Ballroom A  
-[Session page](https://qconsf.com/presentation/nov2026/labyrinth-what-distributed-systems-have-taught-us-about-guardrails)
+[Session page](https://qconsf.com/presentation/nov2026/labyrinth-what-distributed-systems-have-taught-us-about-guardrails) · [All 42 slides](../gallery/into-the-labyrinth.md)
 
 > Why agent-written code should be treated like a distributed system, and how property-based testing, fault injection and deterministic simulation let people state what correct means while machines search for violations.
 
@@ -41,11 +51,11 @@ Now people on the safe side of the cliff are shouting for more tokens and more s
 
 ![Slide 5: Thinking leads to anticipate, update design, strengthen tests; testing catches known bugs.](../slides/into-the-labyrinth/deep/s05.webp)
 
-Slide 5. Thinking anticipates; testing catches what you anticipated.
+*Slide 5: Thinking anticipates; testing catches what you anticipated.*
 
 ![Slide 7: The thinking and testing lists taped over with agents question marks.](../slides/into-the-labyrinth/deep/s07.webp)
 
-Slide 7. Every item on both lists gets handed to agents.
+*Slide 7: Every item on both lists gets handed to agents.*
 
 ### Jepsen and ParticleDB (slide 8)
 
@@ -65,11 +75,11 @@ So just write better unit tests? Akshay walked through one HBase failure. Data n
 
 ![Slide 11: Timeline of data node 0, control plane and data node 1 showing partition, WAL roll, recovery and traffic redirect.](../slides/into-the-labyrinth/deep/s11.webp)
 
-Slide 11. The HBase write-loss sequence.
+*Slide 11: The HBase write-loss sequence.*
 
 ![Slide 12: Java test testLogRollAfterSplitStart with comments okay, simulation?, WTF, OMG kill me.](../slides/into-the-labyrinth/deep/s12.webp)
 
-Slide 12. The “simple” unit test that would have caught it.
+*Slide 12: The “simple” unit test that would have caught it.*
 
 ### The labyrinth (slides 13–14)
 
@@ -95,11 +105,11 @@ Making a failing input as small as possible while it still fails, so you debug `
 
 ![Slide 18: Hypothesis test of sorted with ascending and permutation assertions.](../slides/into-the-labyrinth/deep/s18.webp)
 
-Slide 18. Two properties define “sorted.”
+*Slide 18: Two properties define “sorted.”*
 
 ![Slide 21: Corpus \[3\], strategy \[3,1\], output \[\], shrink to \[1\].](../slides/into-the-labyrinth/deep/s21.webp)
 
-Slide 21. One pass through the loop, ending in a shrunk counterexample.
+*Slide 21: One pass through the loop, ending in a shrunk counterexample.*
 
 ### Jepsen is property-based testing (slides 22–23)
 
@@ -126,11 +136,11 @@ Antithesis takes the external route: your containers run on k3s on the Linux ker
 
 ![Slide 31: TimeOS real time backed by the operating system and TimeSim simulated time for testing.](../slides/into-the-labyrinth/deep/s31.webp)
 
-Slide 31. TigerBeetle: real time and simulated time behind one interface.
+*Slide 31: TigerBeetle: real time and simulated time behind one interface.*
 
 ![Slide 33: External determinism stack: your containers, k3s, Linux kernel, deterministic hypervisor, hardware plus emulation.](../slides/into-the-labyrinth/deep/s33.webp)
 
-Slide 33. The external approach, virtualizing the machine below your code.
+*Slide 33: The external approach, virtualizing the machine below your code.*
 
 ### Deterministic simulation testing (slides 35–37)
 
@@ -142,11 +152,11 @@ That’s where agents come in. Ask an agent to find bugs against your properties
 
 ![Slide 36: Tightrope with properties added under thinking and deterministic simulation testing under testing.](../slides/into-the-labyrinth/deep/s36.webp)
 
-Slide 36. The rebalanced tightrope.
+*Slide 36: The rebalanced tightrope.*
 
 ![Slide 37: LLMs love DST, with the prompt about PROPERTIES.md and DST workloads.](../slides/into-the-labyrinth/deep/s37.webp)
 
-Slide 37. Agents propose; DST proves.
+*Slide 37: Agents propose; DST proves.*
 
 ### Monster three: state space explosion (slides 38–40)
 
@@ -158,9 +168,9 @@ The idea he finds most exciting is concolic testing, concrete plus symbolic: exp
 
 For property-based testing: QuickCheck, Hypothesis, Hegel, Tyche and Bombadil, which he singled out as property-based testing for web UIs. For DST: TigerBeetle, RewindVM, Turmoil and Antithesis. There was no time for questions. The talk’s title borrows from book 6 of the Death Gate Cycle, which he refuses to admit he has read.
 
-## Numbers we checked
+## Numbers I checked
 
-Checked means we found it in the source or a write-up of it; Caveat means it holds with a condition; Slide only means we took it from the slide.
+Checked means we found it in the source or a write-up of it; Caveat means it holds with a condition; Slide only means I took it from the slide.
 
 | Claim                                                | Figure           | Source                                                                                                  | Status                           |
 |------------------------------------------------------|------------------|---------------------------------------------------------------------------------------------------------|----------------------------------|
@@ -308,172 +318,3 @@ Orkes makes the Conductor workflow platform; ParticleDB is its multi-model datab
 - [Hypothesis](https://hypothesis.works) for Python.
 - [fast-check](https://fast-check.dev) for TypeScript and JavaScript.
 
-## All slides
-
-[![Slide 1: Title](../slides/into-the-labyrinth/deep/s01.webp)](../slides/into-the-labyrinth/deep/s01.webp)
-
-Slide 1. Title
-
-[![Slide 2: Akshay Shah](../slides/into-the-labyrinth/deep/s02.webp)](../slides/into-the-labyrinth/deep/s02.webp)
-
-Slide 2. Akshay Shah
-
-[![Slide 3: The tightrope](../slides/into-the-labyrinth/deep/s03.webp)](../slides/into-the-labyrinth/deep/s03.webp)
-
-Slide 3. The tightrope
-
-[![Slide 4: Thinking and testing](../slides/into-the-labyrinth/deep/s04.webp)](../slides/into-the-labyrinth/deep/s04.webp)
-
-Slide 4. Thinking and testing
-
-[![Slide 5: Thinking anticipates](../slides/into-the-labyrinth/deep/s05.webp)](../slides/into-the-labyrinth/deep/s05.webp)
-
-Slide 5. Thinking anticipates
-
-[![Slide 6: MOAR tokens, MOAR speed](../slides/into-the-labyrinth/deep/s06.webp)](../slides/into-the-labyrinth/deep/s06.webp)
-
-Slide 6. MOAR tokens, MOAR speed
-
-[![Slide 7: Agents on every item](../slides/into-the-labyrinth/deep/s07.webp)](../slides/into-the-labyrinth/deep/s07.webp)
-
-Slide 7. Agents on every item
-
-[![Slide 8: Jepsen: ParticleDB](../slides/into-the-labyrinth/deep/s08.webp)](../slides/into-the-labyrinth/deep/s08.webp)
-
-Slide 8. Jepsen: ParticleDB
-
-[![Slide 9: Lamport's definition](../slides/into-the-labyrinth/deep/s09.webp)](../slides/into-the-labyrinth/deep/s09.webp)
-
-Slide 9. Lamport's definition
-
-[![Slide 10: Yuan et al. Finding 9](../slides/into-the-labyrinth/deep/s10.webp)](../slides/into-the-labyrinth/deep/s10.webp)
-
-Slide 10. Yuan et al. Finding 9
-
-[![Slide 11: HBase write loss](../slides/into-the-labyrinth/deep/s11.webp)](../slides/into-the-labyrinth/deep/s11.webp)
-
-Slide 11. HBase write loss
-
-[![Slide 12: The unit test](../slides/into-the-labyrinth/deep/s12.webp)](../slides/into-the-labyrinth/deep/s12.webp)
-
-Slide 12. The unit test
-
-[![Slide 13: The labyrinth](../slides/into-the-labyrinth/deep/s13.webp)](../slides/into-the-labyrinth/deep/s13.webp)
-
-Slide 13. The labyrinth
-
-[![Slide 14: Jepsen analyses](../slides/into-the-labyrinth/deep/s14.webp)](../slides/into-the-labyrinth/deep/s14.webp)
-
-Slide 14. Jepsen analyses
-
-[![Slide 15: QuickCheck](../slides/into-the-labyrinth/deep/s15.webp)](../slides/into-the-labyrinth/deep/s15.webp)
-
-Slide 15. QuickCheck
-
-[![Slide 16: A little thin](../slides/into-the-labyrinth/deep/s16.webp)](../slides/into-the-labyrinth/deep/s16.webp)
-
-Slide 16. A little thin
-
-[![Slide 17: Getting better](../slides/into-the-labyrinth/deep/s17.webp)](../slides/into-the-labyrinth/deep/s17.webp)
-
-Slide 17. Getting better
-
-[![Slide 18: Hypothesis properties](../slides/into-the-labyrinth/deep/s18.webp)](../slides/into-the-labyrinth/deep/s18.webp)
-
-Slide 18. Hypothesis properties
-
-[![Slide 19: PBT in a nutshell](../slides/into-the-labyrinth/deep/s19.webp)](../slides/into-the-labyrinth/deep/s19.webp)
-
-Slide 19. PBT in a nutshell
-
-[![Slide 20: AFL++ interesting values](../slides/into-the-labyrinth/deep/s20.webp)](../slides/into-the-labyrinth/deep/s20.webp)
-
-Slide 20. AFL++ interesting values
-
-[![Slide 21: PBT example](../slides/into-the-labyrinth/deep/s21.webp)](../slides/into-the-labyrinth/deep/s21.webp)
-
-Slide 21. PBT example
-
-[![Slide 22: PBT in Jepsen](../slides/into-the-labyrinth/deep/s22.webp)](../slides/into-the-labyrinth/deep/s22.webp)
-
-Slide 22. PBT in Jepsen
-
-[![Slide 23: xkcd: Jepsen-ing](../slides/into-the-labyrinth/deep/s23.webp)](../slides/into-the-labyrinth/deep/s23.webp)
-
-Slide 23. xkcd: Jepsen-ing
-
-[![Slide 24: PBT vs state](../slides/into-the-labyrinth/deep/s24.webp)](../slides/into-the-labyrinth/deep/s24.webp)
-
-Slide 24. PBT vs state
-
-[![Slide 25: State trees](../slides/into-the-labyrinth/deep/s25.webp)](../slides/into-the-labyrinth/deep/s25.webp)
-
-Slide 25. State trees
-
-[![Slide 26: Nondeterminism](../slides/into-the-labyrinth/deep/s26.webp)](../slides/into-the-labyrinth/deep/s26.webp)
-
-Slide 26. Nondeterminism
-
-[![Slide 27: Nondeterminism is everywhere](../slides/into-the-labyrinth/deep/s27.webp)](../slides/into-the-labyrinth/deep/s27.webp)
-
-Slide 27. Nondeterminism is everywhere
-
-[![Slide 28: Eliminating it](../slides/into-the-labyrinth/deep/s28.webp)](../slides/into-the-labyrinth/deep/s28.webp)
-
-Slide 28. Eliminating it
-
-[![Slide 29: TigerBeetle clock](../slides/into-the-labyrinth/deep/s29.webp)](../slides/into-the-labyrinth/deep/s29.webp)
-
-Slide 29. TigerBeetle clock
-
-[![Slide 30: Time interface](../slides/into-the-labyrinth/deep/s30.webp)](../slides/into-the-labyrinth/deep/s30.webp)
-
-Slide 30. Time interface
-
-[![Slide 31: TimeOS and TimeSim](../slides/into-the-labyrinth/deep/s31.webp)](../slides/into-the-labyrinth/deep/s31.webp)
-
-Slide 31. TimeOS and TimeSim
-
-[![Slide 32: Internal: pros and cons](../slides/into-the-labyrinth/deep/s32.webp)](../slides/into-the-labyrinth/deep/s32.webp)
-
-Slide 32. Internal: pros and cons
-
-[![Slide 33: External: deterministic VM](../slides/into-the-labyrinth/deep/s33.webp)](../slides/into-the-labyrinth/deep/s33.webp)
-
-Slide 33. External: deterministic VM
-
-[![Slide 34: External: pros and cons](../slides/into-the-labyrinth/deep/s34.webp)](../slides/into-the-labyrinth/deep/s34.webp)
-
-Slide 34. External: pros and cons
-
-[![Slide 35: DST defined](../slides/into-the-labyrinth/deep/s35.webp)](../slides/into-the-labyrinth/deep/s35.webp)
-
-Slide 35. DST defined
-
-[![Slide 36: The rebalanced tightrope](../slides/into-the-labyrinth/deep/s36.webp)](../slides/into-the-labyrinth/deep/s36.webp)
-
-Slide 36. The rebalanced tightrope
-
-[![Slide 37: LLMs love DST](../slides/into-the-labyrinth/deep/s37.webp)](../slides/into-the-labyrinth/deep/s37.webp)
-
-Slide 37. LLMs love DST
-
-[![Slide 38: State space explosion](../slides/into-the-labyrinth/deep/s38.webp)](../slides/into-the-labyrinth/deep/s38.webp)
-
-Slide 38. State space explosion
-
-[![Slide 39: DST is a search problem](../slides/into-the-labyrinth/deep/s39.webp)](../slides/into-the-labyrinth/deep/s39.webp)
-
-Slide 39. DST is a search problem
-
-[![Slide 40: Concolic testing](../slides/into-the-labyrinth/deep/s40.webp)](../slides/into-the-labyrinth/deep/s40.webp)
-
-Slide 40. Concolic testing
-
-[![Slide 41: Where to start](../slides/into-the-labyrinth/deep/s41.webp)](../slides/into-the-labyrinth/deep/s41.webp)
-
-Slide 41. Where to start
-
-[![Slide 42: Questions](../slides/into-the-labyrinth/deep/s42.webp)](../slides/into-the-labyrinth/deep/s42.webp)
-
-Slide 42. Questions

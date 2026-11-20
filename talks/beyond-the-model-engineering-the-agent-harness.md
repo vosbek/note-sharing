@@ -1,12 +1,22 @@
 ---
 title: "Beyond the Model: Engineering the Agent Harness for Autonomous Software Delivery"
+kind: "talk"
+speakers: ["Jayant Kulkarni"]
+track: "Sponsored Solution Track I"
+day: "2026-11-16"
+time: "11:45"
+session_url: "https://qconsf.com/presentation/nov2026/beyond-model-engineering-agent-harness-autonomous-software-delivery"
+topics_central: ["Harness design"]
+topics_touched: ["Code review at volume", "Verification", "Context and retrieval", "Isolation and permissions", "Cost and value"]
+slides: "gallery/beyond-the-model-engineering-the-agent-harness.md"
+summary: "IBM pitched Bob as a harness for the whole software lifecycle, with modes, rules, skills, hooks and human approval gates around the model."
 ---
 
 # Beyond the Model: Engineering the Agent Harness for Autonomous Software Delivery
 
 **Speaker:** Jayant Kulkarni (Senior Solution Architect, Client Engineering, IBM)  
 QCon SF 2026 · Sponsored Solution Track I · Mon Nov 16, 11:45 · Pacific LM  
-[Session page](https://qconsf.com/presentation/nov2026/beyond-model-engineering-agent-harness-autonomous-software-delivery)
+[Session page](https://qconsf.com/presentation/nov2026/beyond-model-engineering-agent-harness-autonomous-software-delivery) · [All 33 slides](../gallery/beyond-the-model-engineering-the-agent-harness.md)
 
 > IBM pitched Bob as a harness for the whole software lifecycle, with modes, rules, skills, hooks and human approval gates around the model.
 
@@ -43,13 +53,13 @@ Slide 5 sets out three disciplines, each fixing the previous one’s limit. Prom
 
 ![Slide 5: From better prompts to reliable AI agents. 2023 prompt engineering, 2025 context engineering, 2026 harness engineering, each with its limit. Bob: Ask, Plan, Agent, Review.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s05.webp)
 
-Slide 5. Three disciplines, each fixing the last one’s limit.
+*Slide 5: Three disciplines, each fixing the last one’s limit.*
 
 ![Slide 6: Harness engineering. The bottleneck is agent ecosystem, not intelligence. Context architecture, agent specialization, persistent memory and structured execution around reliable agent autonomy.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s06.webp)
 
-Slide 6. Four parts of the harness around the model.
+*Slide 6: Four parts of the harness around the model.*
 
-**Takeaway:** the same model gives very different results depending on what context, tools and checkpoints surround it. That is the keynote’s argument, told from a vendor’s side.
+> the same model gives very different results depending on what context, tools and checkpoints surround it. That is the keynote’s argument, told from a vendor’s side.
 
 ### What Bob is, and the maturity curve (slides 7–12)
 
@@ -68,13 +78,13 @@ Its footer covers context management: a 270,000-token window per conversation, b
 
 ![Slide 11: Climbing the AI maturity curve with IBM Bob. Assist, Delegate, Tailor, Scale and Extend, with key actions and a context window management strip showing 270,000 tokens per conversation.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s11.webp)
 
-Slide 11. Assist, Delegate, Tailor, Scale & Extend.
+*Slide 11: Assist, Delegate, Tailor, Scale & Extend.*
 
 ![Slide 12: Bob and package across the SDLC. Infinity loop of build, code, release, iterate, plan, govern, review, test, with Bob in the middle.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s12.webp)
 
-Slide 12. Join the loop at any stage.
+*Slide 12: Join the loop at any stage.*
 
-**Takeaway:** the four stages are a usable maturity ladder with a concrete context rule at each step.
+> the four stages are a usable maturity ladder with a concrete context rule at each step.
 
 ### Modes, workflow and claimed strengths (slides 13–17)
 
@@ -94,13 +104,13 @@ Slides 15 and 17 list the strengths IBM claims: hybrid deployment (SaaS, on-prem
 
 ![Slide 16: IBM Bob IDE deep dive, execution modes and developer control. Mode comparison table for Ask, Plan, Agent and an end-to-end example adding an API field.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s16.webp)
 
-Slide 16. Who controls what in each mode.
+*Slide 16: Who controls what in each mode.*
 
 ![Slide 17: Bob strengths for developers and technical decision makers: empower and partner, modernize and scale, optimize and deliver, shift-left and secure, each with claimed benefits.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s17.webp)
 
-Slide 17. Claimed benefits, including the 45% average.
+*Slide 17: Claimed benefits, including the 45% average.*
 
-**Takeaway:** two human gates (plan approval, then shell and Git actions) are built into the flow by default, with CI/CD gates still the team’s job.
+> two human gates (plan approval, then shell and Git actions) are built into the flow by default, with CI/CD gates still the team’s job.
 
 ### Demo 1: diagrams from an unfamiliar repo (slides 18–20)
 
@@ -110,11 +120,11 @@ He then asked Bob for a Mermaid class diagram of the Python models and Java doma
 
 ![Slide 19: Bob running /init with a to-do list: check existing AGENTS.md, identify stack and build/test commands, analyze architecture, write AGENTS.md.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s19.webp)
 
-Slide 19. /init plans its own work first.
+*Slide 19: /init plans its own work first.*
 
 ![Slide 20: Mermaid class diagram generated from the Galaxium Travels Python and Java models, with the prompt in the Bob panel.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s20.webp)
 
-Slide 20. Class diagram from the Python and Java models.
+*Slide 20: Class diagram from the Python and Java models.*
 
 ### Demo 2: an audit skill (slides 21–23)
 
@@ -124,13 +134,13 @@ The findings included no authentication, an IDOR on the bookings and cancel endp
 
 ![Slide 22: Create New Skill dialog with name asvs-audit, description auditing a codebase against OWASP ASVS Level 1, auto-invoke toggle, workspace scope.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s22.webp)
 
-Slide 22. Creating the asvs-audit skill.
+*Slide 22: Creating the asvs-audit skill.*
 
 ![Slide 23: Plan table of five audit sub-tasks with ASVS control IDs and risk areas, the note that the skill checks only seven controls, and tools awaiting approval.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s23.webp)
 
-Slide 23. Five sub-tasks, seven controls, out-of-scope issues listed.
+*Slide 23: Five sub-tasks, seven controls, out-of-scope issues listed.*
 
-**Takeaway:** the useful part isn’t the scan itself. It’s that the skill pins the scope to named controls and says what it didn’t check.
+> the useful part isn’t the scan itself. It’s that the skill pins the scope to named controls and says what it didn’t check.
 
 ### Demo 3 and the IDE tour (slides 24–28)
 
@@ -145,11 +155,11 @@ The settings tour showed the governance surface:
 
 ![Slide 26: Bob settings, General: account, team IBM Internal, add-ons IBM Bob Premium Package for i and z, monthly budget 250.00 with 21% used, monthly usage 52.33, View Bobalytics.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s26.webp)
 
-Slide 26. Budget, usage and premium add-ons.
+*Slide 26: Budget, usage and premium add-ons.*
 
 ![Slide 28: Bob settings, Hooks: five active global hooks for SessionStart, PreToolUse write_file/edit_file, PreToolUse execute_command, PostToolUse write_file/edit_file, and Stop.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s28.webp)
 
-Slide 28. Five global lifecycle hooks.
+*Slide 28: Five global lifecycle hooks.*
 
 ### Roadmap, deployment and testimonials (slides 29–33)
 
@@ -159,15 +169,15 @@ The “pricing and competitive landscape” section turned out to be slide 31, a
 
 ![Slide 30: Roadmap for October, November and December: agent harness, Bob Bazaar, security and governance, specialization and on-prem items.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s30.webp)
 
-Slide 30. Roadmap through December. Dates are estimates.
+*Slide 30: Roadmap through December. Dates are estimates.*
 
 ![Slide 31: Same capabilities, your choice of where it runs. IBM Bob SaaS versus self-hosted: multimodal routing SaaS only; air-gapped, private models and reuse of existing model licenses self-hosted only.](../slides/beyond-the-model-engineering-the-agent-harness/deep/s31.webp)
 
-Slide 31. SaaS versus self-hosted.
+*Slide 31: SaaS versus self-hosted.*
 
 What the abstract promised versus what was shown: the session page described a live multi-step change with parallel agents and validation before merge, and the same harness across IDE, CLI and CI/CD. The demos were recorded and single-agent; parallel agents and CI/CD appeared only on slides and the roadmap.
 
-## Numbers we checked
+## Numbers I checked
 
 Every figure below is IBM’s unless marked. None has an independent measurement behind it.
 
@@ -195,7 +205,7 @@ Every figure below is IBM’s unless marked. None has an independent measurement
 ### Harness and context
 
 [Harness engineering](https://claude.ai/artifact/HMh7MpE5JiJLRpHtVPvmPs)  
-Designing everything around the model (context, tools, permissions, checks) so agent work is repeatable. The theme of Monday’s keynote (linked: our write-up); Jayant used the same 2023 → 2025 → 2026 framing.
+Designing everything around the model (context, tools, permissions, checks) so agent work is repeatable. The theme of Monday’s keynote (linked: my write-up); Jayant used the same 2023 → 2025 → 2026 framing.
 
 [Context engineering](https://en.wikipedia.org/wiki/Prompt_engineering)  
 Choosing what goes into the model’s context window: requirements, code, rules, tool results. Slide 5 places it between prompts and harnesses.
@@ -336,136 +346,3 @@ The 2017 attention-based architecture behind today’s language models.
 - **Still ahead:** [Drawing the Rest of the Owl: A Blueprint for Your Software Factory](https://qconsf.com/presentation/nov2026/drawing-rest-owl-blueprint-your-software-factory), Chris Kelly (Harness), Tue 1:35 PM, Pacific LM.
 - **Still ahead:** [How To Kill the Code Review](https://qconsf.com/presentation/nov2026/how-kill-code-review), Ankit Jain (Aviator), Wed 3:55 PM, Ballroom A.
 
-## All slides
-
-[![Slide 1: Agenda](../slides/beyond-the-model-engineering-the-agent-harness/deep/s01.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s01.webp)
-
-Slide 1. Agenda
-
-[![Slide 2: Section 01: agentic AI](../slides/beyond-the-model-engineering-the-agent-harness/deep/s02.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s02.webp)
-
-Slide 2. Section 01: agentic AI
-
-[![Slide 3: Model evolution, 1957–2026](../slides/beyond-the-model-engineering-the-agent-harness/deep/s03.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s03.webp)
-
-Slide 3. Model evolution, 1957–2026
-
-[![Slide 4: Why enterprises need agentic AI](../slides/beyond-the-model-engineering-the-agent-harness/deep/s04.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s04.webp)
-
-Slide 4. Why enterprises need agentic AI
-
-[![Slide 5: Prompts, context, harness](../slides/beyond-the-model-engineering-the-agent-harness/deep/s05.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s05.webp)
-
-Slide 5. Prompts, context, harness
-
-[![Slide 6: Harness engineering](../slides/beyond-the-model-engineering-the-agent-harness/deep/s06.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s06.webp)
-
-Slide 6. Harness engineering
-
-[![Slide 7: Section 02: Bob introduction](../slides/beyond-the-model-engineering-the-agent-harness/deep/s07.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s07.webp)
-
-Slide 7. Section 02: Bob introduction
-
-[![Slide 8: What is IBM Bob?](../slides/beyond-the-model-engineering-the-agent-harness/deep/s08.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s08.webp)
-
-Slide 8. What is IBM Bob?
-
-[![Slide 9: The measure of success](../slides/beyond-the-model-engineering-the-agent-harness/deep/s09.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s09.webp)
-
-Slide 9. The measure of success
-
-[![Slide 10: Press quotes](../slides/beyond-the-model-engineering-the-agent-harness/deep/s10.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s10.webp)
-
-Slide 10. Press quotes
-
-[![Slide 11: AI maturity curve](../slides/beyond-the-model-engineering-the-agent-harness/deep/s11.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s11.webp)
-
-Slide 11. AI maturity curve
-
-[![Slide 12: Bob across the SDLC](../slides/beyond-the-model-engineering-the-agent-harness/deep/s12.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s12.webp)
-
-Slide 12. Bob across the SDLC
-
-[![Slide 13: Knowledge to controlled execution](../slides/beyond-the-model-engineering-the-agent-harness/deep/s13.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s13.webp)
-
-Slide 13. Knowledge to controlled execution
-
-[![Slide 14: End-to-end SDLC workflow](../slides/beyond-the-model-engineering-the-agent-harness/deep/s14.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s14.webp)
-
-Slide 14. End-to-end SDLC workflow
-
-[![Slide 15: Key strengths](../slides/beyond-the-model-engineering-the-agent-harness/deep/s15.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s15.webp)
-
-Slide 15. Key strengths
-
-[![Slide 16: Modes and developer control](../slides/beyond-the-model-engineering-the-agent-harness/deep/s16.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s16.webp)
-
-Slide 16. Modes and developer control
-
-[![Slide 17: Strengths and claimed benefits](../slides/beyond-the-model-engineering-the-agent-harness/deep/s17.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s17.webp)
-
-Slide 17. Strengths and claimed benefits
-
-[![Slide 18: Demo: Bob IDE welcome](../slides/beyond-the-model-engineering-the-agent-harness/deep/s18.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s18.webp)
-
-Slide 18. Demo: Bob IDE welcome
-
-[![Slide 19: Demo: /init to-do list](../slides/beyond-the-model-engineering-the-agent-harness/deep/s19.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s19.webp)
-
-Slide 19. Demo: /init to-do list
-
-[![Slide 20: Demo: Mermaid class diagram](../slides/beyond-the-model-engineering-the-agent-harness/deep/s20.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s20.webp)
-
-Slide 20. Demo: Mermaid class diagram
-
-[![Slide 21: Demo: audit code](../slides/beyond-the-model-engineering-the-agent-harness/deep/s21.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s21.webp)
-
-Slide 21. Demo: audit code
-
-[![Slide 22: Demo: create asvs-audit skill](../slides/beyond-the-model-engineering-the-agent-harness/deep/s22.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s22.webp)
-
-Slide 22. Demo: create asvs-audit skill
-
-[![Slide 23: Demo: audit plan](../slides/beyond-the-model-engineering-the-agent-harness/deep/s23.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s23.webp)
-
-Slide 23. Demo: audit plan
-
-[![Slide 24: Demo: literate coding](../slides/beyond-the-model-engineering-the-agent-harness/deep/s24.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s24.webp)
-
-Slide 24. Demo: literate coding
-
-[![Slide 25: IDE: auto-approval settings](../slides/beyond-the-model-engineering-the-agent-harness/deep/s25.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s25.webp)
-
-Slide 25. IDE: auto-approval settings
-
-[![Slide 26: IDE: budget and add-ons](../slides/beyond-the-model-engineering-the-agent-harness/deep/s26.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s26.webp)
-
-Slide 26. IDE: budget and add-ons
-
-[![Slide 27: IDE: built-in skills](../slides/beyond-the-model-engineering-the-agent-harness/deep/s27.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s27.webp)
-
-Slide 27. IDE: built-in skills
-
-[![Slide 28: IDE: hooks](../slides/beyond-the-model-engineering-the-agent-harness/deep/s28.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s28.webp)
-
-Slide 28. IDE: hooks
-
-[![Slide 29: Workflow with approval gates](../slides/beyond-the-model-engineering-the-agent-harness/deep/s29.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s29.webp)
-
-Slide 29. Workflow with approval gates
-
-[![Slide 30: Roadmap, Oct–Dec](../slides/beyond-the-model-engineering-the-agent-harness/deep/s30.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s30.webp)
-
-Slide 30. Roadmap, Oct–Dec
-
-[![Slide 31: SaaS vs self-hosted](../slides/beyond-the-model-engineering-the-agent-harness/deep/s31.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s31.webp)
-
-Slide 31. SaaS vs self-hosted
-
-[![Slide 32: Testimonials (1)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s32.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s32.webp)
-
-Slide 32. Testimonials (1)
-
-[![Slide 33: Testimonials (2)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s33.webp)](../slides/beyond-the-model-engineering-the-agent-harness/deep/s33.webp)
-
-Slide 33. Testimonials (2)

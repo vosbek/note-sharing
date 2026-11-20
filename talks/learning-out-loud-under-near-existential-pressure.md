@@ -1,12 +1,22 @@
 ---
 title: "Learning Out Loud (Under Near-Existential Pressure)"
+kind: "talk"
+speakers: ["Laura Savino"]
+track: "Keynote"
+day: "2026-11-17"
+time: "09:00"
+session_url: "https://qconsf.com/keynote/nov2026/learning-out-loud-under-near-existential-pressure"
+topics_central: ["People and adoption"]
+topics_touched: ["Cost and value"]
+slides: "gallery/learning-out-loud-under-near-existential-pressure.md"
+summary: "Photoshop engineer and former language teacher Laura Savino argued that the engineers who adapt fastest to AI are the ones willing to learn in public. Enthusiasts, she said, spread adoption by invitation, not pressure."
 ---
 
 # Learning Out Loud (Under Near-Existential Pressure)
 
 **Speaker:** Laura Savino (Software Engineer, Adobe Photoshop)  
 QCon SF 2026 · Keynote · Tue Nov 17, 09:00 · Grand Ballroom  
-[Session page](https://qconsf.com/keynote/nov2026/learning-out-loud-under-near-existential-pressure)
+[Session page](https://qconsf.com/keynote/nov2026/learning-out-loud-under-near-existential-pressure) · [All 6 slides](../gallery/learning-out-loud-under-near-existential-pressure.md)
 
 > Photoshop engineer and former language teacher Laura Savino argued that the engineers who adapt fastest to AI are the ones willing to learn in public. Enthusiasts, she said, spread adoption by invitation, not pressure.
 
@@ -40,7 +50,7 @@ The talk ran as a chain of short stories, which she called “parables of AI”.
 
 She opened with the boiling-frog fable, then admitted it is debunked: real frogs move when the water gets too hot. She still likes it, reframed. The point is not that you ignore growing danger and get cooked. It is that you change too. Hard conditions that arrive gradually give you time to build the skills and support to handle them, and you only have to solve month eight after you have solved month seven.
 
-**Takeaway:** gradual change is survivable because you adapt with it, which is the opposite of how the fable is usually told.
+> gradual change is survivable because you adapt with it, which is the opposite of how the fable is usually told.
 
 ### Zealots, and the friend who isn’t one
 
@@ -50,7 +60,7 @@ Her friend TJ loved Haskell in the years when functional programming had true be
 
 Savino came up writing iOS apps. For years Apple developers knew all the tricks, took pride in craft, and big companies paid well for that knowledge. Then Apple moved its new APIs to Swift, and people who had shipped software for decades had to relearn beginner tasks. New names appeared overnight writing the best tutorials. Her observation: the people who grew most were the ones who learned in public, posting early questions and rough code and accepting the internet’s eagerness to correct them.
 
-**Takeaway:** in a platform shift, the expert identity is the thing that slows you down.
+> in a platform shift, the expert identity is the thing that slows you down.
 
 ### Denial, the useful kind and the harmful kind (slide 2)
 
@@ -58,7 +68,7 @@ She described “second-order denial” about AI: accepting that the technology 
 
 ![Quote from Maya Shankar's The Other Side of Change: denial can stem from a fear that you or those you love lack the skills or resources to handle the consequences of a change.](../slides/learning-out-loud-under-near-existential-pressure/deep/s02.webp)
 
-Slide 2. Denial as fear of not coping.
+*Slide 2: Denial as fear of not coping.*
 
 ### Lower the stakes
 
@@ -66,7 +76,7 @@ She improved her Spanish by reading the Twilight novels in translation: “brain
 
 Years later, learning to code, she froze at a karaoke night because an engineering manager was in the room and she couldn’t work the remote; she had turned a party into a job interview. Her AI version: the company survey on AI adoption. She asked people to answer it honestly, and admitted she still reads code with her own eyes before she checks it in.
 
-**Takeaway:** notice when the only thing at risk is your ego, and say out loud that the interface doesn’t make sense.
+> notice when the only thing at risk is your ego, and say out loud that the interface doesn’t make sense.
 
 ### Skill is trainable, so not knowing is ordinary
 
@@ -74,7 +84,7 @@ Shankar’s book argues that the person who finishes a change is different from 
 
 She cited a Dweck study in which researchers led participants to believe a skill was either innate or trainable. Those in the innate group avoided an effective learning task because others would see them fail; the trainable group took it. Her concrete practice: the first time a colleague walked her through an AI tool on a real Photoshop feature, she recorded the session, rookie questions and all, and posted it to the 600-person Photoshop channel. Diagrams don’t teach, she said; seeing a real tool on a real problem does.
 
-**Takeaway:** show your steps, including the ones where you don’t know what you’re doing.
+> show your steps, including the ones where you don’t know what you’re doing.
 
 ### The dance floor
 
@@ -82,7 +92,7 @@ At weddings she dances like there is no downside to looking goofy, so others dec
 
 Then she spoke to the AI enthusiasts in the room. Dragging someone onto the dance floor and dancing away makes them flee as soon as your back is turned. Shouting that everything off the floor is lava doesn’t work either. She used pandemic risk-taking as a mirror: everyone knew someone more relaxed and someone more cautious, and found both irritating. Risk profiles shift and people shift with them. When a reluctant colleague finally comes around, don’t gloat.
 
-**Takeaway:** adoption spreads by invitation; pressure and “I told you so” push people back to the wall.
+> adoption spreads by invitation; pressure and “I told you so” push people back to the wall.
 
 ### AI intensifies work, and support costs money
 
@@ -96,11 +106,11 @@ For real advice on curiosity she turned to mathematician David Bessis. Beyond th
 
 ![Quote from David Bessis's Mathematica about using the state of mind before sleep: rather than focusing on subjects, letting himself be filled with them.](../slides/learning-out-loud-under-near-existential-pressure/deep/s03.webp)
 
-Slide 3. Bessis on being filled with a problem.
+*Slide 3: Bessis on being filled with a problem.*
 
 ![Quote from David Bessis: focusing is thinking intensely in search of solutions; being filled with something means contemplating it without a goal, almost like dreaming.](../slides/learning-out-loud-under-near-existential-pressure/deep/s05.webp)
 
-Slide 5. The difference, in his words.
+*Slide 5: The difference, in his words.*
 
 She asked for scheduled, required rest: an hour at a conference to do a puzzle or stare at a wall after a dense session. And Bessis says nobody reads math books cover to cover, because understanding one fully is nearly as hard as writing it. Applied to work: when someone hands you a workflow diagram and you don’t get it, you haven’t rebuilt their whole mental model from its undocumented foundations yet. Ask “what are they thinking?” instead of “what were they thinking?”
 
@@ -108,9 +118,9 @@ She asked for scheduled, required rest: an hour at a conference to do a puzzle o
 
 She closed on the moment in an advanced meeting when someone senior asks what a term means and everyone else is relieved. Senior people need to be the ones raising their hands: “I’ve never seen X take precedence over Y. What made it the right choice here?” You learn something, and several others feel safe sharing their own confusion. When everyone is a beginner, that is leadership. Her last line: she is someone who learns out loud.
 
-**Takeaway:** the most useful thing a senior engineer can do in an AI rollout is ask the basic question in public.
+> the most useful thing a senior engineer can do in an AI rollout is ask the basic question in public.
 
-## Sources we checked
+## Sources I checked
 
 The talk had few numbers. These are the studies and claims it rested on, checked on Nov 17, 2026.
 
@@ -119,7 +129,7 @@ The talk had few numbers. These are the studies and claims it rested on, checked
 | Heart patients in deep denial did better short term and worse long term  | High deniers had fewer days in intensive care and fewer signs of cardiac dysfunction in hospital; denial was maladaptive after discharge                                       | [Levine et al., 1987](https://experts.arizona.edu/en/publications/the-role-of-denial-in-recovery-from-coronary-heart-disease/)                    | Checked   |
 | Citation slide gives the journal as Biopsychosocial Science and Medicine | The paper ran in *Psychosomatic Medicine* 49(2); the journal took its new name in 2025                                                                                         | [SBSM](https://thesbsm.org/?p=478)                                                                                                                | Caveat    |
 | AI doesn’t reduce work, it intensifies it                                | An eight-month study of about 200 employees at a US tech company: people took on more tasks and longer hours, often unasked                                                    | [HBR, Feb 9, 2026](https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it)                                                               | Checked   |
-| People told a skill was innate avoided a public-failure learning task    | Closest match: incremental theorists were more likely to take remedial action after poor performance. We could not confirm the public-versus-private task design she described | [Hong, Chiu, Dweck et al., 1999](https://rims.cityu-dg.edu.cn/en/publications/implicit-theories-attributions-and-coping-a-meaning-system-approa/) | Caveat    |
+| People told a skill was innate avoided a public-failure learning task    | Closest match: incremental theorists were more likely to take remedial action after poor performance. I could not confirm the public-versus-private task design she described | [Hong, Chiu, Dweck et al., 1999](https://rims.cityu-dg.edu.cn/en/publications/implicit-theories-attributions-and-coping-a-meaning-system-approa/) | Caveat    |
 | The boiling-frog story is debunked                                       | Frogs heated gradually try to escape; moving to regulate temperature is how ectotherms survive                                                                                 | [Wikipedia](https://en.wikipedia.org/wiki/Boiling_frog)                                                                                           | Checked   |
 | Racehorses share an official birthday                                    | January 1 in the Northern Hemisphere, August 1 in most of the Southern                                                                                                         | [Kentucky Derby](https://www.kentuckyderby.com/horses/news/thoroughbred-birthdays-along-the-road-to-the-kentucky-derby/)                          | Checked   |
 | She posted her learning session to a 600-person Photoshop channel        | Her own account                                                                                                                                                                | Recording                                                                                                                                         | Talk only |
@@ -175,35 +185,10 @@ Aruna Ranganathan and Xingqi Maggie Ye, Harvard Business Review, February 2026. 
 
 ![Citations slide listing Shankar, Dweck, Ranganathan and Ye in HBR, Levine et al. 1987, and Bessis.](../slides/learning-out-loud-under-near-existential-pressure/deep/s06.webp)
 
-Slide 6. Her citations.
+*Slide 6: Her citations.*
 
 ### Related sessions this week
 
 - **Nobody Knows Everything (and That’s OK): Building Alignment in Complex, Rapidly Changing Environments**, Teams and Orgs track, Tuesday (time not listed).
 - **How Netflix Retrofitted Its SDLC**, Wednesday 10:35. Still ahead.
 
-## All slides
-
-[![Slide 1: Title card: Laura Savino, Software Engineer at Adobe Photoshop, Learning Out Loud (Under Near-Existential Pressure).](../slides/learning-out-loud-under-near-existential-pressure/deep/s01.webp)](../slides/learning-out-loud-under-near-existential-pressure/deep/s01.webp)
-
-Slide 1. Title card
-
-[![Slide 2: Quote from Maya Shankar, The Other Side of Change, on denial stemming from fear of lacking the skills or resources to handle a change.](../slides/learning-out-loud-under-near-existential-pressure/deep/s02.webp)](../slides/learning-out-loud-under-near-existential-pressure/deep/s02.webp)
-
-Slide 2. Denial as fear of not coping
-
-[![Slide 3: Quote from David Bessis, Mathematica, on letting himself be filled with problems rather than focusing on them.](../slides/learning-out-loud-under-near-existential-pressure/deep/s03.webp)](../slides/learning-out-loud-under-near-existential-pressure/deep/s03.webp)
-
-Slide 3. Bessis on being filled with a problem
-
-[![Slide 4: The French phrases se focaliser (to focus) and être rempli de (to be filled with).](../slides/learning-out-loud-under-near-existential-pressure/deep/s04.webp)](../slides/learning-out-loud-under-near-existential-pressure/deep/s04.webp)
-
-Slide 4. Two French verbs
-
-[![Slide 5: Quote from David Bessis contrasting focusing on solutions with contemplating a problem without a goal.](../slides/learning-out-loud-under-near-existential-pressure/deep/s05.webp)](../slides/learning-out-loud-under-near-existential-pressure/deep/s05.webp)
-
-Slide 5. Focusing versus being filled with
-
-[![Slide 6: Citations slide: Shankar, Dweck, Ranganathan and Ye in HBR, Levine et al. 1987, Bessis.](../slides/learning-out-loud-under-near-existential-pressure/deep/s06.webp)](../slides/learning-out-loud-under-near-existential-pressure/deep/s06.webp)
-
-Slide 6. Citations

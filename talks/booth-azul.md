@@ -1,5 +1,9 @@
 ---
 title: "Azul: an AI-readable page about Azul and its Java products"
+kind: "booth"
+company: "Azul"
+day: "2026-11-16"
+summary: "Azul sells Java runtimes and support. Its Code Inventory product reports which Java classes and methods actually run in production."
 ---
 
 # Azul: an AI-readable page about Azul and its Java products
@@ -14,7 +18,7 @@ Booth visit: Azul · QCon SF 2026 · Mon Nov 16
 - The page says Azul Intelligence Cloud can scope AI code generation and modernization work to the code that actually runs in production.
 - The page repeats Azul's commercial claims, including Java licensing savings against Oracle Java SE. Some figures appear two different ways, so they need checking against Azul's own sources.
 
-Booth, Monday Nov 16. Sources: Azul's AI-readable summary page and its product and press pages, read Nov 17, 2026. Figures and claims are the vendor's own until we test them.
+Booth, Monday Nov 16. Sources: Azul's AI-readable summary page and its product and press pages, read Nov 17, 2026. Figures and claims are the vendor's own; I haven't tested them.
 
 ## What it is
 
