@@ -80,4 +80,4 @@ Vendor booths from the expo floor. Figures and claims on these pages are the ven
 
 ## About these notes
 
-The slides belong to their speakers and appear here as photos taken in the sessions. The official decks and recordings are on [qconsf.com](https://qconsf.com). Figures quoted from the talks were checked against their sources where possible, and each page's "Numbers we checked" table says which could not be confirmed. "My take" sections are my own opinion.
+The slides belong to their speakers and appear here as photos taken in the sessions. The official decks and recordings are on [qconsf.com](https://qconsf.com). Figures quoted from the talks were checked against their sources where possible, and each page's "Numbers I checked" table says which could not be confirmed. "My take" sections are my own opinion.

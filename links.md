@@ -12,8 +12,8 @@ Every external link in the notes, 751 in all, grouped by kind, with the talks or
 - [antithesishq/antithesis-skills](https://github.com/antithesishq/antithesis-skills): Agent skills for onboarding and triage · [Antithesis booth](talks/booth-antithesis.md)
 - [antithesishq/bombadil](https://github.com/antithesishq/bombadil): Bombadil · [Labyrinth](talks/into-the-labyrinth.md)
 - [antithesishq/hands-on-tutorial-1](https://github.com/antithesishq/hands-on-tutorial-1): Hands-on tutorial · [Antithesis booth](talks/booth-antithesis.md)
-- [atomicdotdev/atomic](https://github.com/atomicdotdev/atomic) · [Atomic](talks/wait-you-re-still-doing-prs.md), [Atomic booth](talks/booth-atomic.md)
-- [atomicdotdev/atomic-claude](https://github.com/atomicdotdev/atomic-claude): Claude Code integration · [Atomic](talks/wait-you-re-still-doing-prs.md), [Atomic booth](talks/booth-atomic.md)
+- [atomicdotdev/atomic](https://github.com/atomicdotdev/atomic) · [Atomic booth](talks/booth-atomic.md), [Atomic](talks/wait-you-re-still-doing-prs.md)
+- [atomicdotdev/atomic-claude](https://github.com/atomicdotdev/atomic-claude): Claude Code integration · [Atomic booth](talks/booth-atomic.md), [Atomic](talks/wait-you-re-still-doing-prs.md)
 - [atomicdotdev/atomic-opencode](https://github.com/atomicdotdev/atomic-opencode): OpenCode integration · [Atomic](talks/wait-you-re-still-doing-prs.md)
 - [aviator-co/agent-plugins](https://github.com/aviator-co/agent-plugins) · [Aviator](talks/how-to-kill-the-code-review.md)
 - [aviator-co/av](https://github.com/aviator-co/av): Stacked pull requests · [Aviator](talks/how-to-kill-the-code-review.md)
@@ -613,7 +613,7 @@ Every external link in the notes, 751 in all, grouped by kind, with the talks or
 
 - [AI agent workflows](https://docs.atomic.dev/getting-started/ai-agent-workflows) · [Atomic](talks/wait-you-re-still-doing-prs.md)
 - [Atomic docs, agent command](https://docs.atomic.dev/commands/agent) · [Atomic](talks/wait-you-re-still-doing-prs.md)
-- [Quick start](https://docs.atomic.dev/getting-started/quick-start) · [Atomic](talks/wait-you-re-still-doing-prs.md), [Atomic booth](talks/booth-atomic.md)
+- [Quick start](https://docs.atomic.dev/getting-started/quick-start) · [Atomic booth](talks/booth-atomic.md), [Atomic](talks/wait-you-re-still-doing-prs.md)
 
 **docs.augmentcode.com**
 
