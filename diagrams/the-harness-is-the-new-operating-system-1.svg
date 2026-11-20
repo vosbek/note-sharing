@@ -1,0 +1,44 @@
+<svg width="760" height="330" viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, Segoe UI, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#15191f"/></marker>
+</defs>
+<rect x="10" y="20" width="520" height="290" fill="#f3f5f8" stroke="#d8dde4"/>
+<text x="26" y="44" font-size="12" font-weight="600" letter-spacing="1.2" fill="#5a6370">HARNESS</text>
+<g>
+<rect x="40" y="64" width="200" height="86" fill="#ffffff" stroke="#15191f"/>
+<text x="58" y="94" font-size="18" font-weight="600" fill="#15191f">Feedback</text>
+<text x="58" y="118" font-size="13" fill="#5a6370">What happened?</text>
+<text x="58" y="136" font-size="12" fill="#1c57a5">≈ return codes, errors</text>
+</g>
+<g>
+<rect x="300" y="64" width="200" height="86" fill="#ffffff" stroke="#15191f"/>
+<text x="318" y="94" font-size="18" font-weight="600" fill="#15191f">Context</text>
+<text x="318" y="118" font-size="13" fill="#5a6370">What does the model know?</text>
+<text x="318" y="136" font-size="12" fill="#1c57a5">≈ virtual memory</text>
+</g>
+<g>
+<rect x="40" y="196" width="200" height="86" fill="#ffffff" stroke="#15191f"/>
+<text x="58" y="226" font-size="18" font-weight="600" fill="#15191f">Execution</text>
+<text x="58" y="250" font-size="13" fill="#5a6370">Where does it run?</text>
+<text x="58" y="268" font-size="12" fill="#1c57a5">≈ processes, permissions</text>
+</g>
+<g>
+<rect x="300" y="196" width="200" height="86" fill="#ffffff" stroke="#15191f"/>
+<text x="318" y="226" font-size="18" font-weight="600" fill="#15191f">Interface</text>
+<text x="318" y="250" font-size="13" fill="#5a6370">What can it ask to do?</text>
+<text x="318" y="268" font-size="12" fill="#1c57a5">≈ system calls</text>
+</g>
+<rect x="580" y="128" width="160" height="90" fill="#1c57a5"/>
+<text x="600" y="164" font-size="20" font-weight="600" fill="#ffffff">Model</text>
+<text x="600" y="188" font-size="13" fill="#e8eff9">Decides what to try</text>
+<line x1="240" y1="107" x2="296" y2="107" stroke="#15191f" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="246" y="99" font-size="11" fill="#5a6370">evidence</text>
+<path d="M500 107 C 545 107, 560 140, 576 150" fill="none" stroke="#15191f" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="508" y="96" font-size="11" fill="#5a6370">working view</text>
+<path d="M580 200 C 560 225, 545 239, 504 239" fill="none" stroke="#15191f" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="520" y="262" font-size="11" fill="#5a6370">action request</text>
+<line x1="300" y1="239" x2="244" y2="239" stroke="#15191f" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="262" y="231" font-size="11" fill="#5a6370">run</text>
+<line x1="140" y1="196" x2="140" y2="154" stroke="#15191f" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="148" y="180" font-size="11" fill="#5a6370">result</text>
+</svg>

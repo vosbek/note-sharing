@@ -1,0 +1,33 @@
+<svg width="720" height="250" viewBox="0 0 720 250" role="img" aria-label="Diagram comparing a Git rebase with inserting a change in a patch graph, using the hamburger example. Left: to add cheese after the patty, Git rewinds and replays lettuce, tomato, onion and bun. Right: in a patch graph the cheese node is inserted between patty and lettuce and only the edges change." xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif" font-size="13">
+<text x="20" y="24" font-weight="600" fill="#15191f">Git: rebase restacks history</text>
+<text x="380" y="24" font-weight="600" fill="#15191f">Patch graph: insert and remap</text>
+<g fill="#ffffff" stroke="#5a6370">
+<rect x="20" y="44" width="70" height="30" rx="3"/><rect x="100" y="44" width="70" height="30" rx="3"/>
+<rect x="180" y="44" width="70" height="30" rx="3" stroke-dasharray="4 3"/><rect x="260" y="44" width="70" height="30" rx="3" stroke-dasharray="4 3"/>
+<rect x="20" y="140" width="70" height="30" rx="3"/><rect x="100" y="140" width="70" height="30" rx="3"/>
+<rect x="180" y="140" width="70" height="30" rx="3" fill="#e8eff9" stroke="#1c57a5"/><rect x="260" y="140" width="70" height="30" rx="3"/>
+</g>
+<g fill="#15191f" text-anchor="middle">
+<text x="55" y="64">bun</text><text x="135" y="64">patty</text><text x="215" y="64">lettuce</text><text x="295" y="64">tomato</text>
+<text x="55" y="160">bun</text><text x="135" y="160">patty</text><text x="215" y="160" fill="#0d2f63">cheese</text><text x="295" y="160">lettuce′</text>
+</g>
+<text x="20" y="106" fill="#5a6370">Rewind past lettuce and tomato,</text>
+<text x="20" y="122" fill="#5a6370">add cheese, replay with new IDs</text>
+<text x="20" y="200" fill="#5a6370">Every agent that started from</text>
+<text x="20" y="216" fill="#5a6370">the old commit must rebase too</text>
+<g fill="#ffffff" stroke="#5a6370">
+<rect x="380" y="64" width="70" height="30" rx="3"/><rect x="460" y="64" width="70" height="30" rx="3"/>
+<rect x="540" y="64" width="70" height="30" rx="3" fill="#e8eff9" stroke="#1c57a5"/><rect x="620" y="64" width="70" height="30" rx="3"/>
+<rect x="620" y="130" width="70" height="30" rx="3"/>
+</g>
+<g fill="#15191f" text-anchor="middle">
+<text x="415" y="84">bun</text><text x="495" y="84">patty</text><text x="575" y="84" fill="#0d2f63">cheese</text><text x="655" y="84">lettuce</text><text x="655" y="150">tomato</text>
+</g>
+<path d="M495 64 C495 40 655 40 655 64" stroke="#5a6370" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="575" y="40" fill="#5a6370" text-anchor="middle" font-size="11">old edge</text>
+<g stroke="#5a6370" fill="none" stroke-width="1.5"><path d="M450 79 H460"/><path d="M655 94 V130"/></g>
+<g stroke="#1c57a5" fill="none" stroke-width="2"><path d="M530 79 H540"/><path d="M610 79 H620"/></g>
+<text x="380" y="196" fill="#5a6370">Cheese is inserted after patty and</text>
+<text x="380" y="212" fill="#5a6370">lettuce now follows cheese.</text>
+<text x="380" y="228" fill="#5a6370">No other change is rewritten.</text>
+</svg>

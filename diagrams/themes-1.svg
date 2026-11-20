@@ -1,0 +1,151 @@
+<svg width="940" height="456" class="cn-grid-wide" viewBox="0 0 940 456" role="img" aria-labelledby="mx-t mx-d" xmlns="http://www.w3.org/2000/svg" font-family="Mona Sans Variable, Mona Sans, Arial, sans-serif" font-size="12.5">
+<title id="mx-t">Themes by talk</title>
+<desc id="mx-d">A grid of eight themes against the twenty talks. Filled squares mark a theme that was central to the talk, outlined squares a theme the talk touched. Harness design: central to Opening keynote, IBM, Lucidic, Cosmos; touched by Uber, Atomic, Roblox, Pinterest, OpenAI, Netflix SDLC, Capital Group, Forter. Code review at volume: central to Atomic, Roblox, Cosmos, OpenAI, Netflix SDLC, Forter, Aviator; touched by Opening keynote, IBM, Uber, Labyrinth, Pinterest. Verification: central to Roblox, Labyrinth, Lucidic, OpenAI, Capital Group, Forter, Aviator; touched by Opening keynote, IBM, Uber, Netflix UDA, Atomic, Pinterest, Cosmos, LinkedIn, Netflix SDLC, Ro. Context and retrieval: central to Uber, Netflix UDA, Roblox, Lucidic, Pinterest, LinkedIn, Netflix SDLC; touched by Opening keynote, IBM, Atomic, Cosmos, OpenAI, Legacy as Leverage, Capital Group, Aviator. Isolation and permissions: central to Opening keynote, Netflix UDA, Atomic, OpenAI; touched by IBM, Roblox, Pinterest, Cosmos, Capital Group. Cost and value: central to Uber, Roblox, LinkedIn; touched by IBM, Atomic, Adobe, Lucidic, Cosmos, OpenAI, Legacy as Leverage, Capital Group, Forter. Change provenance: central to Atomic, Roblox, Capital Group, Aviator; touched by Uber, Netflix UDA, Labyrinth, Cosmos, OpenAI, Netflix SDLC. People and adoption: central to Adobe, Pinterest, Bravely, Legacy as Leverage; touched by OpenAI, Aviator, Ro.</desc>
+<text x="218" y="12" font-size="11" font-weight="700" letter-spacing="1.3" fill="#5b6280">MONDAY</text>
+<line x1="218" y1="20" x2="438" y2="20" stroke="#141d4d"/>
+<text x="442" y="12" font-size="11" font-weight="700" letter-spacing="1.3" fill="#5b6280">TUESDAY</text>
+<line x1="442" y1="20" x2="630" y2="20" stroke="#141d4d"/>
+<line x1="436" y1="20" x2="436" y2="456" stroke="#dfe3ec"/>
+<text x="634" y="12" font-size="11" font-weight="700" letter-spacing="1.3" fill="#5b6280">WEDNESDAY</text>
+<line x1="634" y1="20" x2="854" y2="20" stroke="#141d4d"/>
+<line x1="628" y1="20" x2="628" y2="456" stroke="#dfe3ec"/>
+<a href="/conferences/qcon-sf-2026/the-harness-is-the-new-operating-system/"><text transform="translate(234 136) rotate(-50)" font-weight="600" fill="#3a4160">Opening keynote</text></a>
+<a href="/conferences/qcon-sf-2026/beyond-the-model-engineering-the-agent-harness/"><text transform="translate(266 136) rotate(-50)" font-weight="600" fill="#3a4160">IBM</text></a>
+<a href="/conferences/qcon-sf-2026/running-software-factory-efficiently-at-uber-scale/"><text transform="translate(298 136) rotate(-50)" font-weight="600" fill="#3a4160">Uber</text></a>
+<a href="/conferences/qcon-sf-2026/stop-fighting-the-remodel/"><text transform="translate(330 136) rotate(-50)" font-weight="600" fill="#3a4160">Netflix UDA</text></a>
+<a href="/conferences/qcon-sf-2026/wait-you-re-still-doing-prs/"><text transform="translate(362 136) rotate(-50)" font-weight="600" fill="#3a4160">Atomic</text></a>
+<a href="/conferences/qcon-sf-2026/generation-got-cheap-trust-didnt/"><text transform="translate(394 136) rotate(-50)" font-weight="600" fill="#3a4160">Roblox</text></a>
+<a href="/conferences/qcon-sf-2026/into-the-labyrinth/"><text transform="translate(426 136) rotate(-50)" font-weight="600" fill="#3a4160">Labyrinth</text></a>
+<a href="/conferences/qcon-sf-2026/learning-out-loud-under-near-existential-pressure/"><text transform="translate(458 136) rotate(-50)" font-weight="600" fill="#3a4160">Adobe</text></a>
+<a href="/conferences/qcon-sf-2026/skills-memory-or-fine-tuning/"><text transform="translate(490 136) rotate(-50)" font-weight="600" fill="#3a4160">Lucidic</text></a>
+<a href="/conferences/qcon-sf-2026/use-ai-to-multiply-your-team-as-a-staff-engineer/"><text transform="translate(522 136) rotate(-50)" font-weight="600" fill="#3a4160">Pinterest</text></a>
+<a href="/conferences/qcon-sf-2026/drawing-the-rest-of-the-owl/"><text transform="translate(554 136) rotate(-50)" font-weight="600" fill="#3a4160">Cosmos</text></a>
+<a href="/conferences/qcon-sf-2026/building-a-100m-product-at-openai/"><text transform="translate(586 136) rotate(-50)" font-weight="600" fill="#3a4160">OpenAI</text></a>
+<a href="/conferences/qcon-sf-2026/bridging-retrieval-and-ranking/"><text transform="translate(618 136) rotate(-50)" font-weight="600" fill="#3a4160">LinkedIn</text></a>
+<a href="/conferences/qcon-sf-2026/the-execution-muscle-why-great-teams-are-built-not-hired/"><text transform="translate(650 136) rotate(-50)" font-weight="600" fill="#3a4160">Bravely</text></a>
+<a href="/conferences/qcon-sf-2026/how-netflix-retrofitted-its-sdlc-for-ai-coding-agents/"><text transform="translate(682 136) rotate(-50)" font-weight="600" fill="#3a4160">Netflix SDLC</text></a>
+<a href="/conferences/qcon-sf-2026/legacy-as-leverage-how-brownfield-work-builds-technical-judgment/"><text transform="translate(714 136) rotate(-50)" font-weight="600" fill="#3a4160">Legacy as Leverage</text></a>
+<a href="/conferences/qcon-sf-2026/observability-the-missing-control-plane-for-agentic-engineering/"><text transform="translate(746 136) rotate(-50)" font-weight="600" fill="#3a4160">Capital Group</text></a>
+<a href="/conferences/qcon-sf-2026/you-cant-read-the-code-anymore/"><text transform="translate(778 136) rotate(-50)" font-weight="600" fill="#3a4160">Forter</text></a>
+<a href="/conferences/qcon-sf-2026/how-to-kill-the-code-review/"><text transform="translate(810 136) rotate(-50)" font-weight="600" fill="#3a4160">Aviator</text></a>
+<a href="/conferences/qcon-sf-2026/game-time-10x-in-a-week-and-in-a-year/"><text transform="translate(842 136) rotate(-50)" font-weight="600" fill="#3a4160">Ro</text></a>
+<text x="940" y="136" text-anchor="end" font-size="11" font-weight="700" letter-spacing="1.3" fill="#5b6280">TALKS</text>
+<line x1="0" y1="150" x2="940" y2="150" stroke="#141d4d" stroke-width="2"/>
+<a href="#topic-1"><text x="0" y="174" font-size="14.5" fill="#1d2340"><tspan font-weight="700" fill="#0047b9">1</tspan><tspan dx="10" font-weight="600">Harness design</tspan></text></a>
+<rect x="224" y="161" width="16" height="16" fill="#0047b9"/>
+<rect x="256" y="161" width="16" height="16" fill="#0047b9"/>
+<rect x="289" y="162" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="353" y="162" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="385" y="162" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="480" y="161" width="16" height="16" fill="#0047b9"/>
+<rect x="513" y="162" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="544" y="161" width="16" height="16" fill="#0047b9"/>
+<rect x="577" y="162" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="673" y="162" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="737" y="162" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="769" y="162" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<text x="940" y="174" text-anchor="end" font-size="14.5" font-weight="700" fill="#141d4d">12</text>
+<line x1="0" y1="188" x2="940" y2="188" stroke="#dfe3ec"/>
+<a href="#topic-2"><text x="0" y="212" font-size="14.5" fill="#1d2340"><tspan font-weight="700" fill="#0047b9">2</tspan><tspan dx="10" font-weight="600">Code review at volume</tspan></text></a>
+<rect x="225" y="200" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="257" y="200" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="289" y="200" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="352" y="199" width="16" height="16" fill="#0047b9"/>
+<rect x="384" y="199" width="16" height="16" fill="#0047b9"/>
+<rect x="417" y="200" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="513" y="200" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="544" y="199" width="16" height="16" fill="#0047b9"/>
+<rect x="576" y="199" width="16" height="16" fill="#0047b9"/>
+<rect x="672" y="199" width="16" height="16" fill="#0047b9"/>
+<rect x="768" y="199" width="16" height="16" fill="#0047b9"/>
+<rect x="800" y="199" width="16" height="16" fill="#0047b9"/>
+<text x="940" y="212" text-anchor="end" font-size="14.5" font-weight="700" fill="#141d4d">12</text>
+<line x1="0" y1="226" x2="940" y2="226" stroke="#dfe3ec"/>
+<a href="#topic-3"><text x="0" y="250" font-size="14.5" fill="#1d2340"><tspan font-weight="700" fill="#0047b9">3</tspan><tspan dx="10" font-weight="600">Verification</tspan></text></a>
+<rect x="225" y="238" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="257" y="238" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="289" y="238" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="321" y="238" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="353" y="238" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="384" y="237" width="16" height="16" fill="#0047b9"/>
+<rect x="416" y="237" width="16" height="16" fill="#0047b9"/>
+<rect x="480" y="237" width="16" height="16" fill="#0047b9"/>
+<rect x="513" y="238" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="545" y="238" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="576" y="237" width="16" height="16" fill="#0047b9"/>
+<rect x="609" y="238" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="673" y="238" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="736" y="237" width="16" height="16" fill="#0047b9"/>
+<rect x="768" y="237" width="16" height="16" fill="#0047b9"/>
+<rect x="800" y="237" width="16" height="16" fill="#0047b9"/>
+<rect x="833" y="238" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<text x="940" y="250" text-anchor="end" font-size="14.5" font-weight="700" fill="#141d4d">17</text>
+<line x1="0" y1="264" x2="940" y2="264" stroke="#dfe3ec"/>
+<a href="#topic-4"><text x="0" y="288" font-size="14.5" fill="#1d2340"><tspan font-weight="700" fill="#0047b9">4</tspan><tspan dx="10" font-weight="600">Context and retrieval</tspan></text></a>
+<rect x="225" y="276" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="257" y="276" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="288" y="275" width="16" height="16" fill="#0047b9"/>
+<rect x="320" y="275" width="16" height="16" fill="#0047b9"/>
+<rect x="353" y="276" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="384" y="275" width="16" height="16" fill="#0047b9"/>
+<rect x="480" y="275" width="16" height="16" fill="#0047b9"/>
+<rect x="512" y="275" width="16" height="16" fill="#0047b9"/>
+<rect x="545" y="276" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="577" y="276" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="608" y="275" width="16" height="16" fill="#0047b9"/>
+<rect x="672" y="275" width="16" height="16" fill="#0047b9"/>
+<rect x="705" y="276" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="737" y="276" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="801" y="276" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<text x="940" y="288" text-anchor="end" font-size="14.5" font-weight="700" fill="#141d4d">15</text>
+<line x1="0" y1="302" x2="940" y2="302" stroke="#dfe3ec"/>
+<a href="#topic-5"><text x="0" y="326" font-size="14.5" fill="#1d2340"><tspan font-weight="700" fill="#0047b9">5</tspan><tspan dx="10" font-weight="600">Isolation and permissions</tspan></text></a>
+<rect x="224" y="313" width="16" height="16" fill="#0047b9"/>
+<rect x="257" y="314" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="320" y="313" width="16" height="16" fill="#0047b9"/>
+<rect x="352" y="313" width="16" height="16" fill="#0047b9"/>
+<rect x="385" y="314" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="513" y="314" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="545" y="314" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="576" y="313" width="16" height="16" fill="#0047b9"/>
+<rect x="737" y="314" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<text x="940" y="326" text-anchor="end" font-size="14.5" font-weight="700" fill="#141d4d">9</text>
+<line x1="0" y1="340" x2="940" y2="340" stroke="#dfe3ec"/>
+<a href="#topic-6"><text x="0" y="364" font-size="14.5" fill="#1d2340"><tspan font-weight="700" fill="#0047b9">6</tspan><tspan dx="10" font-weight="600">Cost and value</tspan></text></a>
+<rect x="257" y="352" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="288" y="351" width="16" height="16" fill="#0047b9"/>
+<rect x="353" y="352" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="384" y="351" width="16" height="16" fill="#0047b9"/>
+<rect x="449" y="352" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="481" y="352" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="545" y="352" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="577" y="352" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="608" y="351" width="16" height="16" fill="#0047b9"/>
+<rect x="705" y="352" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="737" y="352" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="769" y="352" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<text x="940" y="364" text-anchor="end" font-size="14.5" font-weight="700" fill="#141d4d">12</text>
+<line x1="0" y1="378" x2="940" y2="378" stroke="#dfe3ec"/>
+<a href="#topic-7"><text x="0" y="402" font-size="14.5" fill="#1d2340"><tspan font-weight="700" fill="#0047b9">7</tspan><tspan dx="10" font-weight="600">Change provenance</tspan></text></a>
+<rect x="289" y="390" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="321" y="390" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="352" y="389" width="16" height="16" fill="#0047b9"/>
+<rect x="384" y="389" width="16" height="16" fill="#0047b9"/>
+<rect x="417" y="390" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="545" y="390" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="577" y="390" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="673" y="390" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="736" y="389" width="16" height="16" fill="#0047b9"/>
+<rect x="800" y="389" width="16" height="16" fill="#0047b9"/>
+<text x="940" y="402" text-anchor="end" font-size="14.5" font-weight="700" fill="#141d4d">10</text>
+<line x1="0" y1="416" x2="940" y2="416" stroke="#dfe3ec"/>
+<a href="#topic-8"><text x="0" y="440" font-size="14.5" fill="#1d2340"><tspan font-weight="700" fill="#0047b9">8</tspan><tspan dx="10" font-weight="600">People and adoption</tspan></text></a>
+<rect x="448" y="427" width="16" height="16" fill="#0047b9"/>
+<rect x="512" y="427" width="16" height="16" fill="#0047b9"/>
+<rect x="577" y="428" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="640" y="427" width="16" height="16" fill="#0047b9"/>
+<rect x="704" y="427" width="16" height="16" fill="#0047b9"/>
+<rect x="801" y="428" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<rect x="833" y="428" width="14" height="14" fill="#ffffff" stroke="#0047b9" stroke-width="2"/>
+<text x="940" y="440" text-anchor="end" font-size="14.5" font-weight="700" fill="#141d4d">7</text>
+</svg>

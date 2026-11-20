@@ -1,0 +1,49 @@
+<svg width="760" height="250" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" role="img" aria-labelledby="flow-title flow-desc">
+<title id="flow-title">Bob’s end-to-end workflow</title>
+<desc id="flow-desc">Setup, then Ask mode, then Plan mode, then a human approval gate that can send the plan back for revision, then Agent mode, then a second approval gate for shell and Git actions, then commit and pull request, looping back for the next feature.</desc>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5a6370"/></marker></defs>
+<g font-size="12" fill="#15191f">
+<rect x="4" y="40" width="100" height="74" fill="#f3f5f8" stroke="#5a6370"/>
+<text x="54" y="60" text-anchor="middle" font-weight="600">0 Setup</text>
+<text x="54" y="78" text-anchor="middle" font-size="10.5">/init</text>
+<text x="54" y="92" text-anchor="middle" font-size="10.5">AGENTS.md</text>
+<text x="54" y="106" text-anchor="middle" font-size="10.5">.bob/rules-*</text>
+<rect x="126" y="40" width="110" height="74" fill="#e8eff9" stroke="#1c57a5"/>
+<text x="181" y="60" text-anchor="middle" font-weight="600" fill="#0d2f63">1 Ask</text>
+<text x="181" y="78" text-anchor="middle" font-size="10.5">Read-only explore</text>
+<text x="181" y="92" text-anchor="middle" font-size="10.5">Explore subagents</text>
+<text x="181" y="106" text-anchor="middle" font-size="10.5">Diagrams, deps</text>
+<rect x="258" y="40" width="110" height="74" fill="#e8eff9" stroke="#1c57a5"/>
+<text x="313" y="60" text-anchor="middle" font-weight="600" fill="#0d2f63">2 Plan</text>
+<text x="313" y="78" text-anchor="middle" font-size="10.5">Specs, task list</text>
+<text x="313" y="92" text-anchor="middle" font-size="10.5">Writes a plan</text>
+<text x="313" y="106" text-anchor="middle" font-size="10.5">as Markdown</text>
+<polygon points="430,40 470,77 430,114 390,77" fill="#ffffff" stroke="#15191f" stroke-width="1.5"/>
+<text x="430" y="74" text-anchor="middle" font-size="10.5" font-weight="600">Human</text>
+<text x="430" y="87" text-anchor="middle" font-size="10.5" font-weight="600">gate</text>
+<rect x="492" y="40" width="120" height="74" fill="#0d2f63" stroke="#0d2f63"/>
+<text x="552" y="60" text-anchor="middle" font-weight="600" fill="#ffffff">3 Agent</text>
+<text x="552" y="78" text-anchor="middle" font-size="10.5" fill="#ffffff">Edit, parallel subagents</text>
+<text x="552" y="92" text-anchor="middle" font-size="10.5" fill="#ffffff">MCP tools</text>
+<text x="552" y="106" text-anchor="middle" font-size="10.5" fill="#ffffff">Tests, scans, critic</text>
+<polygon points="674,40 714,77 674,114 634,77" fill="#ffffff" stroke="#15191f" stroke-width="1.5"/>
+<text x="674" y="74" text-anchor="middle" font-size="10.5" font-weight="600">Shell/Git</text>
+<text x="674" y="87" text-anchor="middle" font-size="10.5" font-weight="600">gate</text>
+<text x="740" y="80" text-anchor="middle" font-size="10.5" font-weight="600">PR</text>
+</g>
+<g stroke="#5a6370" stroke-width="1.5" fill="none">
+<line x1="104" y1="77" x2="124" y2="77" marker-end="url(#ar)"/>
+<line x1="236" y1="77" x2="256" y2="77" marker-end="url(#ar)"/>
+<line x1="368" y1="77" x2="388" y2="77" marker-end="url(#ar)"/>
+<line x1="470" y1="77" x2="490" y2="77" marker-end="url(#ar)"/>
+<line x1="612" y1="77" x2="632" y2="77" marker-end="url(#ar)"/>
+<line x1="714" y1="77" x2="728" y2="77" marker-end="url(#ar)"/>
+<path d="M430,114 L430,140 L313,140 L313,116" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+<path d="M740,92 L740,190 L181,190 L181,116" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+</g>
+<g font-size="11" fill="#5a6370">
+<text x="372" y="156" text-anchor="middle">needs revision</text>
+<text x="460" y="208" text-anchor="middle">next feature or iteration</text>
+<text x="380" y="240" text-anchor="middle" font-size="10.5">Redrawn from slides 14 and 29. Gates depend on the permissions a team configures.</text>
+</g>
+</svg>

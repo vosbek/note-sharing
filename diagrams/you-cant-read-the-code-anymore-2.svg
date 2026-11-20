@@ -1,0 +1,42 @@
+<svg width="760" height="270" viewBox="0 0 760 270" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, Segoe UI, sans-serif">
+<title id="d2t">Telem lifecycle in a repository</title>
+<desc id="d2d">Every run starts with preflight. Backfill runs once per business flow: the first run bootstraps the harness, builds fakes and finds feature flags; later runs backfill one flow each from the flow checklist. When every flow is done, verify-full-coverage sweeps the whole repo, then graduate switches the repo to the contribute workflow of Red, Green, Refactor, Whitebox for every change. Sync runs on a schedule to apply new plugin guidance and production changes. State lives in .telem/bdd-onboarding-progress.json during backfill and .telem/bdd-freshness.json after graduation.</desc>
+<defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#15191f"/></marker></defs>
+<rect x="10" y="40" width="100" height="56" fill="#f3f5f8" stroke="#5a6370"/>
+<text x="60" y="64" text-anchor="middle" font-size="13" font-weight="600">/preflight</text>
+<text x="60" y="82" text-anchor="middle" font-size="11" fill="#5a6370">every run</text>
+<line x1="110" y1="68" x2="136" y2="68" stroke="#15191f" stroke-width="1.5" marker-end="url(#a2)"/>
+<rect x="140" y="10" width="250" height="120" fill="#ffffff" stroke="#1c57a5" stroke-width="2"/>
+<text x="155" y="32" font-size="14" font-weight="600" fill="#1c57a5">/backfill (once per flow)</text>
+<text x="155" y="54" font-size="11.5">first run: bootstrap, create-fakes,</text>
+<text x="155" y="70" font-size="11.5">identify-feature-flags</text>
+<text x="155" y="90" font-size="11.5">then: pick a flow from FLOW-CHECKLIST.md,</text>
+<text x="155" y="106" font-size="11.5">run the 20-step backfill-tests pipeline,</text>
+<text x="155" y="122" font-size="11.5">add the suite to CI</text>
+<path d="M265,130 C265,160 200,160 200,134" stroke="#1c57a5" stroke-width="1.5" fill="none" stroke-dasharray="5 4" marker-end="url(#a2)"/>
+<text x="275" y="155" font-size="11" fill="#1c57a5">next flow</text>
+<line x1="390" y1="68" x2="416" y2="68" stroke="#15191f" stroke-width="1.5" marker-end="url(#a2)"/>
+<rect x="420" y="30" width="140" height="76" fill="#ffffff" stroke="#1c57a5" stroke-width="2"/>
+<text x="490" y="56" text-anchor="middle" font-size="13" font-weight="600" fill="#1c57a5">/verify-full-</text>
+<text x="490" y="72" text-anchor="middle" font-size="13" font-weight="600" fill="#1c57a5">coverage</text>
+<text x="490" y="92" text-anchor="middle" font-size="11" fill="#5a6370">whole-repo sweep</text>
+<line x1="560" y1="68" x2="586" y2="68" stroke="#15191f" stroke-width="1.5" marker-end="url(#a2)"/>
+<rect x="590" y="30" width="160" height="76" fill="#e8eff9" stroke="#0d2f63" stroke-width="2"/>
+<text x="670" y="58" text-anchor="middle" font-size="13" font-weight="600" fill="#0d2f63">/graduate</text>
+<text x="670" y="78" text-anchor="middle" font-size="11">writes CONTRIBUTING.md,</text>
+<text x="670" y="94" text-anchor="middle" font-size="11">deletes work product</text>
+<line x1="670" y1="106" x2="670" y2="166" stroke="#15191f" stroke-width="1.5" marker-end="url(#a2)"/>
+<rect x="430" y="170" width="320" height="70" fill="#ffffff" stroke="#1c57a5" stroke-width="2"/>
+<text x="445" y="194" font-size="13" font-weight="600" fill="#1c57a5">/contribute-* on every change</text>
+<text x="445" y="214" font-size="11.5">spec, tests (red), implementation (green),</text>
+<text x="445" y="230" font-size="11.5">refactor, emerging behavior (whitebox); human gates</text>
+<rect x="140" y="170" width="250" height="70" fill="#ffffff" stroke="#5a6370" stroke-width="1.5"/>
+<text x="155" y="194" font-size="13" font-weight="600">/sync on a schedule</text>
+<text x="155" y="214" font-size="11.5">apply new plugin guidance (ON SYNC),</text>
+<text x="155" y="230" font-size="11.5">add scenarios for production drift</text>
+<path d="M390,205 L426,205" stroke="#15191f" stroke-width="1.5" stroke-dasharray="5 4" fill="none" marker-end="url(#a2)"/>
+<text x="10" y="200" font-size="10.5" fill="#5a6370">state during backfill:</text>
+<text x="10" y="214" font-size="10.5" fill="#5a6370" font-family="IBM Plex Mono, monospace">bdd-onboarding-</text>
+<text x="10" y="227" font-size="10.5" fill="#5a6370" font-family="IBM Plex Mono, monospace">progress.json</text>
+<text x="10" y="250" font-size="10.5" fill="#5a6370">after: bdd-freshness.json</text>
+</svg>

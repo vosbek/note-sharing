@@ -1,0 +1,15 @@
+title: QCon SF 2026 notes
+description: Notes from QCon San Francisco 2026, with slides, checked figures, themes and tools.
+theme: jekyll-theme-primer
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-default-layout
+relative_links:
+  enabled: true
+  collections: false

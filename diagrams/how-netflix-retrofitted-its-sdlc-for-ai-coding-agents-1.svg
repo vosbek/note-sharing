@@ -1,0 +1,30 @@
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+<title id="dg1-t">Two layers of context in Netflix's design</title>
+<desc id="dg1-d">Inside one repo, an agent reads AGENTS.md, then a generated index, then one doc, then the code. Across repos, the payments domain's chosen repos feed a payments graph behind one ask tool, which local agents, a chat bot and CI review all query; answers cite a file and a line.</desc>
+<style>
+.bx{fill:#ffffff;stroke:#1c57a5;stroke-width:1.5}
+.bxd{fill:#0d2f63;stroke:#0d2f63}
+.bxg{fill:#f3f5f8;stroke:#d8dde4;stroke-width:1.5}
+.t{font:600 13px 'IBM Plex Sans',sans-serif;fill:#15191f}
+.tw{font:600 13px 'IBM Plex Sans',sans-serif;fill:#ffffff}
+.s{font:12px 'IBM Plex Sans',sans-serif;fill:#5a6370}
+.sw{font:12px 'IBM Plex Sans',sans-serif;fill:#b9cdee}
+.h{font:600 11px 'IBM Plex Mono',monospace;fill:#1c57a5;letter-spacing:.06em}
+.ln{stroke:#5a6370;stroke-width:1.5;fill:none}
+</style>
+<text class="h" x="10" y="20">INSIDE ONE REPO</text>
+<rect class="bx" x="10" y="32" width="150" height="54"/><text class="t" x="22" y="55">AGENTS.md</text><text class="s" x="22" y="74">read first</text>
+<rect class="bx" x="200" y="32" width="150" height="54"/><text class="t" x="212" y="55">Generated index</text><text class="s" x="212" y="74">one line per doc</text>
+<rect class="bx" x="390" y="32" width="150" height="54"/><text class="t" x="402" y="55">One doc or ADR</text><text class="s" x="402" y="74">read in full</text>
+<rect class="bxd" x="580" y="32" width="170" height="54"/><text class="tw" x="592" y="55">The code</text><text class="sw" x="592" y="74">then change it</text>
+<path class="ln" d="M160 59H200M350 59H390M540 59H580"/>
+<text class="h" x="10" y="130">ACROSS REPOS, ONE DOMAIN</text>
+<rect class="bxg" x="10" y="145" width="170" height="70"/><text class="t" x="22" y="170">Payments repos</text><text class="s" x="22" y="190">code, docs, ADRs</text><text class="s" x="22" y="206">chosen by the team</text>
+<rect class="bxd" x="230" y="145" width="190" height="70"/><text class="tw" x="242" y="170">Payments graph</text><text class="sw" x="242" y="190">AST + doc extraction</text><text class="sw" x="242" y="206">one MCP tool: ask</text>
+<rect class="bx" x="500" y="122" width="290" height="40"/><text class="t" x="512" y="147">Local agents</text><text class="s" x="610" y="147">Claude Code, Cursor, Codex</text>
+<rect class="bx" x="500" y="170" width="290" height="40"/><text class="t" x="512" y="195">Chat bot</text><text class="s" x="580" y="195">questions across the stack</text>
+<rect class="bx" x="500" y="218" width="290" height="40"/><text class="t" x="512" y="243">CI review</text><text class="s" x="584" y="243">what else reads this?</text>
+<path class="ln" d="M180 180H230M420 180H460V142H500M460 190H500M460 180V238H500"/>
+<text class="s" x="230" y="245">Every answer cites a file and a line.</text>
+<text class="s" x="230" y="262">Each build pins commits.</text>
+</svg>
